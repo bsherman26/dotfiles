@@ -17,11 +17,9 @@ source ~/.vim/vundle.vim
     " call pathogen#helptags()
 
 "Help while modifying the .vimrc
-    " Let's make it easy to edit this file (mnemonic for key sequence is
-    " 'e'dit 'v'imrc)
+    " Let's make it easy to edit this file (mnemonic for key sequence is 'e'dit 'v'imrc)
     nmap <silent> <leader>ev :e $MYVIMRC<CR>
-    " And to source this file as well (mnemonic for the key sequence is
-    " 's'ource 'v'imrc)
+    " And to source this file as well (mnemonic for the key sequence is 's'ource 'v'imrc)
     nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Make the command-line completion better
@@ -39,6 +37,9 @@ set hidden
     syntax enable
     set background=dark
     colorscheme koehler
+    "colorscheme molokai
+    "colorscheme slate
+    "colorscheme Monokai
     "colorscheme vividchalk
     "colorscheme blackboard
     "colorscheme blazer
@@ -137,7 +138,8 @@ let delimitMate_jump_expansion = 1
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 "command! -bang Q quit<bang>
 "SuperTab
-let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 "CtrlP
 let g:ctrlp_arg_map = 1   "When this is set to 1, the <c-o> & <c-y> mappings will accept one extra key as an argument
 

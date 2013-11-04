@@ -8,15 +8,20 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugin Bundles
-Bundle 'wincent/Command-T'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/YankRing.vim'
-"Bundle 'msanders/snipmate.vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
+
+" Snipmate
+"Bundle 'msanders/snipmate.vim' "Unmaintained original version of Snipmate
+"Bundle 'MarcWeber/vim-addon-mw-utils'
+"Bundle 'tomtom/tlib_vim'
+"Bundle 'garbas/vim-snipmate'
+"Bundle 'honza/vim-snippets'     "Snippet Repository
 
 " Linting
 Bundle 'scrooloose/syntastic'
@@ -39,20 +44,25 @@ Bundle 'mattn/emmet-vim'
 "Bundle 'tpope/vim-markdown'
 
 " New
+Bundle 'marijnh/tern_for_vim'
+Bundle 'vim-scripts/Better-CSS-Syntax-for-Vim'
+Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'vim-scripts/Better-CSS-Syntax-for-Vim'
-Bundle 'skammer/vim-css-color'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'kien/ctrlp.vim'
 
+" File Explorers
+Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
+" Shougo/unite.vim
+" sjbach/lusty
 
 " Tried
 "Bundle 'tpope/vim-commentary'  "Prefered Nerd Commenter
 "Bundle 'tpope/vim-abolish'     "Clever but I wasn't using it. Consider Some other time
 "Bundle 'tpope/vim-endwise'     "Caused Problems with the delimitMate Plugin: Bracket Expansion Wouldnt work
+"Bundle 'skammer/vim-css-color' "Doesn't work in combination with 'vim-scripts/Better-CSS-Syntax-for-Vim' which is very helpful consider integrating them
