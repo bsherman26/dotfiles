@@ -132,8 +132,8 @@ nnoremap <silent> <Leader>o :TagbarToggle<CR>
 map <silent> <Leader>d :DelimitMateSwitch<CR>
 "let delimitMate_offByDefault = 1   "Prevent delimitMate from loading until :DelimitMateSwitch is called
 let delimitMate_expand_cr = 1
-let delimitMate_expand_space = 1
 let delimitMate_jump_expansion = 1
+"let delimitMate_expand_space = 1
 "Fix mistake with :W for :w
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 "command! -bang Q quit<bang>

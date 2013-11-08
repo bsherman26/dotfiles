@@ -52,6 +52,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/bufexplorer.zip'
 
