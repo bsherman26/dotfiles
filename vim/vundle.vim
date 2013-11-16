@@ -38,22 +38,23 @@ Bundle 'tpope/vim-rails'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'marijnh/tern_for_vim'
 
 " HTML/CSS
 Bundle 'mattn/emmet-vim'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'skammer/vim-css-color'
 "Bundle 'tpope/vim-markdown'
 
 " New
-Bundle 'marijnh/tern_for_vim'
-Bundle 'vim-scripts/Better-CSS-Syntax-for-Vim'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
-Bundle 'ervandew/supertab'
-Bundle 'godlygeek/tabular'
-Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/bufexplorer.zip'
 
 " File Explorers
@@ -63,6 +64,7 @@ Bundle 'kien/ctrlp.vim'
 " sjbach/lusty
 
 " Tried
+"Bundle 'vim-scripts/Better-CSS-Syntax-for-Vim'  "Replaced with hail2u/vim-css3-syntax. Could also have used alternative and more active repository ChrisYip/Better-CSS-Syntax-for-Vim
 "Bundle 'tpope/vim-commentary'  "Prefered Nerd Commenter
 "Bundle 'tpope/vim-abolish'     "Clever but I wasn't using it. Consider Some other time
 "Bundle 'tpope/vim-endwise'     "Caused Problems with the delimitMate Plugin: Bracket Expansion Wouldnt work
