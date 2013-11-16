@@ -56,6 +56,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'kshenoy/vim-signature'
 
 " File Explorers
 Bundle 'wincent/Command-T'
