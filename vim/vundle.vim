@@ -44,6 +44,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'skammer/vim-css-color'
+Bundle 'groenewege/vim-less'
 "Bundle 'tpope/vim-markdown'
 
 " New
@@ -53,10 +54,13 @@ Bundle 'ervandew/supertab'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
+"Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'kshenoy/vim-signature'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'juvenn/mustache.vim'
+Bundle 'tpope/vim-haml'
 
 " File Explorers
 Bundle 'wincent/Command-T'

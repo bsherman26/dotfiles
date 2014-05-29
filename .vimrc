@@ -1,4 +1,3 @@
-
 " Brian Sherman's Vim Configuration
 "
 
@@ -22,6 +21,11 @@ source ~/.vim/vundle.vim
     " And to source this file as well (mnemonic for the key sequence is 's'ource 'v'imrc)
     nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Remove GUI widgets and scrollbars
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
 " Make the command-line completion better
 set wildmenu
 
@@ -36,12 +40,12 @@ set hidden
 " COLOR SCHEME
     syntax enable
     set background=dark
-    colorscheme koehler
+    "colorscheme koehler
     "colorscheme molokai
     "colorscheme slate
     "colorscheme Monokai
     "colorscheme vividchalk
-    "colorscheme blackboard
+    colorscheme blackboard
     "colorscheme blazer
     "colorscheme torte
     "colorscheme pablo
@@ -50,13 +54,14 @@ set hidden
     "PLAY WITH LATER
     "Change color of selected item background in Popup Menu in color terminal
     "hi PmenuSel ctermfg=15
-    "if has('gui_running')
+    if has('gui_running')
+        colorscheme koehler
         "let g:solarized_termtrans=1
         "let g:solarized_termcolars = 256
         "let g:solarized_contrast="high"
         "let g:solarized_visibility="high"
         "colorscheme solarized
-    "endif
+    endif
 
 " Show Line Numbers
 set number
@@ -91,6 +96,12 @@ autocmd FileType ruby setlocal ts=2
 autocmd FileType ruby setlocal sts=2
 autocmd FileType ruby setlocal tw=0
 autocmd FileType ruby setlocal et
+" Jade
+autocmd FileType jade setlocal sw=2
+autocmd FileType jade setlocal ts=2
+autocmd FileType jade setlocal sts=2
+autocmd FileType jade setlocal tw=0
+autocmd FileType jade setlocal et
 
 "--------------------------------------------------------------------------
 " Set Key Mappings
@@ -105,8 +116,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <silent> <C-s> :w<CR>
 nmap <silent> ,/ :set hlsearch!<CR>
+
 "Map NERDTree to \p
 "map <silent> <Leader>p :NERDTreeToggle<CR>
+
 "Map Command-T to \p
 map <silent> <Leader>p :CommandT<CR>
 map <silent> <Leader>t :CommandTTag<CR>
@@ -118,16 +131,23 @@ if !has('gui_running')
     let g:CommandTHighlightColor='Yellow'
 endif
 let g:CommandTMatchWindowReverse=1
+
 "Show Invisibles Toggle
 nmap <leader>l :set list!<CR>
+
 "Invisible characters
 set listchars=tab:▸\ ,eol:¬
+
 "Yank Ring
 nnoremap <silent> <F11> :YRShow<CR>
+let g:yankring_replace_n_pkey = '<c-[>'
+
 " Toggle spell checking for the current buffer on and off with '\s'
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
+
 " Tagbar
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
+
 " DelimitMate
 map <silent> <Leader>d :DelimitMateSwitch<CR>
 "let delimitMate_offByDefault = 1   "Prevent delimitMate from loading until :DelimitMateSwitch is called
@@ -140,14 +160,28 @@ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <ar
 "SuperTab
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 "let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-"CtrlP
+
+"Ctrl-P
+"let g:ctrlp_map = '<c-[>'
 let g:ctrlp_arg_map = 1   "When this is set to 1, the <c-o> & <c-y> mappings will accept one extra key as an argument
+"set wildignore+=*/node_modules/*
+let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
 
 "FROM vimrc_example
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+
+" Show syntax highlighting groups for word under cursor (From Vim
+" Casts)(Conisder Trying HiLinkTrace for this instead)
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 
 "FOR WINDOWS BOX
