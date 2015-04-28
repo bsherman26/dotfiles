@@ -1,0 +1,14 @@
+[user]
+    name = Brian Sherman
+	email = bsherman26@hotmail.com
+[credential]
+	helper = cache
+[alias]
+	st = status
+	co = checkout
+	br = branch
+    last = log -1 HEAD
+[core]
+	excludesfile = ~/.cvsignore
+[push]
+	default = simple
