@@ -1,0 +1,22 @@
+#########################
+# System Backup Excludes
+#########################
+
+# Live System Excludes
+/dev/
+/proc/
+/sys/
+/tmp/
+/run/
+/mnt/
+/media/
+/lost+found
+
+# System Excludes
+/etc/fstab
+
+# My System Excludes
+/home/brian/.backup/
+/home/brian/mnt/
+/home/brian/data/
+/home/brian/win/
