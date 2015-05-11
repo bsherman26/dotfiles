@@ -17,17 +17,17 @@
 # TODO: Add tests for a correctly mounted filesystem.
 # TODO: Rewrite all of these as make tasks.
 # TODO: Add a task to "shread swap and tmp files etc."
-sudo rsync -aAXv --delete --one-file-system --exclude-from=exclude.txt / ~/mnt &&
+sudo rsync -aAXv --delete --one-file-system --exclude-from=exclude.txt / ~/.backup/64 &&
 
 #**********
 # Fix grub
 #**********
 # Set up for installation
-sudo mount --bind /dev     ~/mnt/dev      &&
-sudo mount --bind /dev/pts ~/mnt/dev/pts  &&
-sudo mount --bind /proc    ~/mnt/proc     &&
-sudo mount --bind /sys     ~/mnt/sys      &&
-#sudo chroot                ~/mnt          &&
+sudo mount --bind /dev     ~/.backup/64/dev      &&
+sudo mount --bind /dev/pts ~/.backup/64/dev/pts  &&
+sudo mount --bind /proc    ~/.backup/64/proc     &&
+sudo mount --bind /sys     ~/.backup/64/sys      &&
+#sudo chroot                ~/.backup/64          &&
 
 #****************************************************************
 # NOTES:
@@ -37,17 +37,17 @@ sudo mount --bind /sys     ~/mnt/sys      &&
 #****************************************************************
 
 # Install grub
-chroot ~/mnt grub-install /dev/sdb            &&
-chroot ~/mnt grub-install --recheck /dev/sdb  &&
-chroot ~/mnt update-grub                      &&
+sudo chroot ~/.backup/64 grub-install /dev/sdb            &&
+sudo chroot ~/.backup/64 grub-install --recheck /dev/sdb  &&
+sudo chroot ~/.backup/64 update-grub                      &&
 
 # Clean up
 #exit                       &&
-sudo umount ~/mnt/sys      &&
-sudo umount ~/mnt/proc     &&
-sudo umount ~/mnt/dev/pts  &&
-sudo umount ~/mnt/dev
-#sudo umount ~/mnt
+sudo umount ~/.backup/64/sys      &&
+sudo umount ~/.backup/64/proc     &&
+sudo umount ~/.backup/64/dev/pts  &&
+sudo umount ~/.backup/64/dev
+#sudo umount ~/.backup/64
 
 
 #*******
