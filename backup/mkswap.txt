@@ -1,0 +1,16 @@
+# TODO:
+#    Mount the swapfile on ecrypfs
+#    Seed the swapfile with encrypted characters rather than /dev/zero
+
+# Make a swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+# Turn on a swap device or swapfile
+sudo swapon /path/to/swap
+
+# Turn off usp swap
+sudo swapoff /dev/sdX6
+OR
+sudo swapoff /dev/sdb6

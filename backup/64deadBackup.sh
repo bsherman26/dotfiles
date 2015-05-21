@@ -17,17 +17,18 @@
 # TODO: Add tests for a correctly mounted filesystem.
 # TODO: Rewrite all of these as make tasks.
 # TODO: Add a task to "shread swap and tmp files etc."
-sudo rsync -aAXv --delete --one-file-system --exclude-from=exclude.txt / ~/.backup/64 &&
+sudo rsync -aAXv --delete --one-file-system --exclude-from=exclude.txt ~/64/ ~/.backup/64
+#&&
 
-#**********
-# Fix grub
-#**********
-# Set up for installation
-sudo mount --bind /dev     ~/.backup/64/dev      &&
-sudo mount --bind /dev/pts ~/.backup/64/dev/pts  &&
-sudo mount --bind /proc    ~/.backup/64/proc     &&
-sudo mount --bind /sys     ~/.backup/64/sys      &&
-#sudo chroot                ~/.backup/64          &&
+##**********
+## Fix grub
+##**********
+## Set up for installation
+#sudo mount --bind /dev     ~/.backup/64/dev      &&
+#sudo mount --bind /dev/pts ~/.backup/64/dev/pts  &&
+#sudo mount --bind /proc    ~/.backup/64/proc     &&
+#sudo mount --bind /sys     ~/.backup/64/sys      &&
+##sudo chroot                ~/.backup/64          &&
 
 #****************************************************************
 # NOTES:
@@ -36,18 +37,18 @@ sudo mount --bind /sys     ~/.backup/64/sys      &&
 # So, chroot must be used like sudo (ie chroot ~/mnt install.sh).
 #****************************************************************
 
-# Install grub
-sudo chroot ~/.backup/64 grub-install /dev/sdb            &&
-sudo chroot ~/.backup/64 grub-install --recheck /dev/sdb  &&
-sudo chroot ~/.backup/64 update-grub                      &&
+## Install grub
+#sudo chroot ~/.backup/64 grub-install /dev/sdb            &&
+#sudo chroot ~/.backup/64 grub-install --recheck /dev/sdb  &&
+#sudo chroot ~/.backup/64 update-grub                      &&
 
-# Clean up
-#exit                       &&
-sudo umount ~/.backup/64/sys      &&
-sudo umount ~/.backup/64/proc     &&
-sudo umount ~/.backup/64/dev/pts  &&
-sudo umount ~/.backup/64/dev
-#sudo umount ~/.backup/64
+## Clean up
+##exit                       &&
+#sudo umount ~/.backup/64/sys      &&
+#sudo umount ~/.backup/64/proc     &&
+#sudo umount ~/.backup/64/dev/pts  &&
+#sudo umount ~/.backup/64/dev
+##sudo umount ~/.backup/64
 
 
 #*******

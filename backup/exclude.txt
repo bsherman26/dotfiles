@@ -13,7 +13,11 @@
 /lost+found
 
 # System Excludes
+# These files need to be created either manually fstab or by grub.
 /etc/fstab
+# I'm not sure about this one yet. Maybe just /boot/grub/grub.cfg.
+/boot/grub/
+/etc/default/grub
 
 # My System Excludes
 /home/brian/.backup/
