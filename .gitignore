@@ -1,3 +1,4 @@
 *.swp
 vim/bundle/*
 vim/view/*
+vim/OLD.view.OLD
