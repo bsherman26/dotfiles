@@ -121,7 +121,7 @@
        use obconf if you want to change these without having to log out
        and back in -->
     <number>5</number>
-    <firstdesk>1</firstdesk>
+    <firstdesk>3</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
     <name>desktop 1</name>
@@ -403,8 +403,14 @@
         <command>lxsession-default terminal</command>
       </action>
     </keybind>
+    <!-- Launch an internet browser on Ctrl + Alt + Shift + I-->
+    <keybind key="C-A-S-I">
+      <action name="Execute">
+        <command>lxsession-default webbrowser</command>
+      </action>
+    </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
-    <keybind key="C-A-D">
+    <keybind key="C-A-S-F">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -413,14 +419,14 @@
         <command>lxsession-default file_manager</command>
       </action>
     </keybind>
-    <!-- Lock the screen on Ctrl + Alt + Shift + U-->
-    <keybind key="C-A-S-U">
+    <!-- Lock the screen on Ctrl + Alt + Shift + P-->
+    <keybind key="C-A-S-P">
       <action name="Execute">
         <command>lxsession-default lock</command>
       </action>
     </keybind>
-    <!-- Shutdown on Ctrl + Alt + Shift + I-->
-    <keybind key="C-A-S-I">
+    <!-- Shutdown on Ctrl + Alt + Shift + O-->
+    <keybind key="C-A-S-O">
       <action name="Execute">
         <command>lxsession-default quit</command>
       </action>

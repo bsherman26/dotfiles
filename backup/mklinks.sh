@@ -23,6 +23,9 @@ ln -s ~/src/projects/dotfiles/.jshintrc   ~/.jshintrc
 ln -s ~/src/projects/dotfiles/.mongorc.js ~/.mongorc.js
 
 # .config Directory Links
+mv ~/.config/openbox/lubuntu-rc.xml ~/.config/openbox/OLD.lubuntu-rc.xml.OLD
+ln -s ~/src/projects/dotfiles/.config/openbox/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
+
 mv ~/.config/lxterminal/lxterminal.conf ~/.config/lxterminal/OLD.lxterminal.conf.OLD
 ln -s ~/src/projects/dotfiles/.config/lxterminal/lxterminal.conf ~/.config/lxterminal/lxterminal.conf
 
