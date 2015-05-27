@@ -2,3 +2,4 @@ synclient MaxTapTime=0
 synclient HorizTwoFingerScroll=1
 synclient VertScrollDelta=-105
 synclient HorizScrollDelta=-105
+synclient HorizEdgeScroll=1
