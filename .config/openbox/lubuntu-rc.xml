@@ -322,23 +322,42 @@
         <direction>down</direction>
       </action>
     </keybind>
+
     <!-- Keybindings for window tiling -->
-    <keybind key="W-H">        # HalfLeftScreen
+    <keybind key="W-H">        # Half Left Screen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>100%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-L">        # HalfRightScreen
+    <keybind key="W-L">        # Half Right Screen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>-0</x><y>0</y><height>100%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-K">        # HalfUpperScreen
+    <keybind key="W-K">        # Half Upper Screen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><width>100%</width><height>50%</height></action>
     </keybind>
-    <keybind key="W-J">        # HalfLowerScreen
+    <keybind key="W-J">        # Half Lower Screen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
     </keybind>
+
+    <keybind key="W-A-H">        # Top Left Corner of Screen
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>0</x><y>0</y><height>50%</height><width>50%</width></action>
+    </keybind>
+    <keybind key="W-A-L">        # Top Right Coner of Screen
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>-0</x><y>0</y><height>50%</height><width>50%</width></action>
+    </keybind>
+    <keybind key="W-A-K">        # Bottom Right Corner of Screen
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>-0</x><y>-0</y><width>50%</width><height>50%</height></action>
+    </keybind>
+    <keybind key="W-A-J">        # Bottom Left Corner of Screen
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>0</x><y>-0</y><width>50%</width><height>50%</height></action>
+    </keybind>
+
     <keybind key="W-Left">        # HalfLeftScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>97%</height><width>50%</width></action>
