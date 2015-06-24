@@ -7,5 +7,6 @@
     "nomen"    : true,
     "plusplus" : false,
     "regexp"   : true,
-    "white"    : false
+    "white"    : false,
+    "strict"   : true
 }
