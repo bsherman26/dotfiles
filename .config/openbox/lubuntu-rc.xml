@@ -55,7 +55,7 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Ubuntu Medium</name>
       <size>11</size>
@@ -322,7 +322,6 @@
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- Keybindings for window tiling -->
     <keybind key="W-H">        # Half Left Screen
       <action name="UnmaximizeFull"/>
@@ -340,7 +339,6 @@
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
     </keybind>
-
     <keybind key="W-A-H">        # Top Left Corner of Screen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>50%</height><width>50%</width></action>
@@ -357,7 +355,6 @@
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>50%</width><height>50%</height></action>
     </keybind>
-
     <keybind key="W-Left">        # HalfLeftScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>97%</height><width>50%</width></action>
@@ -375,14 +372,10 @@
       <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
     </keybind>
     <keybind key="W-C-l">        # Monitor Next
-      <action name="MoveResizeTo">
-        <monitor>next</monitor>
-      </action>
+      <action name="MoveResizeTo"><monitor>next</monitor></action>
     </keybind>
     <keybind key="W-C-h">        # Monitor Previous
-      <action name="MoveResizeTo">
-        <monitor>prev</monitor>
-      </action>
+      <action name="MoveResizeTo"><monitor>prev</monitor></action>
     </keybind>
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
