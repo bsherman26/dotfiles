@@ -1,0 +1,24 @@
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+text/plain=gvim.desktop
+text/x-chdr=gvim.desktop
+text/x-csrc=gvim.desktop
+text/x-dtd=gvim.desktop
+text/x-java=gvim.desktop
+text/mathml=gvim.desktop
+text/x-python=gvim.desktop
+text/x-sql=gvim.desktop
+text/x-python=gvim.desktop
+text/x-sql=gvim.desktop
+application/x-perl=gvim.desktop
+application/octet-stream=gnumeric.desktop;gvim.desktop;
+application/pdf=pdfshuffler.desktop;evince.desktop;gvim.desktop;
+application/json=google-chrome.desktop;
+
+
+[Added Associations]
+application/x-gnumeric=libreoffice-calc.desktop;

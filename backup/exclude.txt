@@ -1,8 +1,12 @@
-#########################
+#------------------------------------
 # System Backup Excludes
-#########################
+#------------------------------------
 
+
+#------------------------
 # LIVE SYSTEM EXCLUDES
+#------------------------
+
 /dev/
 /proc/
 /sys/
@@ -12,14 +16,22 @@
 /media/
 /lost+found
 
+
+#------------------------
 # SYSTEM EXCLUDES
+#------------------------
+
 # These files need to be created either manually fstab or by grub.
 /etc/fstab
 # I'm not sure about this one yet. Maybe just /boot/grub/grub.cfg.
 /boot/grub/
 /etc/default/grub
 
+
+#------------------------
 # MY SYSTEM EXCLUDES
+#------------------------
+
 #/home/brian/.backup/
 #~/.backup is now a link to ~/src/projects/dotfiles/backup
 /home/brian/mnt/
@@ -28,7 +40,11 @@
 /home/brian/32/
 /home/brian/64/
 
+
+#------------------------
 # GOOGLE CHROME EXCLUDES
+#------------------------
+
 # Folder where chrome is installed
 #   Notes:
 #     I decided this is important so that updates need to be performed on each

@@ -25,6 +25,7 @@ source ~/.vim/vundle.vim
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
+set guioptions-=m
 
 " Make the command-line completion better
 set wildmenu
@@ -40,17 +41,23 @@ set hidden
 " COLOR SCHEME
     syntax enable
     set background=dark
-    "colorscheme koehler
+    colorscheme mango
+    "colorscheme 0x7A69_dark
+    "colorscheme DevC++
+    "colorscheme kolor
     "colorscheme molokai
-    "colorscheme slate
     "colorscheme Monokai
+    "colorscheme CodeFactoryv3
+    "colorscheme desert
+    "colorscheme black_angus
     "colorscheme vividchalk
-    colorscheme blackboard
+    "colorscheme slate
+    "colorscheme koehler
+    "colorscheme blackboard
     "colorscheme blazer
     "colorscheme torte
     "colorscheme pablo
     "colorscheme murphy
-    "colorscheme desert
     "PLAY WITH LATER
     "Change color of selected item background in Popup Menu in color terminal
     "hi PmenuSel ctermfg=15
@@ -195,6 +202,8 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+"For EPUB Viewing
+au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
 
 "FOR WINDOWS BOX
     "source $VIMRUNTIME/vimrc_example.vim

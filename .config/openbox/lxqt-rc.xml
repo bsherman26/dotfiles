@@ -47,7 +47,7 @@
   </placement>
   <theme>
     <!--  Lubuntu specific : Theme = Lubuntu and font = Ubuntu -->
-    <name>Lubuntu-default</name>
+    <name>Lubuntu Arc</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -138,6 +138,9 @@
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
   <resize>
+    <!--  Lubuntu specific : Don't draw content on resize (too heavy).
+          <drawContents>no</drawContents>
+    -->
     <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
@@ -273,8 +276,8 @@
     <keybind key="C-A-P">
     <!-- <keybind key="A-Print"> -->
       <action name="Execute">
-        <command>lxsession-default screenshot</command>
-        <!-- <command>lxsession-default screenshot window</command> -->
+        <command>/usr/bin/lximage-qt --screenshot</command>
+        <!--<command>/usr/bin/screengrab</command>-->
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -385,58 +388,57 @@
       <action name="MoveResizeTo"><monitor>prev</monitor></action>
     </keybind>
     <!-- Keybindings for running applications on Home + E -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>File manager</name>
-        </startupnotify>
-        <command>lxsession-default file_manager</command>
-      </action>
-    </keybind>
+    <!--<keybind key="W-e">-->
+      <!--<action name="Execute">-->
+        <!--<startupnotify>-->
+          <!--<enabled>true</enabled>-->
+          <!--<name>File manager</name>-->
+        <!--</startupnotify>-->
+        <!--<command>lxsession-default file_manager</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
-    <keybind key="W-r">
-      <action name="Execute">
-        <command>lxsession-default launcher</command>
-      </action>
-    </keybind>
-    <keybind key="A-F2">
-      <action name="Execute">
-        <command>lxsession-default launcher</command>
-      </action>
-    </keybind>
+    <!--<keybind key="W-r">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default launcher</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="A-F2">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default launcher</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybindings for running Menu from Lxpanel -->
-    <keybind key="A-F1">
-      <action name="Execute">
-        <command>lxpanelctl menu</command>
-      </action>
-    </keybind>
-    <keybind key="C-Escape">
-      <action name="Execute">
-        <command>lxpanelctl menu</command>
-      </action>
-    </keybind>
+    <!--<keybind key="A-F1">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxpanelctl menu</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="C-Escape">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxpanelctl menu</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybindings to toggle fullscreen -->
     <keybind key="F11">
       <action name="ToggleFullscreen"/>
     </keybind>
-    <!-- Launch task manager on Ctrl + Alt + Del-->
+    <!-- TODO: Launch task manager on Ctrl + Alt + Del-->
     <keybind key="C-A-Delete">
       <action name="Execute">
-        <command>lxsession-default tasks</command>
+        <command>/usr/bin/qps</command>
       </action>
     </keybind>
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>lxterminal</command>
-        <!--<command>lxsession-default terminal</command>-->
+        <command>/usr/bin/qterminal</command>
       </action>
     </keybind>
     <!-- Launch an internet browser on Ctrl + Alt + Shift + I-->
     <keybind key="C-A-S-I">
       <action name="Execute">
-        <command>lxsession-default webbrowser</command>
+        <command>/usr/bin/google-chrome-stable</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
@@ -446,87 +448,92 @@
           <enabled>true</enabled>
           <name>PCManFM</name>
         </startupnotify>
-        <command>lxsession-default file_manager</command>
+        <command>/usr/bin/pcmanfm-qt --profile=lxqt</command>
       </action>
     </keybind>
     <!-- Lock the screen on Ctrl + Alt + Shift + P-->
     <keybind key="C-A-S-P">
       <action name="Execute">
-        <command>lxsession-default lock</command>
+        <command>lxqt-leave --lockscreen</command>
       </action>
     </keybind>
     <!-- Shutdown on Ctrl + Alt + Shift + O-->
     <keybind key="C-A-S-O">
       <action name="Execute">
-        <command>lxsession-default quit</command>
+        <command>lxqt-leave</command>
+        <!--<command>lxqt-leave -\-logout</command>-->
+        <!--<command>lxqt-leave -\-lockscreen</command>-->
+        <!--<command>lxqt-leave -\-suspend</command>-->
+        <!--<command>lxqt-leave -\-hibernate</command>-->
+        <!--<command>lxqt-leave -\-shutdown</command>-->
+        <!--<command>lxqt-leave -\-reboot</command>-->
       </action>
     </keybind>
     <!-- Keybinding for Volume management -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer -q sset Master 3%+ unmute</command>
+        <command>amixer -q -D pulse sset Master 3%+ unmute</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer -q sset Master 3%- unmute</command>
+        <command>amixer -q -D pulse sset Master 3%- unmute</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>amixer -q sset Master toggle</command>
+        <command>amixer -q -D pulse sset Master toggle</command>
       </action>
     </keybind>
     <!-- Keybinding for terminal button-->
-    <keybind key="XF86WWW">
-      <action name="Execute">
-        <command>lxsession-default terminal</command>
-      </action>
-    </keybind>
-    <keybind key="XF86Terminal">
-      <action name="Execute">
-        <command>lxsession-default terminal</command>
-      </action>
-    </keybind>
+    <!--<keybind key="XF86WWW">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default terminal</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="XF86Terminal">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default terminal</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybinding for calculator button-->
     <keybind key="XF86Calculator">
       <action name="Execute">
-        <command>lxsession-default calculator</command>
+        <command>/usr/bin/kcalc</command>
       </action>
     </keybind>
     <!-- Keybinding for computer button-->
-    <keybind key="XF86MyComputer">
-      <action name="Execute">
-        <command>lxsession-default file_manager</command>
-      </action>
-    </keybind>
+    <!--<keybind key="XF86MyComputer">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default file_manager</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybindings for Multimedia Keys and LCD Backlight (alternative when not using gnome-power-manager or xfce4-volumed) -->
-    <keybind key="C-F7">
-      <action name="Execute">
-        <command>xset dpms force off</command>
-      </action>
-    </keybind>
-    <keybind key="C-F10">
-      <action name="Execute">
-        <command>xbacklight -dec 10</command>
-      </action>
-    </keybind>
-    <keybind key="C-F11">
-      <action name="Execute">
-        <command>xbacklight -inc 10</command>
-      </action>
-    </keybind>
+    <!--<keybind key="C-F7">-->
+      <!--<action name="Execute">-->
+        <!--<command>xset dpms force off</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="C-F10">-->
+      <!--<action name="Execute">-->
+        <!--<command>xbacklight -dec 10</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="C-F11">-->
+      <!--<action name="Execute">-->
+        <!--<command>xbacklight -inc 10</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
-        <command>lxsession-default screenshot</command>
-        <!-- <command>lxsession-default screenshot -i</command> -->
+        <command>/usr/bin/lximage-qt --screenshot</command>
       </action>
     </keybind>
     <!-- Launch logout when push on the shutdown button -->
     <keybind key="XF86PowerOff">
       <action name="Execute">
-        <command>lxsession-default quit</command>
+        <command>lxqt-leave</command>
       </action>
     </keybind>
   </keyboard>

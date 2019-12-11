@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #*************************************************************************
-# Install MBR grub on the 32 bit partition.
+# Install MBR grub on the 64 bit partition.
 #
 # NOTES:
-#    Make sure that the partition to install to is mounted on ~/.backup/32.
+#    Make sure that the partition to install to is mounted on ~/.backup/64.
 #    Make sure that the drive to install grub is sdb.
 #    Currently this does copy the symlinks, because of the a flag???
 #    However, I think this is actually what I want.
@@ -19,11 +19,11 @@
 # Fix grub
 #**********
 # Set up for installation
-sudo mount --bind /dev     ~/.backup/32/dev      &&
-sudo mount --bind /dev/pts ~/.backup/32/dev/pts  &&
-sudo mount --bind /proc    ~/.backup/32/proc     &&
-sudo mount --bind /sys     ~/.backup/32/sys      &&
-#sudo chroot                ~/.backup/32          &&
+sudo mount --bind /dev     ~/.backup/64/dev      &&
+sudo mount --bind /dev/pts ~/.backup/64/dev/pts  &&
+sudo mount --bind /proc    ~/.backup/64/proc     &&
+sudo mount --bind /sys     ~/.backup/64/sys      &&
+#sudo chroot                ~/.backup/64          &&
 
 #****************************************************************
 # NOTES:
@@ -33,14 +33,14 @@ sudo mount --bind /sys     ~/.backup/32/sys      &&
 #****************************************************************
 
 # Install grub
-sudo chroot ~/.backup/32 grub-install /dev/sdb            &&
-sudo chroot ~/.backup/32 grub-install --recheck /dev/sdb  &&
-sudo chroot ~/.backup/32 update-grub                      &&
+sudo chroot ~/.backup/64 grub-install /dev/sdb            &&
+sudo chroot ~/.backup/64 grub-install --recheck /dev/sdb  &&
+sudo chroot ~/.backup/64 update-grub                      &&
 
 # Clean up
 #exit                       &&
-sudo umount ~/.backup/32/sys      &&
-sudo umount ~/.backup/32/proc     &&
-sudo umount ~/.backup/32/dev/pts  &&
-sudo umount ~/.backup/32/dev
-sudo umount ~/.backup/32
+sudo umount ~/.backup/64/sys      &&
+sudo umount ~/.backup/64/proc     &&
+sudo umount ~/.backup/64/dev/pts  &&
+sudo umount ~/.backup/64/dev
+sudo umount ~/.backup/64
