@@ -121,9 +121,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-map ) gt
 map ( gT
-map <silent> <C-s> :w<CR>
+map ) gt
+"map <silent> <C-s> :w<CR>
 nmap <silent> ,/ :set hlsearch!<CR>
 
 "Map NERDTree to \p
@@ -167,8 +167,8 @@ let delimitMate_jump_expansion = 1
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 "command! -bang Q quit<bang>
 "SuperTab
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+""let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " Syntastic
 "set statusline+=%#warningmsg#

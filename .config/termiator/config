@@ -1,0 +1,167 @@
+[global_config]
+  focus = system
+  window_state = maximise
+  borderless = True
+  broadcast_default = off
+  scroll_tabbar = True
+  title_hide_sizetext = True
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, CustomCommandsMenu
+  always_split_with_profile = True
+[keybindings]
+  zoom_out = <Control>underscore
+  zoom_normal = <Control>equal
+  go_next = None
+  go_prev = None
+  go_up = <Control><Shift>k
+  go_down = <Control><Shift>j
+  go_left = <Control><Shift>h
+  go_right = <Control><Shift>l
+  rotate_cw = None
+  rotate_ccw = None
+  split_horiz = <Control><Shift>s
+  split_vert = <Control>s
+  toggle_scrollbar = <Control><Shift>F8
+  page_up_half = <Control><Shift>p
+  page_down_half = <Control><Shift>n
+  move_tab_right = <Control>braceright
+  move_tab_left = <Control>braceleft
+  scaled_zoom = None
+  next_tab = <Control>0
+  prev_tab = <Control>9
+  hide_window = None
+  edit_window_title = <Control>6
+  edit_tab_title = <Control>8
+  edit_terminal_title = <Control>7
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    scrollbar_position = hidden
+    scrollback_lines = 1000
+  [[Local-Server]]
+    cursor_color = "#aaaaaa"
+    scrollbar_position = hidden
+    scrollback_lines = 1000
+    exit_action = hold
+  [[Remote-App]]
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 1000
+    use_custom_command = True
+    custom_command = ssh app-user
+  [[Remote-Admin]]
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 1000
+    use_custom_command = True
+    custom_command = ssh app-admin
+  [[Remote-mDB]]
+    cursor_color = "#aaaaaa"
+    scrollback_lines = 1000
+    use_custom_command = True
+    custom_command = ssh mdb
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+  [[Dev Local]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1919:170
+      maximised = True
+      fullscreen = False
+      size = 1366, 740
+      title = App - Local
+      last_active_window = True
+    [[[child1]]]
+      type = Notebook
+      parent = child0
+      order = 0
+      labels = Log (Local), Grunt, Sync, Shell (Local)
+      last_active_term = 4557b830-e19a-4b08-8792-79ec01fe4146, 9660ecc0-d981-4d3c-83e3-1cddb9930019, a704bc17-1fef-40f1-99d5-9a2b12a36b7b, bda76302-43a4-4db8-b486-127aaacec353
+      active_page = 0
+    [[[terminal2]]]
+      type = Terminal
+      title = Log (Local)
+      parent = child1
+      order = 0
+      profile = Local-Server
+      uuid = 4557b830-e19a-4b08-8792-79ec01fe4146
+      command = ./start_compiled
+      directory = /home/brian/src/projects/survey
+    [[[terminal3]]]
+      type = Terminal
+      title = Grunt
+      parent = child1
+      order = 1
+      profile = default
+      uuid = 9660ecc0-d981-4d3c-83e3-1cddb9930019
+      directory = /home/brian/src/projects/survey
+    [[[terminal4]]]
+      type = Terminal
+      title = Sync
+      parent = child1
+      order = 2
+      profile = default
+      uuid = a704bc17-1fef-40f1-99d5-9a2b12a36b7b
+      directory = /home/brian/src/projects/survey/production_nda
+    [[[terminal5]]]
+      type = Terminal
+      title = App-Shell (Local)
+      parent = child1
+      order = 3
+      profile = default
+      uuid = bda76302-43a4-4db8-b486-127aaacec353
+      directory = /home/brian/src/projects/survey
+  [[Dev Remote]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1919:170
+      maximised = True
+      fullscreen = False
+      size = 1366, 740
+      title = App - Remote
+      last_active_window = True
+    [[[child1]]]
+      type = Notebook
+      parent = child0
+      order = 0
+      labels = Log (Remote), Shell (Remote), DB (Remote), DB Backup (Local)
+      last_active_term = 1c5d954a-efc0-4cf6-8cac-b02248906091, 7a083c4c-01a6-45c2-9294-899490d449f9, df4ff2b2-6936-4302-b6c2-b0d013aed917, 6a09978c-83f9-48a1-bea2-68ad0a274c81
+      active_page = 0
+    [[[terminal2]]]
+      type = Terminal
+      title = Log (Remote)
+      parent = child1
+      order = 0
+      profile = Remote-App
+      uuid = 1c5d954a-efc0-4cf6-8cac-b02248906091
+    [[[terminal3]]]
+      type = Terminal
+      title = App-Shell (Remote)
+      parent = child1
+      order = 1
+      profile = Remote-Admin
+      uuid = 7a083c4c-01a6-45c2-9294-899490d449f9
+    [[[terminal4]]]
+      type = Terminal
+      title = DB (Remote)
+      parent = child1
+      order = 2
+      profile = Remote-mDB
+      uuid = df4ff2b2-6936-4302-b6c2-b0d013aed917
+    [[[terminal5]]]
+      type = Terminal
+      title = DB Backup (Local)
+      parent = child1
+      order = 3
+      profile = default
+      uuid = 6a09978c-83f9-48a1-bea2-68ad0a274c81
+      directory = /home/brian/Desktop/Project/Production/MongoDB/Backups
+[plugins]

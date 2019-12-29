@@ -1,0 +1,27 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>                          <mount point>        <type>  <options>                   <dump>  <pass>
+
+# Play OS
+# Defined By Install
+UUID=c6c86992-1e75-4797-a12e-618e8f3a9ca9 /                    ext4    defaults,discard            0       1
+
+# Dev Share
+UUID=e4722f8c-e468-4787-9edb-2942ba7beb86 /home/brian/data     ext4    errors=remount-ro,discard   0       2
+
+# Dev OS
+UUID=0e5540a6-4761-424e-9210-8bb4d6318136 /home/brian/os-dev   ext4    errors=remount-ro,discard   0       2
+
+# Swap
+# Defined By Install
+UUID=481f252f-ba7d-4a14-8162-890f9a4e2738 swap                 swap    defaults,discard            0       0
+
+# Defined By Install
+tmpfs                                     /tmp                 tmpfs   defaults,noatime,mode=1777  0       0
+
+# Archive
+UUID=b2f59db4-6da6-47b7-b773-c9b0deeac6cd /home/brian/archive  ext4    errors=remount-ro,discard   0       0

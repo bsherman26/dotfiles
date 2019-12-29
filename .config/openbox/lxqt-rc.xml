@@ -387,38 +387,6 @@
     <keybind key="W-C-h">        # Monitor Previous
       <action name="MoveResizeTo"><monitor>prev</monitor></action>
     </keybind>
-    <!-- Keybindings for running applications on Home + E -->
-    <!--<keybind key="W-e">-->
-      <!--<action name="Execute">-->
-        <!--<startupnotify>-->
-          <!--<enabled>true</enabled>-->
-          <!--<name>File manager</name>-->
-        <!--</startupnotify>-->
-        <!--<command>lxsession-default file_manager</command>-->
-      <!--</action>-->
-    <!--</keybind>-->
-    <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
-    <!--<keybind key="W-r">-->
-      <!--<action name="Execute">-->
-        <!--<command>lxsession-default launcher</command>-->
-      <!--</action>-->
-    <!--</keybind>-->
-    <!--<keybind key="A-F2">-->
-      <!--<action name="Execute">-->
-        <!--<command>lxsession-default launcher</command>-->
-      <!--</action>-->
-    <!--</keybind>-->
-    <!-- Keybindings for running Menu from Lxpanel -->
-    <!--<keybind key="A-F1">-->
-      <!--<action name="Execute">-->
-        <!--<command>lxpanelctl menu</command>-->
-      <!--</action>-->
-    <!--</keybind>-->
-    <!--<keybind key="C-Escape">-->
-      <!--<action name="Execute">-->
-        <!--<command>lxpanelctl menu</command>-->
-      <!--</action>-->
-    <!--</keybind>-->
     <!-- Keybindings to toggle fullscreen -->
     <keybind key="F11">
       <action name="ToggleFullscreen"/>
@@ -432,7 +400,14 @@
     <!-- Launch a terminal on Ctrl + Alt + T-->
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>/usr/bin/qterminal</command>
+        <command>/usr/bin/terminator</command>
+        <!--<command>/usr/bin/qterminal</command>-->
+      </action>
+    </keybind>
+    <!-- Launch a terminator Config Launcher on Ctrl + Alt + Shift + T-->
+    <keybind key="C-A-S-T">
+      <action name="Execute">
+        <command>/usr/bin/terminator -s</command>
       </action>
     </keybind>
     <!-- Launch an internet browser on Ctrl + Alt + Shift + I-->
@@ -485,6 +460,56 @@
         <command>amixer -q -D pulse sset Master toggle</command>
       </action>
     </keybind>
+    <!-- Keybinding for calculator button-->
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>/usr/bin/kcalc</command>
+      </action>
+    </keybind>
+    <!-- Launch scrot when Print is pressed -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>/usr/bin/lximage-qt --screenshot</command>
+      </action>
+    </keybind>
+    <!-- Launch logout when push on the shutdown button -->
+    <keybind key="XF86PowerOff">
+      <action name="Execute">
+        <command>lxqt-leave</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for running applications on Home + E -->
+    <!--<keybind key="W-e">-->
+      <!--<action name="Execute">-->
+        <!--<startupnotify>-->
+          <!--<enabled>true</enabled>-->
+          <!--<name>File manager</name>-->
+        <!--</startupnotify>-->
+        <!--<command>lxsession-default file_manager</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!-- Keybindings for running Run menu from Lxpanel on Home + R-->
+    <!--<keybind key="W-r">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default launcher</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="A-F2">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxsession-default launcher</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!-- Keybindings for running Menu from Lxpanel -->
+    <!--<keybind key="A-F1">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxpanelctl menu</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
+    <!--<keybind key="C-Escape">-->
+      <!--<action name="Execute">-->
+        <!--<command>lxpanelctl menu</command>-->
+      <!--</action>-->
+    <!--</keybind>-->
     <!-- Keybinding for terminal button-->
     <!--<keybind key="XF86WWW">-->
       <!--<action name="Execute">-->
@@ -496,12 +521,6 @@
         <!--<command>lxsession-default terminal</command>-->
       <!--</action>-->
     <!--</keybind>-->
-    <!-- Keybinding for calculator button-->
-    <keybind key="XF86Calculator">
-      <action name="Execute">
-        <command>/usr/bin/kcalc</command>
-      </action>
-    </keybind>
     <!-- Keybinding for computer button-->
     <!--<keybind key="XF86MyComputer">-->
       <!--<action name="Execute">-->
@@ -524,18 +543,6 @@
         <!--<command>xbacklight -inc 10</command>-->
       <!--</action>-->
     <!--</keybind>-->
-    <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>/usr/bin/lximage-qt --screenshot</command>
-      </action>
-    </keybind>
-    <!-- Launch logout when push on the shutdown button -->
-    <keybind key="XF86PowerOff">
-      <action name="Execute">
-        <command>lxqt-leave</command>
-      </action>
-    </keybind>
   </keyboard>
   <mouse>
     <!--

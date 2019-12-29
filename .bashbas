@@ -1,0 +1,52 @@
+#!/bin/bash
+# ~/.bashbas: Sourced by ~/.bashrc
+
+
+#-----------------------------------------
+# goToLink
+#-----------------------------------------
+function cdlink {
+
+    # No Param
+    if [ -z "${1+xxx}" ] || [ -z "$1" -a "${1+xxx}" = "xxx" ]; then
+
+        dir=$(readlink -f '.')
+
+    # Directory
+    elif [ -d ${1} ]; then
+
+        dir=$(readlink -f "${1}")
+
+    # File, etc.
+    else
+    #else if [ -f $1 -o -h $1 ]; then
+    #if [ -f $1 ]; then
+
+        #echo 'File/Other'
+        dir="$(dirname "$(readlink -f "${1}")")"
+    fi
+
+    cd "${dir}"
+    #cd `readlink -f "${dir}"`
+}
+
+
+#-----------------------------------------
+# Add custom scripts directory to path
+#-----------------------------------------
+if [ -d "${HOME}"/.bin ]; then
+
+    PATH="$HOME/.bin:$PATH"
+fi
+
+
+#-----------------------------------------
+# Aliases
+#-----------------------------------------
+alias cdl='cdlink'
+
+
+#-----------------------------------------
+# TODO: REMOVE???
+#-----------------------------------------
+#source /home/brian/src/projects/dotfiles/acd_func.sh

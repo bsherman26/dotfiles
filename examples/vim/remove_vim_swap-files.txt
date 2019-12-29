@@ -1,0 +1,26 @@
+Remove Vim Swap Files
+
+NOTE: Notes not a script.
+
+TODO: Consider making this into a script and placing it in your dotfiles.
+
+# Find the Files
+
+find . -type f -regex '^\./.*\..*\.sw.*'
+
+find . -regex '^\./.*\..*\.sw.*'
+
+find . -regex '^\./.*\..*\.s.*'
+
+
+# Delete the Files
+# TODO: Test how the "rm" comand's interactive feature works.
+#       "y" for yes
+#       "n" for no???
+
+find . -type f -regex '^\./.*\..*\.sw.*' -exec rm -i {} \;
+
+find . -type f -regex '^\./.*\..*\.sw.*' -exec rm -f {} \;
+
+# Test or play with this one.
+find . -type f -regex '^\./.*\..*\.sw.*' -delete

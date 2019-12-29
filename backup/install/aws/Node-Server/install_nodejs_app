@@ -1,0 +1,41 @@
+#!/bin/sh
+
+
+#---------------------------------
+# Additional > Packages > Install 
+#---------------------------------
+
+Pacs="build-essential"
+#Pacs="git"
+
+sudo apt-get install -y ${Pacs}
+
+
+#---------------------------------
+# Node.js > Install
+#---------------------------------
+# TODO:
+#
+# TODO: Add Version etc.
+#
+#---------------------------------
+./install_nodejs.sh
+
+
+# Install NPM Global Packages
+npm install -g forever
+
+
+#---------------------------------
+# App-User > Create
+#---------------------------------
+NAME=$1
+./user_app_create.sh ${NAME}
+
+
+#---------------------------------
+# TODO:
+# Install App Files
+#---------------------------------
+
+

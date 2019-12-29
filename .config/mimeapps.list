@@ -15,8 +15,10 @@ text/x-sql=gvim.desktop
 text/x-python=gvim.desktop
 text/x-sql=gvim.desktop
 application/x-perl=gvim.desktop
-application/octet-stream=gnumeric.desktop;gvim.desktop;
-application/pdf=pdfshuffler.desktop;evince.desktop;gvim.desktop;
+application/octet-stream=gvim.desktop;
+"#application/octet-stream=gnumeric.desktop;gvim.desktop;*/
+application/pdf=pdfshuffler.desktop;qpdfview.desktop;gvim.desktop;
+"#application/pdf=pdfshuffler.desktop;evince.desktop;gvim.desktop;
 application/json=google-chrome.desktop;
 
 

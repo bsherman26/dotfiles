@@ -65,6 +65,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'juvenn/mustache.vim'
 Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-dadbod'
 
 " File Explorers
 Plugin 'wincent/Command-T'

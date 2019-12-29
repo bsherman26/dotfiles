@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# TODO: This won't work as a script because cd only changes the working directory of the
+#       child shell. It could be sourced ect. Review:
+#           https://askubuntu.com/questions/481715/why-doesnt-cd-work-in-a-shell-script
+
+##echo $PWD
+##echo $(readlink -f $PWD)
+#dir=$(readlink -f $PWD)
+#echo $dir
+#cd "$dir"
+##cd $(readlink -f $PWD)

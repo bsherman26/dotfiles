@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ -r $2 ] && [ -x $2 ]; then
+    COM=`cat $2`
+    ssh -tt $1 "$COM"
+fi

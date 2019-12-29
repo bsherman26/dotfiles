@@ -1,0 +1,8 @@
+#!/bin/sh
+
+dpkg-query -W -f='${Installed-Size;8}  ${Package}\n' | sort -n
+
+#dpkg-query -W -f='${Installed-Size;8}  ${Package}\n' | sort -n | gvim -
+#dpkg-query -W -f='${Installed-Size;8}  ${Package}\n' | sort -n | less
+
+#dpkg-query -W -f='${Installed-Size;8}  ${Package}\n' | sort -n > app_sizes.txt

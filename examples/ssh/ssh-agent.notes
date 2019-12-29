@@ -1,0 +1,10 @@
+eval `ssh-agent -t 3600`
+ssh-add
+
+<<<WORK>>>
+
+ssh-agent -k
+
+# Just in Case
+sudo ps -e | grep ssh-agent
+kill <<Process-ID>>>
