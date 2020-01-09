@@ -14,16 +14,8 @@
 # TODO: Add tests for a correctly mounted filesystem.
 # TODO: Rewrite all of these as make tasks.
 # TODO: Add a task to "shread swap and tmp files etc."
-sudo rsync -aAXv \
-    --delete \
-    --one-file-system \
-    --exclude-from=dataExclude.txt \
-    --stats \
-    --dry-run \
-    ~/data/ ~/.backup/data
+sudo rsync -aAXv --delete --one-file-system --exclude-from=dataExclude.txt ~/data/ ~/.backup/data
 
-
-#sudo rsync -aAXv --delete --one-file-system --exclude-from=dataExclude.txt ~/data/ ~/.backup/data
 
 # Old Version
 #sudo rsync -aAXv --delete --one-file-system --exclude="/mongodb/journal/" ~/data/ ~/.backup/data

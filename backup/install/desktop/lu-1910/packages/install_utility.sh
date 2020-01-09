@@ -1,63 +1,54 @@
 #!/bin/bash
 
+#-----------------------------------------
 echo "Installing Utility"
-
-Pacs=""
-
 #-----------------------------------------
-# File Systems
-#-----------------------------------------
-Pacs="$Pacs exfat-fuse exfat-utils"       # Micro SD Cards etc.
-Pacs="$Pacs sshfs"                        # Filesystem client based on ssh
-Pacs="$Pacs s3ql"                         # File system for online data storage
-
-#-----------------------------------------
-# Command Line
-#-----------------------------------------
-Pacs="$Pacs tree"
-Pacs="$Pacs extundelete"
-
-#-----------------------------------------
-# PDF to DjVu + Recommended Dependencies (Command Line)
-#-----------------------------------------
-Pacs="$Pacs exiv2 graphicsmagick gettext pdf2djvu"
-
-#-----------------------------------------
-# GUI
-#-----------------------------------------
-Pacs="$Pacs xdiskusage"
-Pacs="$Pacs bleachbit"
-Pacs="$Pacs xsensors"
+#echo $(tmp=(
+sudo apt-get install -y $(tmp=(
 
 
-#-----------------------------------------
-# Install
-#-----------------------------------------
+    #-----------------------------------------
+    # File Systems
+    #-----------------------------------------
+    exfat-fuse           # exFat driver for FUSE (Micro SD Cards etc.)
+        exfat-utils
+    sshfs                # Filesystem client based on ssh
+    s3ql                 # File system for online data storage
 
-#echo $Pacs
+    #-----------------------------------------
+    # Command-Line
+    #-----------------------------------------
+    tree
+    extundelete
 
-sudo apt-get install -y $Pacs
+    #-----------------------------------------
+    # PDF to DjVu + Recommended Dependencies (Command Line)
+    #-----------------------------------------
+    exiv2 graphicsmagick gettext pdf2djvu
+
+    #-----------------------------------------
+    # GUI
+    #-----------------------------------------
+    xdiskusage
+    bleachbit
+    xsensors
 
 
+    #-----------------------------------------
+    # REMOVED
+    #-----------------------------------------
 
-#-----------------------------------------
-# REMOVED
-#-----------------------------------------
+    #lubi         # Linux Distro Installer???
+    #catfish      # GUI File Searching Tool
 
-#Pacs="$Pacs lubi"         # Linux Distro Installer???
-#Pacs="$Pacs catfish"      # GUI File Searching Tool
+    #-----------------------------------------
+    # REPLACED
+    #-----------------------------------------
 
-#-----------------------------------------
-# REPLACED
-#-----------------------------------------
+    #gparted
+    #lxterminal
 
-#Pacs="$Pacs gparted"
-#Pacs="$Pacs lxterminal"
+    #arandr       # Screen Config Utility
+    #numlockx     # Num Key Firing Utility
 
-#Pacs="$Pacs arandr"       # Screen Config Utility
-#Pacs="$Pacs numlockx"     # Num Key Firing Utility
-
-#-----------------------------------------
-# DEFAULT
-#-----------------------------------------
-
+); echo ${tmp[@]})

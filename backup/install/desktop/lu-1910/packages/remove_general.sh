@@ -1,36 +1,29 @@
 #!/bin/bash
 
+#-----------------------------------------
 echo "Removing Package Applications"
-
-Pacs=""
-
-Pacs="$Pacs 2048-qt"
-Pacs="$Pacs fcitx"                 # Flexible Input Method Framework
-Pacs="$Pacs trojita"               # IMAP e-mail client
-Pacs="$Pacs qtpass"                # Password Manager (Small)
-Pacs="$Pacs qlipper"               # Clipboard history applet (Small)
-
-# DEV
-#Pacs="$Pacs firefox"
-#Pacs="$Pacs compton"               # 3D GUI Composer
-#Pacs="$Pacs bluedevil"             # Bluetooth Manager
-#Pacs="$Pacs muon"                  # Package Manager GUI
-#Pacs="$Pacs k3b"                   # CD/DVD Burning
-
-#Pacs="$Pacs featherpad"            # Qt5 Plain Text Editor
-#Pacs="$Pacs lxqt-openssh-askpass"  # OpenSSH user/pw GUI dialog for LXQt
-
-
 #-----------------------------------------
-# Remove
-#-----------------------------------------
-
-#echo $Pacs
-
-sudo apt-get purge -y $Pacs
+#echo $(tmp=(
+#sudo apt-get purge $(tmp=(
+sudo apt-get purge -y $(tmp=(
 
 
+    2048-qt
+    #fcitx                 # TODO: (Maybe not???) Flexible Input Method Framework
+    trojita               # IMAP e-mail client
+    qtpass                # Password Manager (Small)
+    qlipper               # Clipboard history applet (Small)
 
-#-----------------------------------------
-# REMOVED
-#-----------------------------------------
+
+    # TODO: DEV
+
+    #firefox
+    #compton               # 3D GUI Composer
+    #bluedevil             # Bluetooth Manager
+    #muon                  # Package Manager GUI
+    #k3b                   # CD/DVD Burning
+
+    #featherpad            # Qt5 Plain Text Editor
+    #lxqt-openssh-askpass  # OpenSSH user/pw GUI dialog for LXQt
+
+); echo ${tmp[@]})

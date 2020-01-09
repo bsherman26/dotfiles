@@ -1,0 +1,48 @@
+#-------------------------------
+# BAS
+#-------------------------------
+
+
+The configuration files in this directory were copied from /etc/pulse/
+
+   - client.conf
+   - daemon.conf
+   - default.pa
+
+Available audio devices can be found using:
+
+    $> pacmd list-cards
+
+<<The line used below looked like this in the output:>>
+
+	sinks:
+		alsa_output.pci-0000_04_00.6.analog-stereo/#1: Family 17h (Models 10h-1fh) HD Audio Controller Analog Stereo
+	sources:
+
+
+#-------------------------------
+# Changes:
+#-------------------------------
+
+
+- client.conf
+    default-sink = alsa_output.pci-0000_04_00.6.analog-stereo
+        - This stopped the system from initializing to the
+          HDMI Monitor Speakers.
+
+
+- default.pa
+    load-module module-stream-restore restore_device=false
+
+        - This was also added to the /etc/pulse/ version, but now that
+          there are copies in /home/USER/.config/pulse/
+          it is probably better just to have this here and
+          leave the /default config file alone.
+
+        - This line was added because chrome was having issues connecting.
+
+
+- The below files were also manually edited:
+
+	- fa0bbddce1c94b4e9bf125e72df8fa8f-default-sink
+	- OLD.fa0bbddce1c94b4e9bf125e72df8fa8f-default-sink.OLD

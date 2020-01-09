@@ -1,0 +1,1939 @@
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libgsl-dev
+libgsl-dbg - GNU Scientific Library (GSL) -- debug symbols package
+libgsl-dev - GNU Scientific Library (GSL) -- development package
+libgsl23 - GNU Scientific Library (GSL) -- library package
+libgslcblas0 - GNU Scientific Library (GSL) -- blas library package
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libgsl-dev
+Package: libgsl-dev
+Architecture: amd64
+Version: 2.5+dfsg-6
+Priority: optional
+Section: universe/libdevel
+Source: gsl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 6692
+Provides: libgsl0-dev
+Depends: libgsl23 (= 2.5+dfsg-6), libgslcblas0 (= 2.5+dfsg-6)
+Conflicts: gsl-dev, libgsl0-dev
+Replaces: gsl-dev, libgsl0 (<= 1.9-4), libgsl0-dev (<= 1.16+dfsg-4)
+Filename: pool/universe/g/gsl/libgsl-dev_2.5+dfsg-6_amd64.deb
+Size: 1063796
+MD5sum: 4cf9585f3a95ef3f1a2337419e8c3846
+SHA1: 6c86ea0aba857a9f944d6a8476a399a014318b3d
+SHA256: 282cdd4bbb10e30e0180820fb0a418cce4a2d3966a451383ec1bd340a3fec07e
+Homepage: https://www.gnu.org/software/gsl
+Description-en: GNU Scientific Library (GSL) -- development package
+ The GNU Scientific Library (GSL) is a collection of routines for
+ numerical analysis.  The routines are written from scratch by the GSL
+ team in C, and present a modern API for C programmers, while allowing
+ wrappers to be written for very high level languages.
+ .
+ This package contains the header files, static libraries and symbolic
+ links that developers using GNU GSL will need.
+ .
+ URL: http://www.gnu.org/software/gsl/
+Description-md5: 9984710152cbbca3caf2c1e4e16ef6db
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libcurl4
+libcurl4 - easy-to-use client-side URL transfer library (OpenSSL flavour)
+libcurl4-doc - documentation for libcurl
+libcurl4-gnutls-dev - development files and documentation for libcurl (GnuTLS flavour)
+libcurl4-nss-dev - development files and documentation for libcurl (NSS flavour)
+libcurl4-openssl-dev - development files and documentation for libcurl (OpenSSL flavour)
+python-pycurl-doc - Python bindings to libcurl (documentation)
+python3-pycurl - Python bindings to libcurl (Python 3)
+python3-pycurl-dbg - Python bindings to libcurl (debug extension, Python 3)
+libwww-curl-perl - Perl bindings to libcurl
+python-pycurl - Python bindings to libcurl
+python-pycurl-dbg - Python bindings to libcurl (debug extension)
+tclcurl - Tcl bindings to libcurl
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libcurl4-gnutls-de
+v
+Package: libcurl4-gnutls-dev
+Architecture: amd64
+Version: 7.65.3-1ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: curl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1491
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 7.65.3-1ubuntu3)
+Suggests: libcurl4-doc, libgnutls28-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssh2-1-dev, pkg-confi
+g, zlib1g-dev
+Conflicts: libcurl4-nss-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-gnutls-dev_7.65.3-1ubuntu3_amd64.deb
+Size: 316008
+MD5sum: 446bfd2b59b1924afc1958aea4efdf88
+SHA1: f1949f3e7900180f35f26534238557a6ecdcd4c1
+SHA256: badeaa088c724cb9ba06b194a186532a551874b9718c48ce87daab03e53482a7
+Homepage: http://curl.haxx.se
+Description-en: development files and documentation for libcurl (GnuTLS flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses libcurl.
+ .
+ SSL support is provided by GnuTLS.
+Description-md5: a780e9fd64d55eccc7d421f6da7dc01d
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show zlib1g-dev
+Package: zlib1g-dev
+Architecture: amd64
+Version: 1:1.2.11.dfsg-1ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: zlib
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Mark Brown <broonie@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 429
+Provides: libz-dev
+Depends: zlib1g (= 1:1.2.11.dfsg-1ubuntu3), libc6-dev | libc-dev
+Conflicts: zlib1-dev
+Filename: pool/main/z/zlib/zlib1g-dev_1.2.11.dfsg-1ubuntu3_amd64.deb
+Size: 171572
+MD5sum: e64f44cd728b5afc30ab8bbb47d8f8d9
+SHA1: 726eedc05f3960de6a60f50020ef2a39119fdb11
+SHA256: 4220757a021a5ab67ef1edff655dc8aa8047f932d75a2c23c601cdc214bd9632
+Homepage: http://zlib.net/
+Description-en: compression library - development
+ zlib is a library implementing the deflate compression method found
+ in gzip and PKZIP.  This package includes the development support
+ files.
+Description-md5: d7f4e8a626131fc83c643c5d59096290
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libcurl4-gnutls-de
+v
+Package: libcurl4-gnutls-dev
+Architecture: amd64
+Version: 7.65.3-1ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: curl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1491
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 7.65.3-1ubuntu3)
+Suggests: libcurl4-doc, libgnutls28-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssh2-1-dev, pkg-confi
+g, zlib1g-dev
+Conflicts: libcurl4-nss-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-gnutls-dev_7.65.3-1ubuntu3_amd64.deb
+Size: 316008
+MD5sum: 446bfd2b59b1924afc1958aea4efdf88
+SHA1: f1949f3e7900180f35f26534238557a6ecdcd4c1
+SHA256: badeaa088c724cb9ba06b194a186532a551874b9718c48ce87daab03e53482a7
+Homepage: http://curl.haxx.se
+Description-en: development files and documentation for libcurl (GnuTLS flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses libcurl.
+ .
+ SSL support is provided by GnuTLS.
+Description-md5: a780e9fd64d55eccc7d421f6da7dc01d
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libcurl4
+libcurl4 - easy-to-use client-side URL transfer library (OpenSSL flavour)
+libcurl4-doc - documentation for libcurl
+libcurl4-gnutls-dev - development files and documentation for libcurl (GnuTLS flavour)
+libcurl4-nss-dev - development files and documentation for libcurl (NSS flavour)
+libcurl4-openssl-dev - development files and documentation for libcurl (OpenSSL flavour)
+python-pycurl-doc - Python bindings to libcurl (documentation)
+python3-pycurl - Python bindings to libcurl (Python 3)
+python3-pycurl-dbg - Python bindings to libcurl (debug extension, Python 3)
+libwww-curl-perl - Perl bindings to libcurl
+python-pycurl - Python bindings to libcurl
+python-pycurl-dbg - Python bindings to libcurl (debug extension)
+tclcurl - Tcl bindings to libcurl
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libgsl
+libgsl-dbg - GNU Scientific Library (GSL) -- debug symbols package
+libgsl-dev - GNU Scientific Library (GSL) -- development package
+libgsl23 - GNU Scientific Library (GSL) -- library package
+libgslcblas0 - GNU Scientific Library (GSL) -- blas library package
+libocamlgsl-ocaml - GNU scientific library for OCaml
+libocamlgsl-ocaml-dev - GNU scientific library for OCaml
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libgsl-dev
+Package: libgsl-dev
+Architecture: amd64
+Version: 2.5+dfsg-6
+Priority: optional
+Section: universe/libdevel
+Source: gsl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 6692
+Provides: libgsl0-dev
+Depends: libgsl23 (= 2.5+dfsg-6), libgslcblas0 (= 2.5+dfsg-6)
+Conflicts: gsl-dev, libgsl0-dev
+Replaces: gsl-dev, libgsl0 (<= 1.9-4), libgsl0-dev (<= 1.16+dfsg-4)
+Filename: pool/universe/g/gsl/libgsl-dev_2.5+dfsg-6_amd64.deb
+Size: 1063796
+MD5sum: 4cf9585f3a95ef3f1a2337419e8c3846
+SHA1: 6c86ea0aba857a9f944d6a8476a399a014318b3d
+SHA256: 282cdd4bbb10e30e0180820fb0a418cce4a2d3966a451383ec1bd340a3fec07e
+Homepage: https://www.gnu.org/software/gsl
+Description-en: GNU Scientific Library (GSL) -- development package
+ The GNU Scientific Library (GSL) is a collection of routines for
+ numerical analysis.  The routines are written from scratch by the GSL
+ team in C, and present a modern API for C programmers, while allowing
+ wrappers to be written for very high level languages.
+ .
+ This package contains the header files, static libraries and symbolic
+ links that developers using GNU GSL will need.
+ .
+ URL: http://www.gnu.org/software/gsl/
+Description-md5: 9984710152cbbca3caf2c1e4e16ef6db
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libcurl4-gnutls-de
+v
+Package: libcurl4-gnutls-dev
+Architecture: amd64
+Version: 7.65.3-1ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: curl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1491
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 7.65.3-1ubuntu3)
+Suggests: libcurl4-doc, libgnutls28-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssh2-1-dev, pkg-confi
+g, zlib1g-dev
+Conflicts: libcurl4-nss-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-gnutls-dev_7.65.3-1ubuntu3_amd64.deb
+Size: 316008
+MD5sum: 446bfd2b59b1924afc1958aea4efdf88
+SHA1: f1949f3e7900180f35f26534238557a6ecdcd4c1
+SHA256: badeaa088c724cb9ba06b194a186532a551874b9718c48ce87daab03e53482a7
+Homepage: http://curl.haxx.se
+Description-en: development files and documentation for libcurl (GnuTLS flavour)
+ libcurl is an easy-to-use client-side URL transfer library, supporting DICT,
+ FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S,
+ RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP
+ form based upload, proxies, cookies, user+password authentication (Basic,
+ Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling
+ and more!
+ .
+ libcurl is free, thread-safe, IPv6 compatible, feature rich, well supported,
+ fast, thoroughly documented and is already used by many known, big and
+ successful companies and numerous applications.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses libcurl.
+ .
+ SSL support is provided by GnuTLS.
+Description-md5: a780e9fd64d55eccc7d421f6da7dc01d
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libgsl-dev
+Package: libgsl-dev
+Architecture: amd64
+Version: 2.5+dfsg-6
+Priority: optional
+Section: universe/libdevel
+Source: gsl
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 6692
+Provides: libgsl0-dev
+Depends: libgsl23 (= 2.5+dfsg-6), libgslcblas0 (= 2.5+dfsg-6)
+Conflicts: gsl-dev, libgsl0-dev
+Replaces: gsl-dev, libgsl0 (<= 1.9-4), libgsl0-dev (<= 1.16+dfsg-4)
+Filename: pool/universe/g/gsl/libgsl-dev_2.5+dfsg-6_amd64.deb
+Size: 1063796
+MD5sum: 4cf9585f3a95ef3f1a2337419e8c3846
+SHA1: 6c86ea0aba857a9f944d6a8476a399a014318b3d
+SHA256: 282cdd4bbb10e30e0180820fb0a418cce4a2d3966a451383ec1bd340a3fec07e
+Homepage: https://www.gnu.org/software/gsl
+Description-en: GNU Scientific Library (GSL) -- development package
+ The GNU Scientific Library (GSL) is a collection of routines for
+ numerical analysis.  The routines are written from scratch by the GSL
+ team in C, and present a modern API for C programmers, while allowing
+ wrappers to be written for very high level languages.
+ .
+ This package contains the header files, static libraries and symbolic
+ links that developers using GNU GSL will need.
+ .
+ URL: http://www.gnu.org/software/gsl/
+Description-md5: 9984710152cbbca3caf2c1e4e16ef6db
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ i^C
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libglib
+gvfs-bin - userspace virtual filesystem - deprecated command-line tools
+libglib-object-introspection-perl - Perl bindings for gobject-introspection libraries
+libglib-perl - interface to the GLib and GObject libraries
+libglib2.0-0 - GLib library of C routines
+libglib2.0-bin - Programs for the GLib library
+libglib2.0-data - Common files for GLib library
+libglib2.0-dev - Development files for the GLib library
+libglib2.0-dev-bin - Development utilities for the GLib library
+libglib2.0-doc - Documentation files for the GLib library
+libglibmm-2.4-1v5 - C++ wrapper for the GLib toolkit (shared libraries)
+libglibmm-2.4-dev - C++ wrapper for the GLib toolkit (development files)
+libglibmm-2.4-doc - C++ wrapper for the GLib toolkit (documentation)
+libglib2.0-cil - CLI binding for the GLib utility library 2.12
+libglib2.0-cil-dev - CLI binding for the GLib utility library 2.12
+libglib2.0-tests - GLib library of C routines - installed tests
+libglib3.0-cil - CLI binding for the GLib library of C routines
+libglib3.0-cil-dev - CLI binding for the GLib utility library 2.12
+libglibd-2.0-0 - GLib library of C routines - D bindings
+libglibd-2.0-dev - GLib library of C routines - development files for D
+librust-glib-sys-dev - FFI bindings to libglib-2.0 - Rust source code
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libglib
+libglib2.0-0                       libglib2.0-dev-bin                 libglibd-2.0-dev
+libglib2.0-bin                     libglib2.0-doc                     libglibmm-2.4-1v5
+libglib2.0-cil                     libglib2.0-tests                   libglibmm-2.4-dev
+libglib2.0-cil-dev                 libglib3.0-cil                     libglibmm-2.4-doc
+libglib2.0-data                    libglib3.0-cil-dev                 libglib-object-introspection-perl
+libglib2.0-dev                     libglibd-2.0-0                     libglib-perl
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libglib2.0-dev
+Package: libglib2.0-dev
+Architecture: amd64
+Version: 2.62.1-1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: glib2.0
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 9733
+Depends: libffi-dev (>= 3.0.0), libglib2.0-0 (= 2.62.1-1), libglib2.0-bin (= 2.62.1-1), libglib2.0-dev-bin (= 2.62.1-1)
+, libmount-dev (>= 2.28), libpcre3-dev (>= 1:8.31), libselinux1-dev, pkg-config, zlib1g-dev
+Suggests: libgirepository1.0-dev (>= 1.62), libglib2.0-doc
+Breaks: libglib2.0-0-dbg (<< 2.51.4-1~)
+Replaces: libglib2.0-0-dbg (<< 2.51.4-1~)
+Filename: pool/main/g/glib2.0/libglib2.0-dev_2.62.1-1_amd64.deb
+Size: 1488008
+MD5sum: 690235d06d5714f020d58797a848565e
+SHA1: 2c14f19e09e512f11b076d53c240bed051816da6
+SHA256: 41ce6c40e831f85f7daaa25ac029eab41ec365a9c6dffa9af8cc366c30323826
+Homepage: http://www.gtk.org/
+Description-en: Development files for the GLib library
+ GLib is a library containing many useful C routines for things such
+ as trees, hashes, lists, and strings.  It is a useful general-purpose
+ C library used by projects such as GTK+, GIMP, and GNOME.
+ .
+ This package is needed to compile programs against libglib2.0-0,
+ as only it includes the header files and static libraries (optionally)
+ needed for compiling.
+ .
+ GObject-Introspection metadata for this library can be found in the
+ libgirepository1.0-dev package.
+Description-md5: f3b30cd579da1a2abb60728e46bbfb91
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libglib
+gvfs-bin - userspace virtual filesystem - deprecated command-line tools
+libglib-object-introspection-perl - Perl bindings for gobject-introspection libraries
+libglib-perl - interface to the GLib and GObject libraries
+libglib2.0-0 - GLib library of C routines
+libglib2.0-bin - Programs for the GLib library
+libglib2.0-data - Common files for GLib library
+libglib2.0-dev - Development files for the GLib library
+libglib2.0-dev-bin - Development utilities for the GLib library
+libglib2.0-doc - Documentation files for the GLib library
+libglibmm-2.4-1v5 - C++ wrapper for the GLib toolkit (shared libraries)
+libglibmm-2.4-dev - C++ wrapper for the GLib toolkit (development files)
+libglibmm-2.4-doc - C++ wrapper for the GLib toolkit (documentation)
+libglib2.0-cil - CLI binding for the GLib utility library 2.12
+libglib2.0-cil-dev - CLI binding for the GLib utility library 2.12
+libglib2.0-tests - GLib library of C routines - installed tests
+libglib3.0-cil - CLI binding for the GLib library of C routines
+libglib3.0-cil-dev - CLI binding for the GLib utility library 2.12
+libglibd-2.0-0 - GLib library of C routines - D bindings
+libglibd-2.0-dev - GLib library of C routines - development files for D
+librust-glib-sys-dev - FFI bindings to libglib-2.0 - Rust source code
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libglib2.0-dev
+Package: libglib2.0-dev
+Architecture: amd64
+Version: 2.62.1-1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: glib2.0
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 9733
+Depends: libffi-dev (>= 3.0.0), libglib2.0-0 (= 2.62.1-1), libglib2.0-bin (= 2.62.1-1), libglib2.0-dev-bin (= 2.62.1-1)
+, libmount-dev (>= 2.28), libpcre3-dev (>= 1:8.31), libselinux1-dev, pkg-config, zlib1g-dev
+Suggests: libgirepository1.0-dev (>= 1.62), libglib2.0-doc
+Breaks: libglib2.0-0-dbg (<< 2.51.4-1~)
+Replaces: libglib2.0-0-dbg (<< 2.51.4-1~)
+Filename: pool/main/g/glib2.0/libglib2.0-dev_2.62.1-1_amd64.deb
+Size: 1488008
+MD5sum: 690235d06d5714f020d58797a848565e
+SHA1: 2c14f19e09e512f11b076d53c240bed051816da6
+SHA256: 41ce6c40e831f85f7daaa25ac029eab41ec365a9c6dffa9af8cc366c30323826
+Homepage: http://www.gtk.org/
+Description-en: Development files for the GLib library
+ GLib is a library containing many useful C routines for things such
+ as trees, hashes, lists, and strings.  It is a useful general-purpose
+ C library used by projects such as GTK+, GIMP, and GNOME.
+ .
+ This package is needed to compile programs against libglib2.0-0,
+ as only it includes the header files and static libraries (optionally)
+ needed for compiling.
+ .
+ GObject-Introspection metadata for this library can be found in the
+ libgirepository1.0-dev package.
+Description-md5: f3b30cd579da1a2abb60728e46bbfb91
+Supported: 9m
+
+(reverse-i-search)`"': b=$(printf ^C%s (a,b,c))
+(reverse-i-search)`"': b=$(printf ^C%s (a,b,c))
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libsqlite3-dev
+libsqlite3-dev - SQLite 3 development files
+libsqlite0-dev - SQLite 2 development files
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libsqlite3-dev
+Package: libsqlite3-dev
+Architecture: amd64
+Version: 3.29.0-2ubuntu0.1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: sqlite3
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2265
+Depends: libsqlite3-0 (= 3.29.0-2ubuntu0.1), libc6-dev
+Suggests: sqlite3-doc
+Filename: pool/main/s/sqlite3/libsqlite3-dev_3.29.0-2ubuntu0.1_amd64.deb
+Size: 680392
+MD5sum: 7e60f0b215f01d13be0de5a407cfa9d5
+SHA1: 6864175c38d383cfad50b02fe821889d54fe16f8
+SHA256: b2357cab8342b91f23842384b3daee8fd39ff2ed5ff25c30763fcbbee6646514
+Homepage: https://www.sqlite.org/
+Description-en: SQLite 3 development files
+ SQLite is a C library that implements an SQL database engine.
+ Programs that link with the SQLite library can have SQL database
+ access without running a separate RDBMS process.
+ .
+ This package contains the development files (headers, static libraries)
+Description-md5: 6387c6fc4f6fed646a1e0a793253786e
+Supported: 9m
+
+Package: libsqlite3-dev
+Architecture: amd64
+Version: 3.29.0-2
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: sqlite3
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2265
+Depends: libsqlite3-0 (= 3.29.0-2), libc6-dev
+Suggests: sqlite3-doc
+Filename: pool/main/s/sqlite3/libsqlite3-dev_3.29.0-2_amd64.deb
+Size: 680232
+MD5sum: 95962529a4c70315c8fb3595d363837e
+SHA1: fb432267b83e723a59a21fa58b2a2a45208ec415
+SHA256: ca64ce9844ea9ccf15b924fa9f7427933c4595d43ffe27d26464cbe06d7d0486
+Homepage: https://www.sqlite.org/
+Description-en: SQLite 3 development files
+ SQLite is a C library that implements an SQL database engine.
+ Programs that link with the SQLite library can have SQL database
+ access without running a separate RDBMS process.
+ .
+ This package contains the development files (headers, static libraries)
+Description-md5: 6387c6fc4f6fed646a1e0a793253786e
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search ^C
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libxml2-dev
+libxml2-dev - Development files for the GNOME XML library
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libxml2-dev
+Package: libxml2-dev
+Architecture: amd64
+Version: 2.9.4+dfsg1-7ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: libxml2
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 3268
+Depends: libicu-dev, libxml2 (= 2.9.4+dfsg1-7ubuntu3)
+Suggests: pkg-config
+Filename: pool/main/libx/libxml2/libxml2-dev_2.9.4+dfsg1-7ubuntu3_amd64.deb
+Size: 718836
+MD5sum: e83270e2d3ba9279021efdf9767bc28c
+SHA1: 156266e3f313feac8eaab99d2f25852006417362
+SHA256: a46f82d2382e62752f92f8f1477fbbf128dc48321e3872bac90c0c79260e7bed
+Homepage: http://xmlsoft.org
+Description-en: Development files for the GNOME XML library
+ XML is a metalanguage to let you design your own markup language.
+ A regular markup language defines a way to describe information in
+ a certain class of documents (eg HTML). XML lets you define your
+ own customized markup languages for many classes of document. It
+ can do this because it's written in SGML, the international standard
+ metalanguage for markup languages.
+ .
+ Install this package if you wish to develop your own programs using
+ the GNOME XML library.
+Description-md5: 3fc5da551079ce5d27e8aae047e7a888
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libxml2
+Package: libxml2
+Architecture: amd64
+Version: 2.9.4+dfsg1-7ubuntu3
+Multi-Arch: same
+Priority: important
+Section: libs
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1846
+Depends: libc6 (>= 2.28), libicu63 (>= 63.1-1~), liblzma5 (>= 5.1.1alpha+20120614), zlib1g (>= 1:1.2.3.3)
+Filename: pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7ubuntu3_amd64.deb
+Size: 624592
+MD5sum: 0d404a6280368184d533de79e14b211e
+SHA1: dc2fa5b9037597db25fec268bdf0c9e10b834017
+SHA256: a31c7ac216c551eb646b34526949d59c1201d5785b3731a300034ae8d0681f42
+Homepage: http://xmlsoft.org
+Description-en: GNOME XML library
+ XML is a metalanguage to let you design your own markup language.
+ A regular markup language defines a way to describe information in
+ a certain class of documents (eg HTML). XML lets you define your
+ own customized markup languages for many classes of document. It
+ can do this because it's written in SGML, the international standard
+ metalanguage for markup languages.
+ .
+ This package provides a library providing an extensive API to handle
+ such XML data files.
+Description-md5: 6771e66f557fa0f71e6955303e1d8f8d
+Task: minimal, ubuntu-desktop-minimal-default-languages, ubuntu-desktop-minimal-default-languages, ubuntu-desktop-minim
+al-default-languages, ubuntu-desktop-minimal-default-languages, ubuntu-desktop-minimal-default-languages, ubuntu-deskto
+p-minimal-default-languages, ubuntu-desktop-minimal-default-languages, ubuntu-desktop-default-languages, ubuntu-desktop
+-default-languages, ubuntu-desktop-default-languages, ubuntu-desktop-default-languages, ubuntu-desktop-default-language
+s, ubuntu-desktop-default-languages, ubuntu-desktop-default-languages, ubuntu-desktop-default-languages
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libxml2
+gir1.2-freedesktop - Introspection data for some FreeDesktop components
+libcroco3 - Cascading Style Sheet (CSS) parsing and manipulation toolkit
+libcroco3-dev - Cascading Style Sheet (CSS) parsing and manipulation toolkit
+libxml++2.6-2v5 - C++ interface to the GNOME XML library (libxml2)
+libxml++2.6-dev - C++ interface to the GNOME XML library (libxml2) - dev files
+libxml++2.6-doc - HTML interface documentation and examples for libxml++
+libxml-libxml-perl - Perl interface to the libxml2 library
+libxml2 - GNOME XML library
+libxml2-dbg - Debugging symbols for the GNOME XML library
+libxml2-dev - Development files for the GNOME XML library
+libxml2-doc - Documentation for the GNOME XML library
+libxml2-utils - XML utilities
+python3-libxml2 - Python3 bindings for the GNOME XML library
+python3-libxml2-dbg - Python3 bindings for the GNOME XML library (debug extension)
+python3-lxml - pythonic binding for the libxml2 and libxslt libraries
+python3-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)
+cpm - Curses based password manager using PGP-encryption
+docbook-xml - standard XML documentation system for software and systems
+docbook5-xml - standard XML documentation system for software and systems
+libcroco-tools - Cascading Style Sheet (CSS) parsing and manipulation toolkit - utils
+libgdome2-0 - DOM level2 library for accessing XML files
+libgdome2-cpp-smart-dev - C++ bindings for GDome2 DOM implementation
+libgdome2-cpp-smart0v5 - C++ bindings for GDome2 DOM implementation
+libgdome2-dev - Development files for libgdome2
+libgdome2-ocaml - OCaml bindings for GDome2 DOM implementation
+libgdome2-ocaml-dev - OCaml bindings for GDome2 DOM implementation
+libghc-libxml-sax-dev - bindings for libXML2 SAX
+libghc-libxml-sax-doc - bindings for libXML2 SAX; documentation
+libghc-libxml-sax-prof - bindings for libXML2 SAX; profiling libraries
+libgtkmathview-bin - rendering engine for MathML documents
+libgtkmathview-dev - rendering engine for MathML documents
+libgtkmathview0c2a - rendering engine for MathML documents
+libui-gxmlcpp-dev - High-level C++ wrapper library for libxml2/libxslt (development)
+libui-gxmlcpp5v5 - High-level C++ wrapper library for libxml2/libxslt (run time)
+libxml-dom-xpath-perl - adds XPath support to XML::DOM, using XML::XPathEngine
+libxml-libxml-lazybuilder-perl - easy and lazy way to create XML documents for XML::LibXML
+libxml-rss-libxml-perl - module for creating, parsing, updating RSS files with XML::LibXML
+nd - small command line interface to WebDAV servers
+python-libxml2 - Python bindings for the GNOME XML library
+python-libxml2-dbg - Python bindings for the GNOME XML library (debug extension)
+python-lxml - pythonic binding for the libxml2 and libxslt libraries
+python-lxml-dbg - pythonic binding for the libxml2 and libxslt libraries (debug extension)
+python-lxml-doc - pythonic binding for the libxml2 and libxslt libraries (documentation)
+r-cran-xml2 - GNU R XML parser
+ruby-libxml - Ruby Bindings for LibXML2
+ruby-loofah - manipulation and transformation of HTML/XML documents and fragments
+ruby-xmlhash - parse a XML string into a ruby hash
+ruby-xmlhash-dbg - parse a XML string into a ruby hash (debug symbols)
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search ^C
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libsqlite
+libsqlite3-0 - SQLite 3 shared library
+libsqlite3-dev - SQLite 3 development files
+libreoffice-base-drivers - Database connectivity drivers for LibreOffice
+libsqlite-tcl - SQLite 2 Tcl bindings
+libsqlite0 - SQLite 2 shared library
+libsqlite0-dev - SQLite 2 development files
+libsqlite3-gst - SQLite bindings for GNU Smalltalk
+libsqlite3-mod-blobtoxy - SQLite3 extension module for read-only BLOB to X/Y mapping
+libsqlite3-mod-csvtable - SQLite3 extension module for read-only access to CSV files
+libsqlite3-mod-impexp - SQLite3 extension module for SQL script, XML, JSON and CSV import/export
+libsqlite3-mod-rasterlite2 - SQLite 3 module for huge raster coverages
+libsqlite3-mod-spatialite - Geospatial extension for SQLite - loadable module
+libsqlite3-mod-virtualpg - Loadable dynamic extension to both SQLite and SpatiaLite
+libsqlite3-mod-xpath - SQLite3 extension module for querying XML data with XPath
+libsqlite3-mod-zipfile - SQLite3 extension module for read-only access to ZIP files
+libsqlite3-ocaml - Embeddable SQL Database for OCaml Programs
+libsqlite3-ocaml-dev - Embeddable SQL Database for OCaml Programs
+libsqlite3-tcl - SQLite 3 Tcl bindings
+libsqliteodbc - ODBC driver for SQLite embedded database
+pidgin - graphical multi-protocol instant messaging client
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache show libsqlite3-dev
+Package: libsqlite3-dev
+Architecture: amd64
+Version: 3.29.0-2ubuntu0.1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: sqlite3
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2265
+Depends: libsqlite3-0 (= 3.29.0-2ubuntu0.1), libc6-dev
+Suggests: sqlite3-doc
+Filename: pool/main/s/sqlite3/libsqlite3-dev_3.29.0-2ubuntu0.1_amd64.deb
+Size: 680392
+MD5sum: 7e60f0b215f01d13be0de5a407cfa9d5
+SHA1: 6864175c38d383cfad50b02fe821889d54fe16f8
+SHA256: b2357cab8342b91f23842384b3daee8fd39ff2ed5ff25c30763fcbbee6646514
+Homepage: https://www.sqlite.org/
+Description-en: SQLite 3 development files
+ SQLite is a C library that implements an SQL database engine.
+ Programs that link with the SQLite library can have SQL database
+ access without running a separate RDBMS process.
+ .
+ This package contains the development files (headers, static libraries)
+Description-md5: 6387c6fc4f6fed646a1e0a793253786e
+Supported: 9m
+
+Package: libsqlite3-dev
+Architecture: amd64
+Version: 3.29.0-2
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: sqlite3
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2265
+Depends: libsqlite3-0 (= 3.29.0-2), libc6-dev
+Suggests: sqlite3-doc
+Filename: pool/main/s/sqlite3/libsqlite3-dev_3.29.0-2_amd64.deb
+Size: 680232
+MD5sum: 95962529a4c70315c8fb3595d363837e
+SHA1: fb432267b83e723a59a21fa58b2a2a45208ec415
+SHA256: ca64ce9844ea9ccf15b924fa9f7427933c4595d43ffe27d26464cbe06d7d0486
+Homepage: https://www.sqlite.org/
+Description-en: SQLite 3 development files
+ SQLite is a C library that implements an SQL database engine.
+ Programs that link with the SQLite library can have SQL database
+ access without running a separate RDBMS process.
+ .
+ This package contains the development files (headers, static libraries)
+Description-md5: 6387c6fc4f6fed646a1e0a793253786e
+Supported: 9m
+
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ apt-cache search libgtk
+gnome-accessibility-themes - High Contrast GTK+ 2 theme and icons
+gnome-themes-extra - Adwaita GTK+ 2 theme — engine
+gnome-themes-extra-data - Adwaita GTK+ 2 theme — common files
+libgdk-pixbuf2.0-doc - GDK Pixbuf library (documentation)
+libglib-object-introspection-perl - Perl bindings for gobject-introspection libraries
+libgtk-3-0 - GTK graphical user interface library
+libgtk-3-bin - programs for the GTK graphical user interface library
+libgtk-3-common - common files for the GTK graphical user interface library
+libgtk-3-dev - development files for the GTK library
+libgtk-3-doc - documentation for the GTK graphical user interface library
+libgtk2.0-0 - GTK graphical user interface library - old version
+libgtk2.0-bin - programs for the GTK graphical user interface library
+libgtk2.0-common - common files for the GTK graphical user interface library
+libgtk2.0-doc - documentation for the GTK graphical user interface library
+libgtk3-perl - Perl bindings for the GTK+ graphical user interface library
+libgtkmm-2.4-1v5 - C++ wrappers for GTK+ 2 (shared libraries)
+libgtkmm-2.4-doc - C++ wrappers for GTK+ 2 (documentation)
+libgtkmm-3.0-1v5 - C++ wrappers for GTK+ (shared libraries)
+libgtkmm-3.0-dev - C++ wrappers for GTK+ (development files)
+libgtkmm-3.0-doc - C++ wrappers for GTK+ (documentation)
+libgtksourceview-4-0 - shared libraries for the GTK+ syntax highlighting widget
+libgtksourceview-4-common - common files for the GTK+ syntax highlighting widget
+libgtksourceview-4-dev - development files for the GTK+ syntax highlighting widget
+libgtksourceview-4-doc - documentation for the GTK+ syntax highlighting widget
+gtk2-ex-formfactory-perl - Makes building complex GUI's easy (dummy package)
+libgtk-dotnet3.0-cil - GTK.NET library
+libgtk-dotnet3.0-cil-dev - GTK.NET library - development files
+libgtk-sharp-beans-cil - Supplementary CLI bindings for GTK 2.14+
+libgtk-sharp-beans2.0-cil-dev - Supplementary CLI bindings for GTK 2.14+ - development package
+libgtk-vnc-1.0-0 - VNC viewer widget for GTK+2 (runtime libraries)
+libgtk-vnc-1.0-dev - VNC viewer widget for GTK+2 (development files)
+libgtk-vnc-2.0-0 - VNC viewer widget for GTK+3 (runtime libraries)
+libgtk-vnc-2.0-dev - VNC viewer widget for GTK+3 (development files)
+libgtk2-ex-formfactory-perl - Makes building complex GUI's easy
+libgtk2-gst - GTK+ bindings and environment for GNU Smalltalk
+libgtk2-perl - Perl interface to the 2.x series of the Gimp Toolkit library
+libgtk2-perl-doc - Perl interface to the Gtk 2.x series (documentation files)
+libgtk2.0-cil - CLI binding for the GTK+ toolkit 2.12
+libgtk2.0-cil-dev - CLI binding for the GTK+ toolkit 2.12
+libgtk2.0-dev - development files for the GTK library
+libgtk3-nocsd0 - Library to disable Gtk+ 3 client side decorations (CSD)
+libgtk3-simplelist-perl - Perl simple interface to GTK+ 3's complex MVC list widget
+libgtk3-webkit2-perl - WebKit2 bindings for Perl
+libgtk3.0-cil - CLI binding for the GTK+ 3.0 toolkit
+libgtk3.0-cil-dev - CLI binding for the GTK+ toolkit 3.0
+libgtkada-bin - Ada binding for the GTK+ GUI (development utilities)
+libgtkada-doc - Ada binding for the GTK+ GUI (documentation)
+libgtkada18 - Ada binding for the GTK+ GUI (dynamic library)
+libgtkada18-dev - Ada binding for the GTK+ GUI (development files)
+libgtkd-3-0 - GTK+ graphical user interface library - D bindings
+libgtkd-3-dev - GTK+ graphical user interface library - development files for D
+libgtkdatabox-dev - Gtk+ library to display large amounts of numerical data (development)
+libgtkdatabox-doc - Gtk+ library to display large amounts of numerical data (API doc)
+libgtkdatabox0 - Gtk+ library to display large amounts of numerical data
+libgtkdatabox0-glade - Gtk+ library to display large amounts of numerical data (glade API)
+libgtkdatabox0-libglade - Gtk+ library to display large amounts of numerical data (glade lib)
+libgtkdsv-3-0 - GTK+ syntax highlighting widget - D bindings
+libgtkdsv-3-dev - GTK+ syntax highlighting widget - development files for D
+libgtkextra-3.0 - useful set of widgets for creating GUI's for GTK+
+libgtkextra-3.0-doc - documentation for libgtkextra-x11-3.0
+libgtkextra-dev - development files for libgtkextra-x11-3.0
+libgtkgl2.0-1 - OpenGL context support for GTK+ (shared libraries)
+libgtkgl2.0-dev - OpenGL context support for GTK+ (development files)
+libgtkglext1 - OpenGL Extension to GTK+ (shared libraries)
+libgtkglext1-dev - OpenGL Extension to GTK+ (development files)
+libgtkglext1-doc - OpenGL Extension to GTK+ (documentation)
+libgtkglextmm-x11-1.2-0v5 - C++ bindings for GtkGLExt (Shared libraries)
+libgtkglextmm-x11-1.2-dev - C++ bindings for GtkGLExt (Development files)
+libgtkglextmm-x11-1.2-doc - C++ bindings for GtkGLExt (Documentation)
+libgtkhex-3-0 - GNOME Hex editor for files (shared library)
+libgtkhex-3-dev - GNOME Hex editor for files (development headers)
+libgtkhotkey-dev - Gtk hotkey static libraries and headers
+libgtkhotkey1 - Gtk hotkey shared library
+libgtkimageview-dev - image viewer widget for GTK+ (development files)
+libgtkimageview0 - image viewer widget for GTK+
+libgtkmathview-bin - rendering engine for MathML documents
+libgtkmathview-dev - rendering engine for MathML documents
+libgtkmathview0c2a - rendering engine for MathML documents
+libgtkmm-2.4-dev - C++ wrappers for GTK+ 2 (development files)
+libgtkpod-dev - main library for the gtkpod package, development kit
+libgtkpod1 - main library for the gtkpod package, shared library
+libgtksourceview-3.0-1 - shared libraries for the GTK+ syntax highlighting widget
+libgtksourceview-3.0-common - common files for the GTK+ syntax highlighting widget
+libgtksourceview-3.0-dev - development files for the GTK+ syntax highlighting widget
+libgtksourceview-3.0-doc - documentation for the GTK+ syntax highlighting widget
+libgtksourceview2.0-0 - shared libraries for the GTK+ syntax highlighting widget
+libgtksourceview2.0-common - common files for the GTK+ syntax highlighting widget
+libgtksourceview2.0-dev - development files for the GTK+ syntax highlighting widget
+libgtksourceview2.0-doc - documentation for the GTK+ syntax highlighting widget
+libgtksourceviewmm-3.0-0v5 - C++ binding of GtkSourceView
+libgtksourceviewmm-3.0-dev - C++ binding of GtkSourceView - development files
+libgtksourceviewmm-3.0-doc - C++ binding of GtkSourceView
+libgtkspell-dev - Development files for GtkSpell
+libgtkspell0 - spell-checking addon for GTK's TextView widget
+libgtkspell3-3-0 - spell-checking addon for GTK+'s TextView widget
+libgtkspell3-3-dev - Development files for GtkSpell
+libgtkspellmm-3.0-0v5 - C++ wrapper library for GtkSpell (shared libraries)
+libgtkspellmm-3.0-dev - C++ wrapper library for GtkSpell (development files)
+libgtkspellmm-3.0-doc - C++ wrappers for GtkSpell (documentation)
+liblablgtkmathview-ocaml - OCaml bindings for libgtkmathview (runtime)
+liblablgtkmathview-ocaml-dev - OCaml bindings for libgtkmathview, a GTK widget to render MathML
+liblablgtksourceview2-ocaml - OCaml bindings for libgtksourceview2 (runtime)
+liblablgtksourceview2-ocaml-dev - OCaml bindings for libgtksourceview2, a source editor GTK+ widget
+liblablgtksourceview3-ocaml - OCaml bindings for libgtksourceview3 (runtime)
+liblablgtksourceview3-ocaml-dev - OCaml bindings for libgtksourceview3 (development files)
+liblablgtkspell3-ocaml - OCaml bindings for libgtkspell3 (runtime)
+liblablgtkspell3-ocaml-dev - OCaml bindings for libgtkspell3 (development files)
+librust-gtk-sys-dev - FFI bindings to libgtk-3 - Rust source code
+librust-pangocairo-sys-dev - FFI bindings to libgtk-3 - Rust source code
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ ./install-pacs.^C
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910$ cd packages/
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ls
+install_dev.sh    install_general.sh  install_mongodb.sh  install_office.sh  install_redis.sh  install_utility.sh
+install_extra.sh  install_lua.sh      install_node.sh     install_python.sh  install_ruby.sh   remove_general.sh
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ./install_dev.sh 
+Installing Dev
+build-essential libssl-dev terminator git gitk vim-gtk3 ctags gdb gdb-doc pkg-config autoconf automake libtool liblua5.
+3-dev lua-luv-dev libuv1 libuv1-dev sphinx-doc libmongoc-1.0-0 libhiredis-dev flex flex-doc bison bison-doc libbison-de
+v libgtk-3-dev libgtk-3-doc libgtkextra-3.0 libgtkextra-3.0-doc libgtkextra-dev libglib2.0-dev libglib2.0-doc libgsl-de
+v libgsl23 libgsl-dbg libcurl4-gnutls-dev libcurl4-doc libgnutls28-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-de
+v libssh2-1-dev libsqlite3-dev sqlite3-doc libxml2-dev libxml2-doc - Documentation for the GNOME XML library libxml2-db
+g - Debugging symbols for the GNOME XML library libxml2-utils - XML utilities texinfo-doc-nonfree info2man dia sqlitebr
+owser
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ./install_dev.sh 
+Installing Dev
+build-essential libssl-dev terminator git gitk vim-gtk3 ctags gdb gdb-doc pkg-config autoconf automake libtool liblua5.
+3-dev lua-luv-dev libuv1 libuv1-dev sphinx-doc libmongoc-1.0-0 libhiredis-dev flex flex-doc bison bison-doc libbison-de
+v libgtk-3-dev libgtk-3-doc libgtkextra-3.0 libgtkextra-3.0-doc libgtkextra-dev libglib2.0-dev libglib2.0-doc libgsl-de
+v libgsl23 libgsl-dbg libcurl4-gnutls-dev libcurl4-doc libgnutls28-dev libidn11-dev libkrb5-dev libldap2-dev librtmp-de
+v libssh2-1-dev libsqlite3-dev sqlite3-doc libxml2-dev libxml2-doc libxml2-dbg libxml2-utils texinfo-doc-nonfree info2m
+an dia sqlitebrowser
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ./install_dev.sh 
+Installing Dev
+[sudo] password for brian: 
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ update.sh 
+[sudo] password for brian: 
+Get:1 http://security.ubuntu.com/ubuntu eoan-security InRelease [97.5 kB]
+Ign:2 http://dl.google.com/linux/chrome/deb stable InRelease                                                    
+Hit:3 http://us.archive.ubuntu.com/ubuntu eoan InRelease                                                        
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan-updates InRelease [97.5 kB]                 
+Ign:5 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 InRelease                                            
+Hit:6 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 Release                                              
+Get:7 http://us.archive.ubuntu.com/ubuntu eoan-backports InRelease [88.8 kB]    
+Hit:8 http://dl.google.com/linux/chrome/deb stable Release
+Get:9 http://security.ubuntu.com/ubuntu eoan-security/main amd64 Packages [109 kB]
+Get:11 http://security.ubuntu.com/ubuntu eoan-security/main Translation-en [37.4 kB]
+Get:12 http://security.ubuntu.com/ubuntu eoan-security/main amd64 DEP-11 Metadata [204 B]
+Get:13 http://security.ubuntu.com/ubuntu eoan-security/restricted amd64 Packages [7,924 B]
+Get:14 http://security.ubuntu.com/ubuntu eoan-security/restricted Translation-en [1,440 B]
+Get:15 http://security.ubuntu.com/ubuntu eoan-security/universe Translation-en [24.4 kB]
+Get:16 http://security.ubuntu.com/ubuntu eoan-security/universe amd64 DEP-11 Metadata [1,672 B]
+Get:17 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 Packages [159 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 DEP-11 Metadata [60.2 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu eoan-updates/main DEP-11 48x48 Icons [9,949 B]
+Get:20 http://us.archive.ubuntu.com/ubuntu eoan-updates/main DEP-11 64x64 Icons [15.1 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu eoan-updates/main DEP-11 128x128 Icons [34.8 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu eoan-updates/universe amd64 DEP-11 Metadata [25.9 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu eoan-updates/universe DEP-11 48x48 Icons [18.5 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu eoan-updates/universe DEP-11 64x64 Icons [22.9 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu eoan-updates/universe DEP-11 128x128 Icons [70.9 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu eoan-backports/universe amd64 DEP-11 Metadata [7,752 B]
+Fetched 891 kB in 1s (990 kB/s)                                           
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  linux-generic linux-headers-generic linux-image-generic
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Del linux-headers-generic 5.3.0.24.28 [2,508 B]
+Del linux-image-generic 5.3.0.24.28 [2,552 B]
+Del linux-signed-generic 5.3.0.24.28 [1,896 B]
+Del linux-libc-dev 5.3.0-24.26 [1,096 kB]
+Del linux-generic 5.3.0.24.28 [1,860 B]
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ sudo apt-get install lin
+ux-image-generic 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  linux-generic linux-headers-5.3.0-26 linux-headers-5.3.0-26-generic linux-headers-generic
+  linux-image-5.3.0-26-generic linux-modules-5.3.0-26-generic linux-modules-extra-5.3.0-26-generic
+Suggested packages:
+  fdutils linux-doc-5.3.0 | linux-source-5.3.0 linux-tools
+The following NEW packages will be installed:
+  linux-headers-5.3.0-26 linux-headers-5.3.0-26-generic linux-image-5.3.0-26-generic linux-modules-5.3.0-26-generic
+  linux-modules-extra-5.3.0-26-generic
+The following packages will be upgraded:
+  linux-generic linux-headers-generic linux-image-generic
+3 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/73.2 MB of archives.
+After this operation, 356 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Selecting previously unselected package linux-modules-5.3.0-26-generic.
+(Reading database ... 288388 files and directories currently installed.)
+Preparing to unpack .../0-linux-modules-5.3.0-26-generic_5.3.0-26.28_amd64.deb ...
+Unpacking linux-modules-5.3.0-26-generic (5.3.0-26.28) ...
+Selecting previously unselected package linux-image-5.3.0-26-generic.
+Preparing to unpack .../1-linux-image-5.3.0-26-generic_5.3.0-26.28_amd64.deb ...
+Unpacking linux-image-5.3.0-26-generic (5.3.0-26.28) ...
+Selecting previously unselected package linux-modules-extra-5.3.0-26-generic.
+Preparing to unpack .../2-linux-modules-extra-5.3.0-26-generic_5.3.0-26.28_amd64.deb ...
+Unpacking linux-modules-extra-5.3.0-26-generic (5.3.0-26.28) ...
+Preparing to unpack .../3-linux-generic_5.3.0.26.30_amd64.deb ...
+Unpacking linux-generic (5.3.0.26.30) over (5.3.0.24.28) ...
+Preparing to unpack .../4-linux-image-generic_5.3.0.26.30_amd64.deb ...
+Unpacking linux-image-generic (5.3.0.26.30) over (5.3.0.24.28) ...
+Selecting previously unselected package linux-headers-5.3.0-26.
+Preparing to unpack .../5-linux-headers-5.3.0-26_5.3.0-26.28_all.deb ...
+Unpacking linux-headers-5.3.0-26 (5.3.0-26.28) ...
+Selecting previously unselected package linux-headers-5.3.0-26-generic.
+Preparing to unpack .../6-linux-headers-5.3.0-26-generic_5.3.0-26.28_amd64.deb ...
+Unpacking linux-headers-5.3.0-26-generic (5.3.0-26.28) ...
+Preparing to unpack .../7-linux-headers-generic_5.3.0.26.30_amd64.deb ...
+Unpacking linux-headers-generic (5.3.0.26.30) over (5.3.0.24.28) ...
+Setting up linux-headers-5.3.0-26 (5.3.0-26.28) ...
+Setting up linux-modules-5.3.0-26-generic (5.3.0-26.28) ...
+Setting up linux-headers-5.3.0-26-generic (5.3.0-26.28) ...
+Setting up linux-headers-generic (5.3.0.26.30) ...
+Setting up linux-image-5.3.0-26-generic (5.3.0-26.28) ...
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-5.3.0-24-generic
+I: /boot/initrd.img.old is now a symlink to initrd.img-5.3.0-24-generic
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.3.0-26-generic
+I: /boot/initrd.img is now a symlink to initrd.img-5.3.0-26-generic
+Setting up linux-modules-extra-5.3.0-26-generic (5.3.0-26.28) ...
+Setting up linux-image-generic (5.3.0.26.30) ...
+Setting up linux-generic (5.3.0.26.30) ...
+Processing triggers for linux-image-5.3.0-26-generic (5.3.0-26.28) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.3.0-26-generic
+W: Possible missing firmware /lib/firmware/amdgpu/vega20_ta.bin for module amdgpu
+W: Possible missing firmware /lib/firmware/amdgpu/navi10_mes.bin for module amdgpu
+I: The initramfs will attempt to resume from /dev/sda5
+I: (UUID=540e8b94-6008-44db-a982-02b8cea36ba9)
+I: Set the RESUME variable to override this.
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.3.0-26-generic
+Found initrd image: /boot/initrd.img-5.3.0-26-generic
+Found linux image: /boot/vmlinuz-5.3.0-24-generic
+Found initrd image: /boot/initrd.img-5.3.0-24-generic
+Found linux image: /boot/vmlinuz-5.3.0-18-generic
+Found initrd image: /boot/initrd.img-5.3.0-18-generic
+Adding boot menu entry for EFI firmware configuration
+done
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ update.sh 
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu eoan InRelease                                      
+Hit:3 http://security.ubuntu.com/ubuntu eoan-security InRelease                               
+Hit:4 http://dl.google.com/linux/chrome/deb stable Release                                    
+Hit:5 http://us.archive.ubuntu.com/ubuntu eoan-updates InRelease        
+Ign:6 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 InRelease
+Hit:7 http://us.archive.ubuntu.com/ubuntu eoan-backports InRelease
+Hit:8 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 Release
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  linux-headers-5.3.0-18 linux-headers-5.3.0-18-generic linux-image-5.3.0-18-generic linux-modules-5.3.0-18-generic
+  linux-modules-extra-5.3.0-18-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  linux-headers-5.3.0-18 linux-headers-5.3.0-18-generic linux-image-5.3.0-18-generic linux-modules-5.3.0-18-generic
+  linux-modules-extra-5.3.0-18-generic
+0 upgraded, 0 newly installed, 5 to remove and 0 not upgraded.
+After this operation, 356 MB disk space will be freed.
+(Reading database ... 324715 files and directories currently installed.)
+Removing linux-headers-5.3.0-18-generic (5.3.0-18.19) ...
+Removing linux-headers-5.3.0-18 (5.3.0-18.19) ...
+Removing linux-modules-extra-5.3.0-18-generic (5.3.0-18.19) ...
+Removing linux-image-5.3.0-18-generic (5.3.0-18.19+1) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-5.3.0-18-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.3.0-26-generic
+Found initrd image: /boot/initrd.img-5.3.0-26-generic
+Found linux image: /boot/vmlinuz-5.3.0-24-generic
+Found initrd image: /boot/initrd.img-5.3.0-24-generic
+Adding boot menu entry for EFI firmware configuration
+done
+Removing linux-modules-5.3.0-18-generic (5.3.0-18.19) ...
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ update.sh 
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu eoan InRelease                                                              
+Ign:3 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 InRelease                                            
+Hit:4 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 Release                          
+Hit:5 http://us.archive.ubuntu.com/ubuntu eoan-updates InRelease                                  
+Hit:6 http://dl.google.com/linux/chrome/deb stable Release                                        
+Hit:7 http://us.archive.ubuntu.com/ubuntu eoan-backports InRelease
+Hit:8 http://security.ubuntu.com/ubuntu eoan-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ./install_dev.sh 
+Installing Dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'exuberant-ctags' instead of 'ctags'
+autoconf is already the newest version (2.69-11ubuntu1).
+automake is already the newest version (1:1.16.1-4ubuntu3).
+bison is already the newest version (2:3.4.1+dfsg-4).
+bison-doc is already the newest version (1:3.4.1+repack-1ubuntu1).
+build-essential is already the newest version (12.8ubuntu1).
+exuberant-ctags is already the newest version (1:5.9~svn20110310-12).
+flex is already the newest version (2.6.4-6.2).
+flex-doc is already the newest version (2.6.4-6.2).
+gdb is already the newest version (8.3-0ubuntu1).
+gdb-doc is already the newest version (8.3-0ubuntu1).
+libbison-dev is already the newest version (2:3.4.1+dfsg-4).
+libcurl4-doc is already the newest version (7.65.3-1ubuntu3).
+libcurl4-gnutls-dev is already the newest version (7.65.3-1ubuntu3).
+libglib2.0-dev is already the newest version (2.62.1-1).
+libglib2.0-doc is already the newest version (2.62.1-1).
+liblua5.3-dev is already the newest version (5.3.3-1.1ubuntu1).
+libssl-dev is already the newest version (1.1.1c-1ubuntu4).
+libtool is already the newest version (2.4.6-11).
+libuv1 is already the newest version (1.30.1-1).
+libuv1-dev is already the newest version (1.30.1-1).
+libxml2-dev is already the newest version (2.9.4+dfsg1-7ubuntu3).
+pkg-config is already the newest version (0.29.1-0ubuntu3).
+sphinx-doc is already the newest version (1.8.5-3).
+texinfo-doc-nonfree is already the newest version (6.6.0-2).
+dia is already the newest version (0.97.3+git20160930-8.1).
+info2man is already the newest version (1.1-9).
+libgsl-dev is already the newest version (2.5+dfsg-6).
+libgsl23 is already the newest version (2.5+dfsg-6).
+libgsl23 set to manually installed.
+libhiredis-dev is already the newest version (0.14.0-3).
+libmongoc-1.0-0 is already the newest version (1.15.0-1).
+lua-luv-dev is already the newest version (1.9.1-0-2).
+sqlitebrowser is already the newest version (3.11.2-1).
+terminator is already the newest version (1.91-4).
+vim-gtk3 is already the newest version (2:8.1.0875-5ubuntu2).
+git is already the newest version (1:2.20.1-2ubuntu1.19.10.1).
+libsqlite3-dev is already the newest version (3.29.0-2ubuntu0.1).
+sqlite3-doc is already the newest version (3.29.0-2ubuntu0.1).
+gitk is already the newest version (1:2.20.1-2ubuntu1.19.10.1).
+The following additional packages will be installed:
+  comerr-dev gir1.2-atspi-2.0 gir1.2-harfbuzz-0.0 krb5-multidev libatk-bridge2.0-dev libatk1.0-dev libatk1.0-doc
+  libatspi2.0-dev libcairo-script-interpreter2 libcairo2-dev libdbus-1-dev libdrm-dev libegl1-mesa-dev libepoxy-dev
+  libfontconfig1-dev libfreetype6-dev libfribidi-dev libgcrypt20-dev libgdk-pixbuf2.0-dev libgl1-mesa-dev libgles1
+  libglvnd-core-dev libglvnd-dev libgmp-dev libgmpxx4ldbl libgnutls-dane0 libgnutls-openssl27 libgnutlsxx28
+  libgpg-error-dev libgraphite2-dev libgssrpc4 libharfbuzz-dev libharfbuzz-gobject0 libice-dev libidn2-dev
+  libkadm5clnt-mit11 libkadm5srv-mit11 libkdb5-9 libopengl0 libp11-kit-dev libpango1.0-dev libpango1.0-doc
+  libpixman-1-dev libpng-dev libpng-tools libpthread-stubs0-dev libsm-dev libtasn1-6-dev libtasn1-doc libunbound8
+  libwayland-bin libwayland-dev libx11-dev libx11-xcb-dev libxau-dev libxcb-dri2-0-dev libxcb-dri3-dev
+  libxcb-glx0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-shape0-dev libxcb-shm0-dev
+  libxcb-sync-dev libxcb-xfixes0-dev libxcb1-dev libxcomposite-dev libxcursor-dev libxdamage-dev libxdmcp-dev
+  libxext-dev libxfixes-dev libxft-dev libxi-dev libxinerama-dev libxkbcommon-dev libxrandr-dev libxrender-dev
+  libxshmfence-dev libxtst-dev libxxf86vm-dev mesa-common-dev nettle-dev pango1.0-tools wayland-protocols
+  x11proto-composite-dev x11proto-core-dev x11proto-damage-dev x11proto-dev x11proto-fixes-dev x11proto-input-dev
+  x11proto-randr-dev x11proto-record-dev x11proto-xext-dev x11proto-xf86vidmode-dev x11proto-xinerama-dev
+  xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  doc-base krb5-doc devhelp libcairo2-doc freetype2-doc libgcrypt20-doc gmp-doc libgmp10-doc libmpfr-dev gnutls-bin
+  gnutls-doc libgraphite2-utils krb5-user libice-doc libsm-doc libwayland-doc libx11-doc libxcb-doc libxext-doc
+The following NEW packages will be installed:
+  comerr-dev gir1.2-atspi-2.0 gir1.2-harfbuzz-0.0 krb5-multidev libatk-bridge2.0-dev libatk1.0-dev libatk1.0-doc
+  libatspi2.0-dev libcairo-script-interpreter2 libcairo2-dev libdbus-1-dev libdrm-dev libegl1-mesa-dev libepoxy-dev
+  libfontconfig1-dev libfreetype6-dev libfribidi-dev libgcrypt20-dev libgdk-pixbuf2.0-dev libgl1-mesa-dev libgles1
+  libglvnd-core-dev libglvnd-dev libgmp-dev libgmpxx4ldbl libgnutls-dane0 libgnutls-openssl27 libgnutls28-dev
+  libgnutlsxx28 libgpg-error-dev libgraphite2-dev libgsl-dbg libgssrpc4 libgtk-3-dev libgtk-3-doc libgtkextra-3.0
+  libgtkextra-3.0-doc libgtkextra-dev libharfbuzz-dev libharfbuzz-gobject0 libice-dev libidn11-dev libidn2-dev
+  libkadm5clnt-mit11 libkadm5srv-mit11 libkdb5-9 libkrb5-dev libldap2-dev libopengl0 libp11-kit-dev libpango1.0-dev
+  libpango1.0-doc libpixman-1-dev libpng-dev libpng-tools libpthread-stubs0-dev librtmp-dev libsm-dev libssh2-1-dev
+  libtasn1-6-dev libtasn1-doc libunbound8 libwayland-bin libwayland-dev libx11-dev libx11-xcb-dev libxau-dev
+  libxcb-dri2-0-dev libxcb-dri3-dev libxcb-glx0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev
+  libxcb-shape0-dev libxcb-shm0-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb1-dev libxcomposite-dev libxcursor-dev
+  libxdamage-dev libxdmcp-dev libxext-dev libxfixes-dev libxft-dev libxi-dev libxinerama-dev libxkbcommon-dev
+  libxml2-dbg libxml2-doc libxml2-utils libxrandr-dev libxrender-dev libxshmfence-dev libxtst-dev libxxf86vm-dev
+  mesa-common-dev nettle-dev pango1.0-tools wayland-protocols x11proto-composite-dev x11proto-core-dev
+  x11proto-damage-dev x11proto-dev x11proto-fixes-dev x11proto-input-dev x11proto-randr-dev x11proto-record-dev
+  x11proto-xext-dev x11proto-xf86vidmode-dev x11proto-xinerama-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 113 newly installed, 0 to remove and 0 not upgraded.
+Need to get 23.0 MB of archives.
+After this operation, 120 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 gir1.2-atspi-2.0 amd64 2.34.0-2 [15.1 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 gir1.2-harfbuzz-0.0 amd64 2.6.1-3 [26.4 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgssrpc4 amd64 1.17-6 [55.3 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libkdb5-9 amd64 1.17-6 [37.3 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libkadm5srv-mit11 amd64 1.17-6 [49.4 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libkadm5clnt-mit11 amd64 1.17-6 [37.7 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 comerr-dev amd64 2.1-1.45.3-4ubuntu2 [40.5 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 krb5-multidev amd64 1.17-6 [120 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libdbus-1-dev amd64 1.12.14-1ubuntu2 [166 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-dev all 2018.4-4 [251 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-core-dev all 2018.4-4 [2,620 B]
+Get:13 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxau-dev amd64 1:1.0.9-0ubuntu1 [9,552 B]
+Get:14 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu1 [25.3 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-input-dev all 2018.4-4 [2,620 B]
+Get:16 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 xtrans-dev all 1.3.5-1build1 [70.7 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5,384 B]
+Get:18 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb1-dev amd64 1.13.1-2 [79.9 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libx11-dev amd64 2:1.6.8-1 [645 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-xext-dev all 2018.4-4 [2,620 B]
+Get:21 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxext-dev amd64 2:1.3.4-0ubuntu1 [82.2 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-fixes-dev all 1:2018.4-4 [2,620 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxfixes-dev amd64 1:5.0.3-1 [11.0 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxi-dev amd64 2:1.7.10-0ubuntu1 [187 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-record-dev all 2018.4-4 [2,620 B]
+Get:26 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxtst-dev amd64 2:1.2.3-1 [15.2 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libatspi2.0-dev amd64 2.34.0-2 [66.5 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libatk-bridge2.0-dev amd64 2.34.0-3 [3,104 B]
+Get:29 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libatk1.0-dev amd64 2.34.0-1 [92.4 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libatk1.0-doc all 2.34.0-1 [97.0 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libcairo-script-interpreter2 amd64 1.16.0-4 [53.8 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpng-dev amd64 1.6.37-1 [176 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libfreetype6-dev amd64 2.9.1-4 [496 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libfontconfig1-dev amd64 2.13.1-2ubuntu2 [732 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxrender-dev amd64 1:0.9.10-1 [24.9 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libice-dev amd64 2:1.0.10-0ubuntu1 [47.8 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libsm-dev amd64 2:1.2.3-1 [17.0 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpixman-1-dev amd64 0.38.4-0ubuntu1 [243 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-render0-dev amd64 1.13.1-2 [18.4 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-shm0-dev amd64 1.13.1-2 [6,656 B]
+Get:41 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libcairo2-dev amd64 1.16.0-4 [626 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libdrm-dev amd64 2.4.99-1ubuntu1 [125 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 mesa-common-dev amd64 19.2.1-1ubuntu1 [660 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libglvnd-core-dev amd64 1.1.1-0ubuntu1 [12.6 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgles1 amd64 1.1.1-0ubuntu1 [12.0 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libopengl0 amd64 1.1.1-0ubuntu1 [31.0 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libglvnd-dev amd64 1.1.1-0ubuntu1 [3,396 B]
+Get:48 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-xf86vidmode-dev all 2018.4-4 [2,632 B]
+Get:49 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxxf86vm-dev amd64 1:1.1.4-1build1 [13.3 kB]
+Get:50 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-damage-dev all 1:2018.4-4 [2,620 B]
+Get:51 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxdamage-dev amd64 1:1.1.5-1 [5,232 B]
+Get:52 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-glx0-dev amd64 1.13.1-2 [27.9 kB]
+Get:53 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-dri2-0-dev amd64 1.13.1-2 [8,460 B]
+Get:54 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-dri3-dev amd64 1.13.1-2 [7,352 B]
+Get:55 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-randr0-dev amd64 1.13.1-2 [20.4 kB]
+Get:56 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-shape0-dev amd64 1.13.1-2 [7,136 B]
+Get:57 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-xfixes0-dev amd64 1.13.1-2 [11.6 kB]
+Get:58 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-sync-dev amd64 1.13.1-2 [10.6 kB]
+Get:59 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-present-dev amd64 1.13.1-2 [6,972 B]
+Get:60 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxshmfence-dev amd64 1.3-1 [3,692 B]
+Get:61 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libx11-xcb-dev amd64 2:1.6.8-1 [9,800 B]
+Get:62 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libwayland-bin amd64 1.17.0-1 [20.0 kB]
+Get:63 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libwayland-dev amd64 1.17.0-1 [63.3 kB]
+Get:64 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libegl1-mesa-dev amd64 19.2.1-1ubuntu1 [20.3 kB]
+Get:65 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgl1-mesa-dev amd64 19.2.1-1ubuntu1 [6,176 B]
+Get:66 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libepoxy-dev amd64 1.5.3-0.1 [123 kB]
+Get:67 http://us.archive.ubuntu.com/ubuntu eoan-updates/main amd64 libfribidi-dev amd64 1.0.5-3.1ubuntu0.19.10.1 [62.5 
+kB]
+Get:68 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgpg-error-dev amd64 1.36-7 [108 kB]
+Get:69 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgcrypt20-dev amd64 1.8.4-5ubuntu2 [470 kB]
+Get:70 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgdk-pixbuf2.0-dev amd64 2.40.0+dfsg-1build1 [43.6 kB]
+Get:71 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgmpxx4ldbl amd64 2:6.1.2+dfsg-4 [9,096 B]
+Get:72 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgmp-dev amd64 2:6.1.2+dfsg-4 [312 kB]
+Get:73 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgnutls-openssl27 amd64 3.6.9-5ubuntu1 [25.4 kB]
+Get:74 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libunbound8 amd64 1.9.0-2ubuntu1 [346 kB]
+Get:75 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgnutls-dane0 amd64 3.6.9-5ubuntu1 [25.1 kB]
+Get:76 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgnutlsxx28 amd64 3.6.9-5ubuntu1 [14.7 kB]
+Get:77 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libidn2-dev amd64 2.2.0-2 [64.6 kB]
+Get:78 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libp11-kit-dev amd64 0.23.17-2 [64.2 kB]
+Get:79 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libtasn1-6-dev amd64 4.14-3 [88.9 kB]
+Get:80 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 nettle-dev amd64 3.4.1-1 [955 kB]
+Get:81 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgnutls28-dev amd64 3.6.9-5ubuntu1 [821 kB]
+Get:82 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgraphite2-dev amd64 1.3.13-8 [14.7 kB]
+Get:83 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libharfbuzz-gobject0 amd64 2.6.1-3 [20.4 kB]
+Get:84 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libharfbuzz-dev amd64 2.6.1-3 [504 kB]
+Get:85 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxft-dev amd64 2.3.3-0ubuntu1 [49.1 kB]
+Get:86 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 pango1.0-tools amd64 1.42.4-7 [24.1 kB]
+Get:87 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpango1.0-dev amd64 1.42.4-7 [118 kB]
+Get:88 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-composite-dev all 1:2018.4-4 [2,620 B]
+Get:89 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcomposite-dev amd64 1:0.4.5-0ubuntu1 [9,172 B]
+Get:90 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcursor-dev amd64 1:1.2.0-2 [26.5 kB]
+Get:91 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-xinerama-dev all 2018.4-4 [2,628 B]
+Get:92 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxinerama-dev amd64 2:1.1.4-2 [7,896 B]
+Get:93 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxkbcommon-dev amd64 0.8.4-1 [150 kB]
+Get:94 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 x11proto-randr-dev all 2018.4-4 [2,620 B]
+Get:95 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxrandr-dev amd64 2:1.5.2-0ubuntu1 [25.0 kB]
+Get:96 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 wayland-protocols all 1.18-1 [59.4 kB]
+Get:97 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgtk-3-dev amd64 3.24.12-1ubuntu1 [1,066 kB]
+Get:98 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgtk-3-doc all 3.24.12-1ubuntu1 [3,329 kB]
+Get:99 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libgtkextra-3.0 amd64 3.3.4-1 [303 kB]
+Get:100 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libgtkextra-3.0-doc all 3.3.4-1 [247 kB]
+Get:101 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libgtkextra-dev amd64 3.3.4-1 [49.2 kB]
+Get:102 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libidn11-dev amd64 1.33-2.2ubuntu2 [519 kB]
+Get:103 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpango1.0-doc all 1.42.4-7 [184 kB]
+Get:104 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libpng-tools amd64 1.6.37-1 [26.2 kB]
+Get:105 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libssh2-1-dev amd64 1.8.0-2.1build1 [244 kB]
+Get:106 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxml2-doc all 2.9.4+dfsg1-7ubuntu3 [762 kB]
+Get:107 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxml2-utils amd64 2.9.4+dfsg1-7ubuntu3 [36.2 kB]
+Get:108 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libgsl-dbg amd64 2.5+dfsg-6 [3,171 kB]
+Get:109 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libkrb5-dev amd64 1.17-6 [11.8 kB]
+Get:110 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libldap2-dev amd64 2.4.48+dfsg-1ubuntu1 [262 kB]
+Get:111 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 librtmp-dev amd64 2.4+20151223.gitfa8646d.1-2 [62.2 kB]
+Get:112 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libtasn1-doc all 4.14-3 [302 kB]
+Get:113 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxml2-dbg amd64 2.9.4+dfsg1-7ubuntu3 [2,110 kB]
+Fetched 23.0 MB in 4s (5,285 kB/s)       
+Extracting templates from packages: 100%
+Selecting previously unselected package gir1.2-atspi-2.0:amd64.
+(Reading database ... 288317 files and directories currently installed.)
+Preparing to unpack .../000-gir1.2-atspi-2.0_2.34.0-2_amd64.deb ...
+Unpacking gir1.2-atspi-2.0:amd64 (2.34.0-2) ...
+Selecting previously unselected package gir1.2-harfbuzz-0.0:amd64.
+Preparing to unpack .../001-gir1.2-harfbuzz-0.0_2.6.1-3_amd64.deb ...
+Unpacking gir1.2-harfbuzz-0.0:amd64 (2.6.1-3) ...
+Selecting previously unselected package libgssrpc4:amd64.
+Preparing to unpack .../002-libgssrpc4_1.17-6_amd64.deb ...
+Unpacking libgssrpc4:amd64 (1.17-6) ...
+Selecting previously unselected package libkdb5-9:amd64.
+Preparing to unpack .../003-libkdb5-9_1.17-6_amd64.deb ...
+Unpacking libkdb5-9:amd64 (1.17-6) ...
+Selecting previously unselected package libkadm5srv-mit11:amd64.
+Preparing to unpack .../004-libkadm5srv-mit11_1.17-6_amd64.deb ...
+Unpacking libkadm5srv-mit11:amd64 (1.17-6) ...
+Selecting previously unselected package libkadm5clnt-mit11:amd64.
+Preparing to unpack .../005-libkadm5clnt-mit11_1.17-6_amd64.deb ...
+Unpacking libkadm5clnt-mit11:amd64 (1.17-6) ...
+Selecting previously unselected package comerr-dev:amd64.
+Preparing to unpack .../006-comerr-dev_2.1-1.45.3-4ubuntu2_amd64.deb ...
+Unpacking comerr-dev:amd64 (2.1-1.45.3-4ubuntu2) ...
+Selecting previously unselected package krb5-multidev:amd64.
+Preparing to unpack .../007-krb5-multidev_1.17-6_amd64.deb ...
+Unpacking krb5-multidev:amd64 (1.17-6) ...
+Selecting previously unselected package libdbus-1-dev:amd64.
+Preparing to unpack .../008-libdbus-1-dev_1.12.14-1ubuntu2_amd64.deb ...
+Unpacking libdbus-1-dev:amd64 (1.12.14-1ubuntu2) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../009-xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../010-x11proto-dev_2018.4-4_all.deb ...
+Unpacking x11proto-dev (2018.4-4) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../011-x11proto-core-dev_2018.4-4_all.deb ...
+Unpacking x11proto-core-dev (2018.4-4) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../012-libxau-dev_1%3a1.0.9-0ubuntu1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../013-libxdmcp-dev_1%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Selecting previously unselected package x11proto-input-dev.
+Preparing to unpack .../014-x11proto-input-dev_2018.4-4_all.deb ...
+Unpacking x11proto-input-dev (2018.4-4) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../015-xtrans-dev_1.3.5-1build1_all.deb ...
+Unpacking xtrans-dev (1.3.5-1build1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../016-libpthread-stubs0-dev_0.4-1_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../017-libxcb1-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../018-libx11-dev_2%3a1.6.8-1_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.8-1) ...
+Selecting previously unselected package x11proto-xext-dev.
+Preparing to unpack .../019-x11proto-xext-dev_2018.4-4_all.deb ...
+Unpacking x11proto-xext-dev (2018.4-4) ...
+Selecting previously unselected package libxext-dev:amd64.
+Preparing to unpack .../020-libxext-dev_2%3a1.3.4-0ubuntu1_amd64.deb ...
+Unpacking libxext-dev:amd64 (2:1.3.4-0ubuntu1) ...
+Selecting previously unselected package x11proto-fixes-dev.
+Preparing to unpack .../021-x11proto-fixes-dev_1%3a2018.4-4_all.deb ...
+Unpacking x11proto-fixes-dev (1:2018.4-4) ...
+Selecting previously unselected package libxfixes-dev:amd64.
+Preparing to unpack .../022-libxfixes-dev_1%3a5.0.3-1_amd64.deb ...
+Unpacking libxfixes-dev:amd64 (1:5.0.3-1) ...
+Selecting previously unselected package libxi-dev:amd64.
+Preparing to unpack .../023-libxi-dev_2%3a1.7.10-0ubuntu1_amd64.deb ...
+Unpacking libxi-dev:amd64 (2:1.7.10-0ubuntu1) ...
+Selecting previously unselected package x11proto-record-dev.
+Preparing to unpack .../024-x11proto-record-dev_2018.4-4_all.deb ...
+Unpacking x11proto-record-dev (2018.4-4) ...
+Selecting previously unselected package libxtst-dev:amd64.
+Preparing to unpack .../025-libxtst-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libxtst-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libatspi2.0-dev:amd64.
+Preparing to unpack .../026-libatspi2.0-dev_2.34.0-2_amd64.deb ...
+Unpacking libatspi2.0-dev:amd64 (2.34.0-2) ...
+Selecting previously unselected package libatk-bridge2.0-dev:amd64.
+Preparing to unpack .../027-libatk-bridge2.0-dev_2.34.0-3_amd64.deb ...
+Unpacking libatk-bridge2.0-dev:amd64 (2.34.0-3) ...
+Selecting previously unselected package libatk1.0-dev:amd64.
+Preparing to unpack .../028-libatk1.0-dev_2.34.0-1_amd64.deb ...
+Unpacking libatk1.0-dev:amd64 (2.34.0-1) ...
+Selecting previously unselected package libatk1.0-doc.
+Preparing to unpack .../029-libatk1.0-doc_2.34.0-1_all.deb ...
+Unpacking libatk1.0-doc (2.34.0-1) ...
+Selecting previously unselected package libcairo-script-interpreter2:amd64.
+Preparing to unpack .../030-libcairo-script-interpreter2_1.16.0-4_amd64.deb ...
+Unpacking libcairo-script-interpreter2:amd64 (1.16.0-4) ...
+Selecting previously unselected package libpng-dev:amd64.
+Preparing to unpack .../031-libpng-dev_1.6.37-1_amd64.deb ...
+Unpacking libpng-dev:amd64 (1.6.37-1) ...
+Selecting previously unselected package libfreetype6-dev:amd64.
+Preparing to unpack .../032-libfreetype6-dev_2.9.1-4_amd64.deb ...
+Unpacking libfreetype6-dev:amd64 (2.9.1-4) ...
+Selecting previously unselected package libfontconfig1-dev:amd64.
+Preparing to unpack .../033-libfontconfig1-dev_2.13.1-2ubuntu2_amd64.deb ...
+Unpacking libfontconfig1-dev:amd64 (2.13.1-2ubuntu2) ...
+Selecting previously unselected package libxrender-dev:amd64.
+Preparing to unpack .../034-libxrender-dev_1%3a0.9.10-1_amd64.deb ...
+Unpacking libxrender-dev:amd64 (1:0.9.10-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../035-libice-dev_2%3a1.0.10-0ubuntu1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../036-libsm-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libpixman-1-dev:amd64.
+Preparing to unpack .../037-libpixman-1-dev_0.38.4-0ubuntu1_amd64.deb ...
+Unpacking libpixman-1-dev:amd64 (0.38.4-0ubuntu1) ...
+Selecting previously unselected package libxcb-render0-dev:amd64.
+Preparing to unpack .../038-libxcb-render0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-render0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-shm0-dev:amd64.
+Preparing to unpack .../039-libxcb-shm0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-shm0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libcairo2-dev:amd64.
+Preparing to unpack .../040-libcairo2-dev_1.16.0-4_amd64.deb ...
+Unpacking libcairo2-dev:amd64 (1.16.0-4) ...
+Selecting previously unselected package libdrm-dev:amd64.
+Preparing to unpack .../041-libdrm-dev_2.4.99-1ubuntu1_amd64.deb ...
+Unpacking libdrm-dev:amd64 (2.4.99-1ubuntu1) ...
+Selecting previously unselected package mesa-common-dev:amd64.
+Preparing to unpack .../042-mesa-common-dev_19.2.1-1ubuntu1_amd64.deb ...
+Unpacking mesa-common-dev:amd64 (19.2.1-1ubuntu1) ...
+Selecting previously unselected package libglvnd-core-dev:amd64.
+Preparing to unpack .../043-libglvnd-core-dev_1.1.1-0ubuntu1_amd64.deb ...
+Unpacking libglvnd-core-dev:amd64 (1.1.1-0ubuntu1) ...
+Selecting previously unselected package libgles1:amd64.
+Preparing to unpack .../044-libgles1_1.1.1-0ubuntu1_amd64.deb ...
+Unpacking libgles1:amd64 (1.1.1-0ubuntu1) ...
+Selecting previously unselected package libopengl0:amd64.
+Preparing to unpack .../045-libopengl0_1.1.1-0ubuntu1_amd64.deb ...
+Unpacking libopengl0:amd64 (1.1.1-0ubuntu1) ...
+Selecting previously unselected package libglvnd-dev:amd64.
+Preparing to unpack .../046-libglvnd-dev_1.1.1-0ubuntu1_amd64.deb ...
+Unpacking libglvnd-dev:amd64 (1.1.1-0ubuntu1) ...
+Selecting previously unselected package x11proto-xf86vidmode-dev.
+Preparing to unpack .../047-x11proto-xf86vidmode-dev_2018.4-4_all.deb ...
+Unpacking x11proto-xf86vidmode-dev (2018.4-4) ...
+Selecting previously unselected package libxxf86vm-dev:amd64.
+Preparing to unpack .../048-libxxf86vm-dev_1%3a1.1.4-1build1_amd64.deb ...
+Unpacking libxxf86vm-dev:amd64 (1:1.1.4-1build1) ...
+Selecting previously unselected package x11proto-damage-dev.
+Preparing to unpack .../049-x11proto-damage-dev_1%3a2018.4-4_all.deb ...
+Unpacking x11proto-damage-dev (1:2018.4-4) ...
+Selecting previously unselected package libxdamage-dev:amd64.
+Preparing to unpack .../050-libxdamage-dev_1%3a1.1.5-1_amd64.deb ...
+Unpacking libxdamage-dev:amd64 (1:1.1.5-1) ...
+Selecting previously unselected package libxcb-glx0-dev:amd64.
+Preparing to unpack .../051-libxcb-glx0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-glx0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-dri2-0-dev:amd64.
+Preparing to unpack .../052-libxcb-dri2-0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-dri2-0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-dri3-dev:amd64.
+Preparing to unpack .../053-libxcb-dri3-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-dri3-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-randr0-dev:amd64.
+Preparing to unpack .../054-libxcb-randr0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-randr0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-shape0-dev:amd64.
+Preparing to unpack .../055-libxcb-shape0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-shape0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-xfixes0-dev:amd64.
+Preparing to unpack .../056-libxcb-xfixes0-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-xfixes0-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-sync-dev:amd64.
+Preparing to unpack .../057-libxcb-sync-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-sync-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxcb-present-dev:amd64.
+Preparing to unpack .../058-libxcb-present-dev_1.13.1-2_amd64.deb ...
+Unpacking libxcb-present-dev:amd64 (1.13.1-2) ...
+Selecting previously unselected package libxshmfence-dev:amd64.
+Preparing to unpack .../059-libxshmfence-dev_1.3-1_amd64.deb ...
+Unpacking libxshmfence-dev:amd64 (1.3-1) ...
+Selecting previously unselected package libx11-xcb-dev:amd64.
+Preparing to unpack .../060-libx11-xcb-dev_2%3a1.6.8-1_amd64.deb ...
+Unpacking libx11-xcb-dev:amd64 (2:1.6.8-1) ...
+Selecting previously unselected package libwayland-bin.
+Preparing to unpack .../061-libwayland-bin_1.17.0-1_amd64.deb ...
+Unpacking libwayland-bin (1.17.0-1) ...
+Selecting previously unselected package libwayland-dev:amd64.
+Preparing to unpack .../062-libwayland-dev_1.17.0-1_amd64.deb ...
+Unpacking libwayland-dev:amd64 (1.17.0-1) ...
+Selecting previously unselected package libegl1-mesa-dev:amd64.
+Preparing to unpack .../063-libegl1-mesa-dev_19.2.1-1ubuntu1_amd64.deb ...
+Unpacking libegl1-mesa-dev:amd64 (19.2.1-1ubuntu1) ...
+Selecting previously unselected package libgl1-mesa-dev:amd64.
+Preparing to unpack .../064-libgl1-mesa-dev_19.2.1-1ubuntu1_amd64.deb ...
+Unpacking libgl1-mesa-dev:amd64 (19.2.1-1ubuntu1) ...
+Selecting previously unselected package libepoxy-dev:amd64.
+Preparing to unpack .../065-libepoxy-dev_1.5.3-0.1_amd64.deb ...
+Unpacking libepoxy-dev:amd64 (1.5.3-0.1) ...
+Selecting previously unselected package libfribidi-dev:amd64.
+Preparing to unpack .../066-libfribidi-dev_1.0.5-3.1ubuntu0.19.10.1_amd64.deb ...
+Unpacking libfribidi-dev:amd64 (1.0.5-3.1ubuntu0.19.10.1) ...
+Selecting previously unselected package libgpg-error-dev.
+Preparing to unpack .../067-libgpg-error-dev_1.36-7_amd64.deb ...
+Unpacking libgpg-error-dev (1.36-7) ...
+Selecting previously unselected package libgcrypt20-dev.
+Preparing to unpack .../068-libgcrypt20-dev_1.8.4-5ubuntu2_amd64.deb ...
+Unpacking libgcrypt20-dev (1.8.4-5ubuntu2) ...
+Selecting previously unselected package libgdk-pixbuf2.0-dev:amd64.
+Preparing to unpack .../069-libgdk-pixbuf2.0-dev_2.40.0+dfsg-1build1_amd64.deb ...
+Unpacking libgdk-pixbuf2.0-dev:amd64 (2.40.0+dfsg-1build1) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../070-libgmpxx4ldbl_2%3a6.1.2+dfsg-4_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../071-libgmp-dev_2%3a6.1.2+dfsg-4_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libgnutls-openssl27:amd64.
+Preparing to unpack .../072-libgnutls-openssl27_3.6.9-5ubuntu1_amd64.deb ...
+Unpacking libgnutls-openssl27:amd64 (3.6.9-5ubuntu1) ...
+Selecting previously unselected package libunbound8:amd64.
+Preparing to unpack .../073-libunbound8_1.9.0-2ubuntu1_amd64.deb ...
+Unpacking libunbound8:amd64 (1.9.0-2ubuntu1) ...
+Selecting previously unselected package libgnutls-dane0:amd64.
+Preparing to unpack .../074-libgnutls-dane0_3.6.9-5ubuntu1_amd64.deb ...
+Unpacking libgnutls-dane0:amd64 (3.6.9-5ubuntu1) ...
+Selecting previously unselected package libgnutlsxx28:amd64.
+Preparing to unpack .../075-libgnutlsxx28_3.6.9-5ubuntu1_amd64.deb ...
+Unpacking libgnutlsxx28:amd64 (3.6.9-5ubuntu1) ...
+Selecting previously unselected package libidn2-dev:amd64.
+Preparing to unpack .../076-libidn2-dev_2.2.0-2_amd64.deb ...
+Unpacking libidn2-dev:amd64 (2.2.0-2) ...
+Selecting previously unselected package libp11-kit-dev:amd64.
+Preparing to unpack .../077-libp11-kit-dev_0.23.17-2_amd64.deb ...
+Unpacking libp11-kit-dev:amd64 (0.23.17-2) ...
+Selecting previously unselected package libtasn1-6-dev:amd64.
+Preparing to unpack .../078-libtasn1-6-dev_4.14-3_amd64.deb ...
+Unpacking libtasn1-6-dev:amd64 (4.14-3) ...
+Selecting previously unselected package nettle-dev:amd64.
+Preparing to unpack .../079-nettle-dev_3.4.1-1_amd64.deb ...
+Unpacking nettle-dev:amd64 (3.4.1-1) ...
+Selecting previously unselected package libgnutls28-dev:amd64.
+Preparing to unpack .../080-libgnutls28-dev_3.6.9-5ubuntu1_amd64.deb ...
+Unpacking libgnutls28-dev:amd64 (3.6.9-5ubuntu1) ...
+Selecting previously unselected package libgraphite2-dev:amd64.
+Preparing to unpack .../081-libgraphite2-dev_1.3.13-8_amd64.deb ...
+Unpacking libgraphite2-dev:amd64 (1.3.13-8) ...
+Selecting previously unselected package libharfbuzz-gobject0:amd64.
+Preparing to unpack .../082-libharfbuzz-gobject0_2.6.1-3_amd64.deb ...
+Unpacking libharfbuzz-gobject0:amd64 (2.6.1-3) ...
+Selecting previously unselected package libharfbuzz-dev:amd64.
+Preparing to unpack .../083-libharfbuzz-dev_2.6.1-3_amd64.deb ...
+Unpacking libharfbuzz-dev:amd64 (2.6.1-3) ...
+Selecting previously unselected package libxft-dev:amd64.
+Preparing to unpack .../084-libxft-dev_2.3.3-0ubuntu1_amd64.deb ...
+Unpacking libxft-dev:amd64 (2.3.3-0ubuntu1) ...
+Selecting previously unselected package pango1.0-tools.
+Preparing to unpack .../085-pango1.0-tools_1.42.4-7_amd64.deb ...
+Unpacking pango1.0-tools (1.42.4-7) ...
+Selecting previously unselected package libpango1.0-dev:amd64.
+Preparing to unpack .../086-libpango1.0-dev_1.42.4-7_amd64.deb ...
+Unpacking libpango1.0-dev:amd64 (1.42.4-7) ...
+Selecting previously unselected package x11proto-composite-dev.
+Preparing to unpack .../087-x11proto-composite-dev_1%3a2018.4-4_all.deb ...
+Unpacking x11proto-composite-dev (1:2018.4-4) ...
+Selecting previously unselected package libxcomposite-dev:amd64.
+Preparing to unpack .../088-libxcomposite-dev_1%3a0.4.5-0ubuntu1_amd64.deb ...
+Unpacking libxcomposite-dev:amd64 (1:0.4.5-0ubuntu1) ...
+Selecting previously unselected package libxcursor-dev:amd64.
+Preparing to unpack .../089-libxcursor-dev_1%3a1.2.0-2_amd64.deb ...
+Unpacking libxcursor-dev:amd64 (1:1.2.0-2) ...
+Selecting previously unselected package x11proto-xinerama-dev.
+Preparing to unpack .../090-x11proto-xinerama-dev_2018.4-4_all.deb ...
+Unpacking x11proto-xinerama-dev (2018.4-4) ...
+Selecting previously unselected package libxinerama-dev:amd64.
+Preparing to unpack .../091-libxinerama-dev_2%3a1.1.4-2_amd64.deb ...
+Unpacking libxinerama-dev:amd64 (2:1.1.4-2) ...
+Selecting previously unselected package libxkbcommon-dev:amd64.
+Preparing to unpack .../092-libxkbcommon-dev_0.8.4-1_amd64.deb ...
+Unpacking libxkbcommon-dev:amd64 (0.8.4-1) ...
+Selecting previously unselected package x11proto-randr-dev.
+Preparing to unpack .../093-x11proto-randr-dev_2018.4-4_all.deb ...
+Unpacking x11proto-randr-dev (2018.4-4) ...
+Selecting previously unselected package libxrandr-dev:amd64.
+Preparing to unpack .../094-libxrandr-dev_2%3a1.5.2-0ubuntu1_amd64.deb ...
+Unpacking libxrandr-dev:amd64 (2:1.5.2-0ubuntu1) ...
+Selecting previously unselected package wayland-protocols.
+Preparing to unpack .../095-wayland-protocols_1.18-1_all.deb ...
+Unpacking wayland-protocols (1.18-1) ...
+Selecting previously unselected package libgtk-3-dev:amd64.
+Preparing to unpack .../096-libgtk-3-dev_3.24.12-1ubuntu1_amd64.deb ...
+Unpacking libgtk-3-dev:amd64 (3.24.12-1ubuntu1) ...
+Selecting previously unselected package libgtk-3-doc.
+Preparing to unpack .../097-libgtk-3-doc_3.24.12-1ubuntu1_all.deb ...
+Unpacking libgtk-3-doc (3.24.12-1ubuntu1) ...
+Selecting previously unselected package libgtkextra-3.0.
+Preparing to unpack .../098-libgtkextra-3.0_3.3.4-1_amd64.deb ...
+Unpacking libgtkextra-3.0 (3.3.4-1) ...
+Selecting previously unselected package libgtkextra-3.0-doc.
+Preparing to unpack .../099-libgtkextra-3.0-doc_3.3.4-1_all.deb ...
+Unpacking libgtkextra-3.0-doc (3.3.4-1) ...
+Selecting previously unselected package libgtkextra-dev.
+Preparing to unpack .../100-libgtkextra-dev_3.3.4-1_amd64.deb ...
+Unpacking libgtkextra-dev (3.3.4-1) ...
+Selecting previously unselected package libidn11-dev:amd64.
+Preparing to unpack .../101-libidn11-dev_1.33-2.2ubuntu2_amd64.deb ...
+Unpacking libidn11-dev:amd64 (1.33-2.2ubuntu2) ...
+Selecting previously unselected package libpango1.0-doc.
+Preparing to unpack .../102-libpango1.0-doc_1.42.4-7_all.deb ...
+Unpacking libpango1.0-doc (1.42.4-7) ...
+Selecting previously unselected package libpng-tools.
+Preparing to unpack .../103-libpng-tools_1.6.37-1_amd64.deb ...
+Unpacking libpng-tools (1.6.37-1) ...
+Selecting previously unselected package libssh2-1-dev:amd64.
+Preparing to unpack .../104-libssh2-1-dev_1.8.0-2.1build1_amd64.deb ...
+Unpacking libssh2-1-dev:amd64 (1.8.0-2.1build1) ...
+Selecting previously unselected package libxml2-doc.
+Preparing to unpack .../105-libxml2-doc_2.9.4+dfsg1-7ubuntu3_all.deb ...
+Unpacking libxml2-doc (2.9.4+dfsg1-7ubuntu3) ...
+Selecting previously unselected package libxml2-utils.
+Preparing to unpack .../106-libxml2-utils_2.9.4+dfsg1-7ubuntu3_amd64.deb ...
+Unpacking libxml2-utils (2.9.4+dfsg1-7ubuntu3) ...
+Selecting previously unselected package libgsl-dbg:amd64.
+Preparing to unpack .../107-libgsl-dbg_2.5+dfsg-6_amd64.deb ...
+Unpacking libgsl-dbg:amd64 (2.5+dfsg-6) ...
+Selecting previously unselected package libkrb5-dev:amd64.
+Preparing to unpack .../108-libkrb5-dev_1.17-6_amd64.deb ...
+Unpacking libkrb5-dev:amd64 (1.17-6) ...
+Selecting previously unselected package libldap2-dev:amd64.
+Preparing to unpack .../109-libldap2-dev_2.4.48+dfsg-1ubuntu1_amd64.deb ...
+Unpacking libldap2-dev:amd64 (2.4.48+dfsg-1ubuntu1) ...
+Selecting previously unselected package librtmp-dev:amd64.
+Preparing to unpack .../110-librtmp-dev_2.4+20151223.gitfa8646d.1-2_amd64.deb ...
+Unpacking librtmp-dev:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Selecting previously unselected package libtasn1-doc.
+Preparing to unpack .../111-libtasn1-doc_4.14-3_all.deb ...
+Unpacking libtasn1-doc (4.14-3) ...
+Selecting previously unselected package libxml2-dbg:amd64.
+Preparing to unpack .../112-libxml2-dbg_2.9.4+dfsg1-7ubuntu3_amd64.deb ...
+Unpacking libxml2-dbg:amd64 (2.9.4+dfsg1-7ubuntu3) ...
+Setting up libcairo-script-interpreter2:amd64 (1.16.0-4) ...
+Setting up libidn11-dev:amd64 (1.33-2.2ubuntu2) ...
+Setting up libdrm-dev:amd64 (2.4.99-1ubuntu1) ...
+Setting up libatk1.0-doc (2.34.0-1) ...
+Setting up libgnutls-openssl27:amd64 (3.6.9-5ubuntu1) ...
+Setting up libpixman-1-dev:amd64 (0.38.4-0ubuntu1) ...
+Setting up libglvnd-core-dev:amd64 (1.1.1-0ubuntu1) ...
+Setting up libpng-tools (1.6.37-1) ...
+Setting up libxshmfence-dev:amd64 (1.3-1) ...
+Setting up libfribidi-dev:amd64 (1.0.5-3.1ubuntu0.19.10.1) ...
+Setting up libtasn1-doc (4.14-3) ...
+Setting up libxkbcommon-dev:amd64 (0.8.4-1) ...
+Setting up libpng-dev:amd64 (1.6.37-1) ...
+Setting up libgtkextra-3.0 (3.3.4-1) ...
+Setting up pango1.0-tools (1.42.4-7) ...
+Setting up libxml2-dbg:amd64 (2.9.4+dfsg1-7ubuntu3) ...
+Setting up libpango1.0-doc (1.42.4-7) ...
+Setting up libharfbuzz-gobject0:amd64 (2.6.1-3) ...
+Setting up libgtk-3-doc (3.24.12-1ubuntu1) ...
+Setting up gir1.2-atspi-2.0:amd64 (2.34.0-2) ...
+Setting up gir1.2-harfbuzz-0.0:amd64 (2.6.1-3) ...
+Setting up libpthread-stubs0-dev:amd64 (0.4-1) ...
+Setting up libopengl0:amd64 (1.1.1-0ubuntu1) ...
+Setting up libfreetype6-dev:amd64 (2.9.1-4) ...
+Setting up libldap2-dev:amd64 (2.4.48+dfsg-1ubuntu1) ...
+Setting up libgssrpc4:amd64 (1.17-6) ...
+Setting up xtrans-dev (1.3.5-1build1) ...
+Setting up libwayland-bin (1.17.0-1) ...
+Setting up libgraphite2-dev:amd64 (1.3.13-8) ...
+Setting up libunbound8:amd64 (1.9.0-2ubuntu1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-4) ...
+Setting up libdbus-1-dev:amd64 (1.12.14-1ubuntu2) ...
+Setting up libgpg-error-dev (1.36-7) ...
+Setting up libgtkextra-3.0-doc (3.3.4-1) ...
+Setting up libgles1:amd64 (1.1.1-0ubuntu1) ...
+Setting up comerr-dev:amd64 (2.1-1.45.3-4ubuntu2) ...
+Setting up libgnutlsxx28:amd64 (3.6.9-5ubuntu1) ...
+Setting up libxml2-doc (2.9.4+dfsg1-7ubuntu3) ...
+Setting up libidn2-dev:amd64 (2.2.0-2) ...
+Setting up wayland-protocols (1.18-1) ...
+Setting up libkdb5-9:amd64 (1.17-6) ...
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Setting up libgtkextra-dev (3.3.4-1) ...
+Setting up libkadm5srv-mit11:amd64 (1.17-6) ...
+Setting up libxml2-utils (2.9.4+dfsg1-7ubuntu3) ...
+Setting up libgsl-dbg:amd64 (2.5+dfsg-6) ...
+Setting up libtasn1-6-dev:amd64 (4.14-3) ...
+Setting up libp11-kit-dev:amd64 (0.23.17-2) ...
+Setting up libatk1.0-dev:amd64 (2.34.0-1) ...
+Setting up libkadm5clnt-mit11:amd64 (1.17-6) ...
+Setting up libgnutls-dane0:amd64 (3.6.9-5ubuntu1) ...
+Setting up libharfbuzz-dev:amd64 (2.6.1-3) ...
+Setting up libfontconfig1-dev:amd64 (2.13.1-2ubuntu2) ...
+Setting up libgmp-dev:amd64 (2:6.1.2+dfsg-4) ...
+Setting up nettle-dev:amd64 (3.4.1-1) ...
+Setting up libglvnd-dev:amd64 (1.1.1-0ubuntu1) ...
+Setting up libwayland-dev:amd64 (1.17.0-1) ...
+Setting up libgcrypt20-dev (1.8.4-5ubuntu2) ...
+Setting up libssh2-1-dev:amd64 (1.8.0-2.1build1) ...
+Setting up krb5-multidev:amd64 (1.17-6) ...
+Setting up libgnutls28-dev:amd64 (3.6.9-5ubuntu1) ...
+Setting up libkrb5-dev:amd64 (1.17-6) ...
+Setting up librtmp-dev:amd64 (2.4+20151223.gitfa8646d.1-2) ...
+Processing triggers for libglib2.0-0:amd64 (2.62.1-1) ...
+Processing triggers for libc-bin (2.30-0ubuntu2) ...
+Processing triggers for man-db (2.8.7-3) ...
+Processing triggers for sgml-base (1.29) ...
+Processing triggers for install-info (6.6.0.dfsg.1-2ubuntu2) ...
+Setting up x11proto-dev (2018.4-4) ...
+Setting up libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Setting up libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1) ...
+Setting up x11proto-randr-dev (2018.4-4) ...
+Setting up x11proto-xinerama-dev (2018.4-4) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Setting up x11proto-damage-dev (1:2018.4-4) ...
+Setting up x11proto-composite-dev (1:2018.4-4) ...
+Setting up x11proto-core-dev (2018.4-4) ...
+Setting up x11proto-input-dev (2018.4-4) ...
+Setting up x11proto-xf86vidmode-dev (2018.4-4) ...
+Setting up x11proto-xext-dev (2018.4-4) ...
+Setting up x11proto-record-dev (2018.4-4) ...
+Setting up x11proto-fixes-dev (1:2018.4-4) ...
+Setting up libxcb1-dev:amd64 (1.13.1-2) ...
+Setting up libx11-dev:amd64 (2:1.6.8-1) ...
+Setting up libxcb-dri3-dev:amd64 (1.13.1-2) ...
+Setting up libgdk-pixbuf2.0-dev:amd64 (2.40.0+dfsg-1build1) ...
+Setting up libxfixes-dev:amd64 (1:5.0.3-1) ...
+Setting up libxcb-shm0-dev:amd64 (1.13.1-2) ...
+Setting up libxcb-dri2-0-dev:amd64 (1.13.1-2) ...
+Setting up libxcb-render0-dev:amd64 (1.13.1-2) ...
+Setting up libxcb-glx0-dev:amd64 (1.13.1-2) ...
+Setting up libxcb-shape0-dev:amd64 (1.13.1-2) ...
+Setting up libxext-dev:amd64 (2:1.3.4-0ubuntu1) ...
+Setting up libxcb-sync-dev:amd64 (1.13.1-2) ...
+Setting up mesa-common-dev:amd64 (19.2.1-1ubuntu1) ...
+Setting up libxcb-xfixes0-dev:amd64 (1.13.1-2) ...
+Setting up libxi-dev:amd64 (2:1.7.10-0ubuntu1) ...
+Setting up libxrender-dev:amd64 (1:0.9.10-1) ...
+Setting up libxft-dev:amd64 (2.3.3-0ubuntu1) ...
+Setting up libxtst-dev:amd64 (2:1.2.3-1) ...
+Setting up libxdamage-dev:amd64 (1:1.1.5-1) ...
+Setting up libatspi2.0-dev:amd64 (2.34.0-2) ...
+Setting up libx11-xcb-dev:amd64 (2:1.6.8-1) ...
+Setting up libxcomposite-dev:amd64 (1:0.4.5-0ubuntu1) ...
+Setting up libxcursor-dev:amd64 (1:1.2.0-2) ...
+Setting up libxxf86vm-dev:amd64 (1:1.1.4-1build1) ...
+Setting up libatk-bridge2.0-dev:amd64 (2.34.0-3) ...
+Setting up libxrandr-dev:amd64 (2:1.5.2-0ubuntu1) ...
+Setting up libxcb-randr0-dev:amd64 (1.13.1-2) ...
+Setting up libxcb-present-dev:amd64 (1.13.1-2) ...
+Setting up libxinerama-dev:amd64 (2:1.1.4-2) ...
+Setting up libgl1-mesa-dev:amd64 (19.2.1-1ubuntu1) ...
+Setting up libcairo2-dev:amd64 (1.16.0-4) ...
+Setting up libegl1-mesa-dev:amd64 (19.2.1-1ubuntu1) ...
+Setting up libepoxy-dev:amd64 (1.5.3-0.1) ...
+Setting up libpango1.0-dev:amd64 (1.42.4-7) ...
+Setting up libgtk-3-dev:amd64 (3.24.12-1ubuntu1) ...
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ ./install_dev.sh 
+Installing Dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'exuberant-ctags' instead of 'ctags'
+autoconf is already the newest version (2.69-11ubuntu1).
+automake is already the newest version (1:1.16.1-4ubuntu3).
+bison is already the newest version (2:3.4.1+dfsg-4).
+bison-doc is already the newest version (1:3.4.1+repack-1ubuntu1).
+build-essential is already the newest version (12.8ubuntu1).
+exuberant-ctags is already the newest version (1:5.9~svn20110310-12).
+flex is already the newest version (2.6.4-6.2).
+flex-doc is already the newest version (2.6.4-6.2).
+gdb is already the newest version (8.3-0ubuntu1).
+gdb-doc is already the newest version (8.3-0ubuntu1).
+libbison-dev is already the newest version (2:3.4.1+dfsg-4).
+libcurl4-doc is already the newest version (7.65.3-1ubuntu3).
+libcurl4-gnutls-dev is already the newest version (7.65.3-1ubuntu3).
+libglib2.0-dev is already the newest version (2.62.1-1).
+libglib2.0-doc is already the newest version (2.62.1-1).
+libgnutls28-dev is already the newest version (3.6.9-5ubuntu1).
+libgtk-3-dev is already the newest version (3.24.12-1ubuntu1).
+libgtk-3-doc is already the newest version (3.24.12-1ubuntu1).
+libidn11-dev is already the newest version (1.33-2.2ubuntu2).
+libkrb5-dev is already the newest version (1.17-6).
+libldap2-dev is already the newest version (2.4.48+dfsg-1ubuntu1).
+liblua5.3-dev is already the newest version (5.3.3-1.1ubuntu1).
+librtmp-dev is already the newest version (2.4+20151223.gitfa8646d.1-2).
+libssl-dev is already the newest version (1.1.1c-1ubuntu4).
+libtool is already the newest version (2.4.6-11).
+libuv1 is already the newest version (1.30.1-1).
+libuv1-dev is already the newest version (1.30.1-1).
+libxml2-dbg is already the newest version (2.9.4+dfsg1-7ubuntu3).
+libxml2-dev is already the newest version (2.9.4+dfsg1-7ubuntu3).
+libxml2-doc is already the newest version (2.9.4+dfsg1-7ubuntu3).
+libxml2-utils is already the newest version (2.9.4+dfsg1-7ubuntu3).
+pkg-config is already the newest version (0.29.1-0ubuntu3).
+sphinx-doc is already the newest version (1.8.5-3).
+texinfo-doc-nonfree is already the newest version (6.6.0-2).
+dia is already the newest version (0.97.3+git20160930-8.1).
+info2man is already the newest version (1.1-9).
+libgsl-dbg is already the newest version (2.5+dfsg-6).
+libgsl-dev is already the newest version (2.5+dfsg-6).
+libgsl23 is already the newest version (2.5+dfsg-6).
+libgtkextra-3.0 is already the newest version (3.3.4-1).
+libgtkextra-3.0-doc is already the newest version (3.3.4-1).
+libgtkextra-dev is already the newest version (3.3.4-1).
+libhiredis-dev is already the newest version (0.14.0-3).
+libmongoc-1.0-0 is already the newest version (1.15.0-1).
+libssh2-1-dev is already the newest version (1.8.0-2.1build1).
+lua-luv-dev is already the newest version (1.9.1-0-2).
+sqlitebrowser is already the newest version (3.11.2-1).
+terminator is already the newest version (1.91-4).
+vim-gtk3 is already the newest version (2:8.1.0875-5ubuntu2).
+git is already the newest version (1:2.20.1-2ubuntu1.19.10.1).
+libsqlite3-dev is already the newest version (3.29.0-2ubuntu0.1).
+sqlite3-doc is already the newest version (3.29.0-2ubuntu0.1).
+gitk is already the newest version (1:2.20.1-2ubuntu1.19.10.1).
+The following additional packages will be installed:
+  devhelp-common krb5-config libamtk-5-0 libamtk-5-common libdevhelp-3-6 libopts25
+Suggested packages:
+  pdf-viewer krb5-k5tls libmpfr-doc
+The following NEW packages will be installed:
+  devhelp devhelp-common freetype2-doc gmp-doc gnutls-bin gnutls-doc krb5-config krb5-doc krb5-user libamtk-5-0 libamtk-5-common libcairo2-doc
+  libdevhelp-3-6 libgcrypt20-doc libgmp10-doc libgraphite2-utils libice-doc libmpfr-dev libopts25 libsm-doc libwayland-doc libx11-doc libxcb-doc
+  libxext-doc
+0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+Need to get 23.4 MB of archives.
+After this operation, 94.5 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libamtk-5-common all 5.0.0-3 [2,216 B]
+Get:2 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libamtk-5-0 amd64 5.0.0-3 [22.6 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 devhelp-common all 3.34.0-1 [133 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libdevhelp-3-6 amd64 3.34.0-1 [51.3 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 devhelp amd64 3.34.0-1 [59.0 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 freetype2-doc all 2.9.1-4 [2,265 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu eoan/multiverse amd64 gmp-doc all 6.1.2+ndfsg-2 [1,098 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libopts25 amd64 1:5.18.12-4build1 [58.3 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 gnutls-bin amd64 3.6.9-5ubuntu1 [270 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 gnutls-doc all 3.6.9-5ubuntu1 [4,142 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 krb5-config all 2.6build1 [21.5 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 krb5-doc all 1.17-6 [2,313 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 krb5-user amd64 1.17-6 [106 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libcairo2-doc all 1.16.0-4 [144 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgcrypt20-doc all 1.8.4-5ubuntu2 [766 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libgmp10-doc all 2:6.1.2+dfsg-4 [160 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu eoan/universe amd64 libgraphite2-utils amd64 1.3.13-8 [13.3 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libice-doc all 2:1.0.10-0ubuntu1 [118 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libmpfr-dev amd64 4.0.2-1 [240 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libsm-doc all 2:1.2.3-1 [106 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libx11-doc all 2:1.6.8-1 [2,069 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxcb-doc all 1.13.1-2 [8,951 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libxext-doc all 2:1.3.4-0ubuntu1 [56.5 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu eoan/main amd64 libwayland-doc all 1.17.0-1 [188 kB]
+Fetched 23.4 MB in 5s (4,888 kB/s)       
+Preconfiguring packages ...
+Selecting previously unselected package libamtk-5-common.
+(Reading database ... 293477 files and directories currently installed.)
+Preparing to unpack .../00-libamtk-5-common_5.0.0-3_all.deb ...
+Unpacking libamtk-5-common (5.0.0-3) ...
+Selecting previously unselected package libamtk-5-0:amd64.
+Preparing to unpack .../01-libamtk-5-0_5.0.0-3_amd64.deb ...
+Unpacking libamtk-5-0:amd64 (5.0.0-3) ...
+Selecting previously unselected package devhelp-common.
+Preparing to unpack .../02-devhelp-common_3.34.0-1_all.deb ...
+Unpacking devhelp-common (3.34.0-1) ...
+Selecting previously unselected package libdevhelp-3-6:amd64.
+Preparing to unpack .../03-libdevhelp-3-6_3.34.0-1_amd64.deb ...
+Unpacking libdevhelp-3-6:amd64 (3.34.0-1) ...
+Selecting previously unselected package devhelp.
+Preparing to unpack .../04-devhelp_3.34.0-1_amd64.deb ...
+Unpacking devhelp (3.34.0-1) ...
+Selecting previously unselected package freetype2-doc.
+Preparing to unpack .../05-freetype2-doc_2.9.1-4_all.deb ...
+Unpacking freetype2-doc (2.9.1-4) ...
+Selecting previously unselected package gmp-doc.
+Preparing to unpack .../06-gmp-doc_6.1.2+ndfsg-2_all.deb ...
+Unpacking gmp-doc (6.1.2+ndfsg-2) ...
+Selecting previously unselected package libopts25:amd64.
+Preparing to unpack .../07-libopts25_1%3a5.18.12-4build1_amd64.deb ...
+Unpacking libopts25:amd64 (1:5.18.12-4build1) ...
+Selecting previously unselected package gnutls-bin.
+Preparing to unpack .../08-gnutls-bin_3.6.9-5ubuntu1_amd64.deb ...
+Unpacking gnutls-bin (3.6.9-5ubuntu1) ...
+Selecting previously unselected package gnutls-doc.
+Preparing to unpack .../09-gnutls-doc_3.6.9-5ubuntu1_all.deb ...
+Unpacking gnutls-doc (3.6.9-5ubuntu1) ...
+Selecting previously unselected package krb5-config.
+Preparing to unpack .../10-krb5-config_2.6build1_all.deb ...
+Unpacking krb5-config (2.6build1) ...
+Selecting previously unselected package krb5-doc.
+Preparing to unpack .../11-krb5-doc_1.17-6_all.deb ...
+Unpacking krb5-doc (1.17-6) ...
+Selecting previously unselected package krb5-user.
+Preparing to unpack .../12-krb5-user_1.17-6_amd64.deb ...
+Unpacking krb5-user (1.17-6) ...
+Selecting previously unselected package libcairo2-doc.
+Preparing to unpack .../13-libcairo2-doc_1.16.0-4_all.deb ...
+Unpacking libcairo2-doc (1.16.0-4) ...
+Selecting previously unselected package libgcrypt20-doc.
+Preparing to unpack .../14-libgcrypt20-doc_1.8.4-5ubuntu2_all.deb ...
+Unpacking libgcrypt20-doc (1.8.4-5ubuntu2) ...
+Selecting previously unselected package libgmp10-doc.
+Preparing to unpack .../15-libgmp10-doc_2%3a6.1.2+dfsg-4_all.deb ...
+Unpacking libgmp10-doc (2:6.1.2+dfsg-4) ...
+Selecting previously unselected package libgraphite2-utils.
+Preparing to unpack .../16-libgraphite2-utils_1.3.13-8_amd64.deb ...
+Unpacking libgraphite2-utils (1.3.13-8) ...
+Selecting previously unselected package libice-doc.
+Preparing to unpack .../17-libice-doc_2%3a1.0.10-0ubuntu1_all.deb ...
+Unpacking libice-doc (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libmpfr-dev:amd64.
+Preparing to unpack .../18-libmpfr-dev_4.0.2-1_amd64.deb ...
+Unpacking libmpfr-dev:amd64 (4.0.2-1) ...
+Selecting previously unselected package libsm-doc.
+Preparing to unpack .../19-libsm-doc_2%3a1.2.3-1_all.deb ...
+Unpacking libsm-doc (2:1.2.3-1) ...
+Selecting previously unselected package libx11-doc.
+Preparing to unpack .../20-libx11-doc_2%3a1.6.8-1_all.deb ...
+Unpacking libx11-doc (2:1.6.8-1) ...
+Selecting previously unselected package libxcb-doc.
+Preparing to unpack .../21-libxcb-doc_1.13.1-2_all.deb ...
+Unpacking libxcb-doc (1.13.1-2) ...
+Selecting previously unselected package libxext-doc.
+Preparing to unpack .../22-libxext-doc_2%3a1.3.4-0ubuntu1_all.deb ...
+Unpacking libxext-doc (2:1.3.4-0ubuntu1) ...
+Selecting previously unselected package libwayland-doc.
+Preparing to unpack .../23-libwayland-doc_1.17.0-1_all.deb ...
+Unpacking libwayland-doc (1.17.0-1) ...
+Setting up libsm-doc (2:1.2.3-1) ...
+Setting up gnutls-doc (3.6.9-5ubuntu1) ...
+Setting up libxext-doc (2:1.3.4-0ubuntu1) ...
+Setting up gmp-doc (6.1.2+ndfsg-2) ...
+Setting up libgcrypt20-doc (1.8.4-5ubuntu2) ...
+Setting up libopts25:amd64 (1:5.18.12-4build1) ...
+Setting up libmpfr-dev:amd64 (4.0.2-1) ...
+Setting up devhelp-common (3.34.0-1) ...
+Setting up libxcb-doc (1.13.1-2) ...
+Setting up libgmp10-doc (2:6.1.2+dfsg-4) ...
+Setting up freetype2-doc (2.9.1-4) ...
+Setting up libgraphite2-utils (1.3.13-8) ...
+Setting up krb5-config (2.6build1) ...
+Setting up libwayland-doc (1.17.0-1) ...
+Setting up krb5-user (1.17-6) ...
+Setting up libcairo2-doc (1.16.0-4) ...
+Setting up krb5-doc (1.17-6) ...
+Setting up libice-doc (2:1.0.10-0ubuntu1) ...
+Setting up libamtk-5-common (5.0.0-3) ...
+Setting up libx11-doc (2:1.6.8-1) ...
+Setting up gnutls-bin (3.6.9-5ubuntu1) ...
+Setting up libamtk-5-0:amd64 (5.0.0-3) ...
+Processing triggers for install-info (6.6.0.dfsg.1-2ubuntu2) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu1) ...
+Processing triggers for mime-support (3.63ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for libglib2.0-0:amd64 (2.62.1-1) ...
+Processing triggers for libc-bin (2.30-0ubuntu2) ...
+Processing triggers for man-db (2.8.7-3) ...
+Setting up libdevhelp-3-6:amd64 (3.34.0-1) ...
+Setting up devhelp (3.34.0-1) ...
+Processing triggers for libc-bin (2.30-0ubuntu2) ...
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ sudo apt-get purge krb5-k5tls krb5-user krb5-config krb5-d
+oc
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'krb5-k5tls' is not installed, so not removed
+The following packages will be REMOVED:
+  krb5-config* krb5-doc* krb5-user*
+0 upgraded, 0 newly installed, 3 to remove and 0 not upgraded.
+After this operation, 13.0 MB disk space will be freed.
+Do you want to continue? [Y/n] Y
+(Reading database ... 308289 files and directories currently installed.)
+Removing krb5-user (1.17-6) ...
+Removing krb5-config (2.6build1) ...
+Removing krb5-doc (1.17-6) ...
+Processing triggers for man-db (2.8.7-3) ...
+(Reading database ... 307239 files and directories currently installed.)
+Purging configuration files for krb5-config (2.6build1) ...
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ update.sh 
+Get:1 http://security.ubuntu.com/ubuntu eoan-security InRelease [97.5 kB]
+Hit:2 http://us.archive.ubuntu.com/ubuntu eoan InRelease                                                                       
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease                                                                   
+Ign:4 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 InRelease                                
+Get:5 http://us.archive.ubuntu.com/ubuntu eoan-updates InRelease [97.5 kB]      
+Hit:6 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 Release                                         
+Hit:7 http://dl.google.com/linux/chrome/deb stable Release                                                       
+Get:8 http://us.archive.ubuntu.com/ubuntu eoan-backports InRelease [88.8 kB]                
+Fetched 284 kB in 1s (320 kB/s)    
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ apps-
+apps-installed  apps-size       
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ apps-installed | grep krb
+krb5-locales
+krb5-multidev:amd64
+libgssapi-krb5-2:amd64
+libkrb5-26-heimdal:amd64
+libkrb5-3:amd64
+libkrb5-dev:amd64
+libkrb5support0:amd64
+brian@lu-1910:~/data/home/brian/src/projects/dotfiles/backup/install/desktop/lu-1910/packages$ exit
+exit

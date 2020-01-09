@@ -1,6 +1,7 @@
 /mongodb/journal/
 *.swp
 *.swo
+.Trash-1000
 
 # Mount Points
 # These probably don't need to be excluded because I am using the --one-file-system flag but I am adding them just incase.

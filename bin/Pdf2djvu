@@ -1,0 +1,148 @@
+#!/bin/bash
+
+# convert PDF -> DjVu
+# usage:  pdf2djvu.sh  <file.pdf>
+# NOTES:
+#     - pdf2djvu Options:
+#         + --fg-colors=black => Discard any color information from the foreground layer
+#         + --monochrome      => Render pages as monochrome bitmaaps. (Ignores --bg- and --fg-)
+#         + 
+#
+#
+
+for ((j = 1; j <= $#; j++ )); do
+
+    i=${!j}
+    o="`basename $i .pdf`"
+    o="$o".djvu
+    if [ -f  "$o" ]; then 
+      echo "file $o exists, override [Y/n]?"
+      read ans
+      case "$ans" in 
+       n|N) exit 1;;
+      esac
+    fi
+    echo "[ converting $i to $o ] "
+
+    cmd="pdf2djvu -o $o --fg-colors=black --quiet $i "
+
+    echo "[ executing $cmd ] "
+    $cmd
+
+done
+
+
+#--lossy
+
+
+## PDF > Test
+#~/win/AAA_Books$ ~/win/AAA_Books/OLD/PDF_Tools/pdfid.py *.pdf > TEST.txt
+
+
+## PDF > Convert
+#~/win/AAA_Books$ ~/win/AAA_Books/OLD/pdf2djvu.sh
+
+
+# Transfers
+
+# DJVU-OLD -> DJVU-Transfer
+#rsync -rlptvh --delete --dry-run --stats . ../../../../Transfer/DJVU/
+#rsync -rlptvh --delete --stats . ../../../../Transfer/DJVU/
+
+# EPUB-OLD -> EPUB-Transfer
+#rsync -rlptvh --delete --dry-run --stats . ../../../Transfer/EPUB/
+#rsync -rlptvh --delete --stats . ../../../Transfer/EPUB/
+
+# CHM-OLD -> CHM-Transfer
+#rsync -rlptvh --delete --dry-run --stats . ../../../Transfer/CHM/
+#rsync -rlptvh --delete --stats . ../../../Transfer/CHM/
+
+# MOBI-OLD -> MOBI-Transfer
+#rsync -rlptvh --delete --dry-run --stats . ../../../Transfer/MOBI/
+#rsync -rlptvh --delete --stats . ../../../Transfer/MOBI/
+
+# AAA_Books-Transfer -> (Card/Books) / <CURRENT>
+#rsync -rlptvh --delete --omit-dir-times --ignore-existing --stats --dry-run ~/archive/AAA_Books/Transfer/ .
+#rsync -rlptvh --delete --omit-dir-times --ignore-existing --stats ~/archive/AAA_Books/Transfer/ .
+
+# TODO: OLD ===>>> AAA_Books-Transfer -> (Card/Books) / <CURRENT>
+#rsync -rlptvhu --delete --dry-run --stats ~/win/AAA_Books/Transfer/ .
+#rsync -rlptvhu --delete --stats ~/win/AAA_Books/Transfer/ .
+
+
+
+# TODO:
+# convert DjVu -> PDF -> DjVu
+# usage:  djvu-swap.sh  <file.pdf>
+
+#for ((j = 1; j <= $#; j++ )); do
+
+    #i=${!j}
+    #o="`basename $i .pdf`"
+    #o="$o".djvu
+    #if [ -f  "$o" ]; then 
+      #echo "file $o exists, override [Y/n]?"
+      #read ans
+      #case "$ans" in 
+       #n|N) exit 1;;
+      #esac
+    #fi
+    #echo "[ converting $i to $o ] "
+
+    #cmd="pdf2djvu -o $o --fg-colors=black --quiet $i "
+
+    #echo "[ executing $cmd ] "
+    #$cmd
+
+#done
+
+
+
+## OLD => Single File
+
+## convert PDF -> DjVu
+## usage:  pdf2djvu.sh  <file.pdf>
+
+#i="$1"
+#o="`basename $i .pdf`"
+#o="$o".djvu
+##o=${2:-$(basename $i .pdf).djvu}
+#if [ -f  "$o" ]; then 
+  #echo "file $o exists, override [Y/n]?"
+  #read ans
+  #case "$ans" in 
+   #n|N) exit 1;;
+  #esac
+#fi
+#echo "[ converting $i to $o ] "
+
+#cmd="pdf2djvu -o $o --fg-colors=black --quiet $i "
+
+#echo "[ executing $cmd ] "
+#$cmd
+
+
+
+## OLD => Reference
+
+##!/bin/bash
+
+## convert DjVu -> PDF
+## usage:  djvu2pdf.sh  <file.djvu>
+
+#i="$1"
+#echo "------------ converting $i to PDF ----------------";
+#o="`basename $i .djvu`"
+#o="$o".pdf
+#echo "[ writing output to $o ] "
+
+#cmd="ddjvu -format=pdf -quality=85 -verbose $i $o "
+#$cmd
+
+
+## OLD => Play
+
+#for ((i = 1; i <= $#; i++ )); do
+    #echo ${!i}
+    ##printf '%s\n' "Arg $i : ${(P)i}"
+#done

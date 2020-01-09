@@ -20,7 +20,7 @@
   rotate_ccw = None
   split_horiz = <Control><Shift>s
   split_vert = <Control>s
-  toggle_scrollbar = <Control><Shift>F8
+  toggle_scrollbar = None
   page_up_half = <Control><Shift>p
   page_down_half = <Control><Shift>n
   move_tab_right = <Control>braceright
@@ -29,9 +29,11 @@
   next_tab = <Control>0
   prev_tab = <Control>9
   hide_window = None
+  ungroup_tab = None
   edit_window_title = <Control>6
   edit_tab_title = <Control>8
   edit_terminal_title = <Control>7
+  help = None
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"

@@ -1,61 +1,67 @@
 #!/bin/bash
 
+#-----------------------------------------
 echo "Installing Extra"
+#-----------------------------------------
+#echo $(tmp=(
+sudo apt-get install -y $(tmp=(
 
-Pacs=""
 
-#----------------------------------------
-# Dev
-#----------------------------------------
+    #----------------------------------------
+    # TODO:
+    # Dev
+    #----------------------------------------
+
+        #------------------------
+        # Dev > DB
+        #------------------------
+        #mysql-server         # This or Download Latest from Website
+
+        #------------------------
+        # Dev > Web Servers
+        #------------------------
+        #apache2              # Apache Web Server
+        #nginx                # Nginx Web Server
+
+        #------------------------
+        # Dev > Other
+        #------------------------
+        #android-sdk          # Android Dev Env
+        #compass              # CSS and SASS fun in Ruby
+
+
+    #----------------------------------------
+    # Other
+    #----------------------------------------
+
+        #------------------------
+        # Editing etc.
+        #------------------------
+        gnome-clocks         # Simple Gnome App with stopwatch, timer, and world clock
+        #pyew                 # Malware Analysis
+
+        #------------------------
+        # Media
+        #------------------------
+        youtube-dl           # Youtube Downloader
+        calibre              # Ebook Management
+        #gimp                 # Gimp
+        #handbrake            # DVD ripper and video transcoder
+        #clementine           # Music Player (Dead?)
+
+); echo ${tmp[@]})
+
+
 
 
 #------------------------
-# DB
+# TODO:
+# PHP
 #------------------------
-#Pacs="$Pacs mysql-server"         # This or Download Latest from Website
-
-
-#------------------------
-# Web Servers
-#------------------------
-#Pacs="$Pacs apache2"              # Apache Web Server
-#Pacs="$Pacs nginx"                # Nginx Web Server
-
-
-#------------------------
-# Other
-#------------------------
-#Pacs="$Pacs android-sdk"          # Android Dev Env
-#Pacs="$Pacs compass"              # CSS and SASS fun in Ruby
 #Pacs="PHP"                        # PHP
 #Pacs="libapache2-mod-php"         # Apache PHP Module
 #sudo systemctl restart apache2    # If you want it to work without restart
 
-
-
-#------------------------
-# Editing etc.
-#------------------------
-Pacs="$Pacs gnome-clocks"         # Simple Gnome App with stopwatch, timer, and world clock
-#Pacs="$Pacs pyew"                 # Malware Analysis
-
-
-#------------------------
-# Media
-#------------------------
-Pacs="$Pacs youtube-dl"           # Youtube Downloader
-Pacs="$Pacs calibre"              # Ebook Management
-#Pacs="$Pacs gimp"                 # Gimp
-#Pacs="$Pacs handbrake"            # DVD ripper and video transcoder
-#Pacs="$Pacs clementine"           # Music Player (Dead?)
-
-
-#-----------------------------------------
-# Install
-#-----------------------------------------
-
-#echo $Pacs
-sudo apt-get install -y $Pacs
 
 
 

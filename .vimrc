@@ -2,45 +2,66 @@
 "
 
 "--------------------------------------------------------------------------
-" Gerneral Setup
+" Gerneral
 "--------------------------------------------------------------------------
 
 set nocompatible
 
-" All of the plugins are installed with Vundle from this file
+" Load Plugins (Vundle)
 source ~/.vim/vundle.vim
 
-"Old Pathogen Setup   
-    " runtime bundle/vim-pathogen/autoload/pathogen.vim
-    " call pathogen#infect()
-    " call pathogen#helptags()
 
-"Help while modifying the .vimrc
-    " Let's make it easy to edit this file (mnemonic for key sequence is 'e'dit 'v'imrc)
-    nmap <silent> <leader>ev :e $MYVIMRC<CR>
-    " And to source this file as well (mnemonic for the key sequence is 's'ource 'v'imrc)
-    nmap <silent> <leader>sv :so $MYVIMRC<CR>
+" GUI > Widgets and Scrollbars > Remove
+if has('gui_running')
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guioptions-=m
+    set guifont=Monospace\ 11
+    "set guifont=*
+endif
 
-" Remove GUI widgets and scrollbars
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-set guioptions-=m
-
-" Make the command-line completion better
+" Command-line Completion => Enhanced Mode
 set wildmenu
 
 " Make sure that unsaved buffers that are to be put in the background are
-" allowed to go in there (ie. the "must save first" error doesn't come up)
+" allowed to go in there (ie. the 'must save first' error doesn't come up)
 set hidden
 
 
-" CTags File location
-"let Tlist_Ctags_Cmd='..\ctags58\ctags.exe'
+"--------------------------------------------------------------------------
+" Color Scheme
+"--------------------------------------------------------------------------
+" TODO:
+"
+" TODO: PLAY WITH LATER
+"       Change color of selected item background
+"       in Popup Menu in color terminal
+"           :hi PmenuSel ctermfg=15
+"
+"--------------------------------------------------------------------------
 
-" COLOR SCHEME
-    syntax enable
-    set background=dark
+"-----------------
+" General
+"-----------------
+syntax enable
+set background=dark
+
+"-----------------
+" GUI
+"-----------------
+if has('gui_running')
+    colorscheme koehler
+    "let g:solarized_termtrans=1
+    "let g:solarized_termcolars = 256
+    "let g:solarized_contrast="high"
+    "let g:solarized_visibility="high"
+    "colorscheme solarized
+
+"-----------------
+" Terminal
+"-----------------
+else
     colorscheme mango
     "colorscheme 0x7A69_dark
     "colorscheme DevC++
@@ -58,119 +79,385 @@ set hidden
     "colorscheme torte
     "colorscheme pablo
     "colorscheme murphy
-    "PLAY WITH LATER
-    "Change color of selected item background in Popup Menu in color terminal
-    "hi PmenuSel ctermfg=15
-    if has('gui_running')
-        colorscheme koehler
-        "let g:solarized_termtrans=1
-        "let g:solarized_termcolars = 256
-        "let g:solarized_contrast="high"
-        "let g:solarized_visibility="high"
-        "colorscheme solarized
-    endif
-
-" Show Line Numbers
-set number
-
-" Filetype
-set filetype=on
-filetype plugin indent on
-set ai    "autoindent
-set ts=4  "tabstop
-set sts=4 "softtabstop
-set et    "expandtab
-set sw=4  "shiftwidth
-set textwidth=79
-" HTML (tab width 2 chr, no wrapping)
-autocmd FileType html setlocal sw=3
-autocmd FileType html setlocal ts=3
-autocmd FileType html setlocal sts=3
-autocmd FileType html setlocal textwidth=0
-" XHTML (tab width 2 chr, no wrapping)
-autocmd FileType xhtml setlocal sw=3
-autocmd FileType xhtml setlocal ts=3
-autocmd FileType xhtml setlocal sts=3
-autocmd FileType xhtml setlocal textwidth=0
-" CSS (tab width 2 chr, wrap at 79th char)
-autocmd FileType css setlocal sw=2
-autocmd FileType css setlocal ts=2
-autocmd FileType css setlocal sts=2
-autocmd FileType css setlocal nowrap
-" Ruby
-autocmd FileType ruby setlocal sw=2
-autocmd FileType ruby setlocal ts=2
-autocmd FileType ruby setlocal sts=2
-autocmd FileType ruby setlocal tw=0
-autocmd FileType ruby setlocal et
-" Jade
-autocmd FileType jade setlocal sw=2
-autocmd FileType jade setlocal ts=2
-autocmd FileType jade setlocal sts=2
-autocmd FileType jade setlocal tw=0
-autocmd FileType jade setlocal et
-
-"--------------------------------------------------------------------------
-" Set Key Mappings
-"--------------------------------------------------------------------------
-set pastetoggle=<F2>
-"nnoremap ; :
-nnoremap j gj
-nnoremap k gk
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map ( gT
-map ) gt
-"map <silent> <C-s> :w<CR>
-nmap <silent> ,/ :set hlsearch!<CR>
-
-"Map NERDTree to \p
-"map <silent> <Leader>p :NERDTreeToggle<CR>
-
-"Map Command-T to \p
-map <silent> <Leader>p :CommandT<CR>
-map <silent> <Leader>t :CommandTTag<CR>
-map <silent> <Leader>r :CommandTFlush<CR>
-"let g:CommandTMaxFiles=10000
-"let g:CommandTMaxDepth=10
-"This isn't working yet"
-if !has('gui_running')
-    let g:CommandTHighlightColor='Yellow'
 endif
-let g:CommandTMatchWindowReverse=1
 
-"Show Invisibles Toggle
-nmap <leader>l :set list!<CR>
 
-"Invisible characters
-set listchars=tab:▸\ ,eol:¬
+"--------------------------------------------------------------------------
+" Filetype Options
+"--------------------------------------------------------------------------
+augroup vimrc
+    autocmd!
 
-"Yank Ring
-nnoremap <silent> <F11> :YRShow<CR>
-let g:yankring_replace_n_pkey = '<c-[>'
+    "-------------------------
+    " File-Open
+    "-------------------------
 
-" Toggle spell checking for the current buffer on and off with '\s'
-nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
+    " EPUB Viewing
+    autocmd BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
 
+
+    "-------------------------
+    " File-Type > Default
+    "-------------------------
+
+    set filetype=on
+    filetype plugin indent on
+
+    " Allow backspacing over everything in insert mode
+    " NOTES:
+    " (This is the default most places)
+    " FROM vimrc_example
+    set backspace=indent,eol,start
+
+    " File-Type-Options > Global > Set
+    set number         " Line-Numbers > Show
+    set textwidth=79   " Line-Length  > Max
+    set expandtab      " expandtab
+    set autoindent     " autoindent
+    set tabstop=4      " tabstop
+    set softtabstop=4  " softtabstop
+    set shiftwidth=4   " shiftwidth = 0 => sw=ts
+
+
+    "-------------------------
+    " File-Type > Change
+    "-------------------------
+
+    " Function => Reset File Type Options
+    function FtReset()
+        setlocal number         " Line-Numbers > Show  (nu)
+        setlocal textwidth=79   " Line-Length  > Max   (tw)
+        setlocal expandtab      " expandtab            (et)
+        setlocal autoindent     " autoindent           (ai)
+        setlocal tabstop=4      " tabstop              (ts)
+        setlocal softtabstop=4  " softtabstop          (sts)
+        setlocal shiftwidth=4   " shiftwidth           (sw)
+    endfunction
+
+    " File-Type-Options > Reset
+    autocmd FileType *    call FtReset() " Reset File-Type Options Before Setting New
+
+    " make => (Keep Tabs, Don't break lines)
+    autocmd FileType make setlocal textwidth=0            " Dont Break Lines                (tw)
+    autocmd FileType make setlocal noexpandtab            " Dont Expand Tabs                (noxt)
+    autocmd FileType make setlocal linebreak              " Wrap Lines at wordish boundarys (lbr)
+
+    " Text => (Keep Tabs, Don't break lines)
+    autocmd FileType text setlocal textwidth=0            " Dont Break Lines                (tw)
+    autocmd FileType text setlocal noexpandtab            " Dont Expand Tabs                (noxt)
+    autocmd FileType text setlocal linebreak              " Wrap Lines at wordish boundarys (lbr)
+    "autocmd FileType text setlocal spell spelllang=en_us  " Turn on Spell Check
+
+    " HTML => (tab-width 2(3) chr, Don't break lines)
+    autocmd FileType html setlocal tw=0
+    autocmd FileType html setlocal ts=2
+    autocmd FileType html setlocal sts=2
+    autocmd FileType html setlocal sw=2
+
+    " XHTML => (tab-width 2(3) chr, Don't break lines)
+    autocmd FileType xhtml setlocal tw=0
+    autocmd FileType xhtml setlocal ts=2
+    autocmd FileType xhtml setlocal sts=2
+    autocmd FileType xhtml setlocal sw=2
+
+    " CSS => (tab-width 2 chr, Break at 79th char)
+    autocmd FileType css setlocal ts=2
+    autocmd FileType css setlocal sts=2
+    autocmd FileType css setlocal sw=2
+    autocmd FileType css setlocal nowrap
+
+    "-------------------------
+    " TODO: OFF
+    "-------------------------
+
+    " TODO: OFF
+    " Ruby
+    "autocmd FileType ruby setlocal tw=0
+    "autocmd FileType ruby setlocal ts=2
+    "autocmd FileType ruby setlocal sts=2
+    "autocmd FileType ruby setlocal sw=2
+
+    " TODO: OFF
+    " Jade
+    "autocmd FileType jade setlocal tw=0
+    "autocmd FileType jade setlocal ts=2
+    "autocmd FileType jade setlocal sts=2
+    "autocmd FileType jade setlocal sw=2
+augroup END
+
+
+"--------------------------------------------------------------------------
+" Key Mappings & Plugin Config
+"--------------------------------------------------------------------------
+" Bindings:
+"--------------------------------------------
+"
+"----------------------
+" Commands:
+"----------------------
+"----------------------
+" General:
+"----------------------
+"   \ev     => vimrc > Edit
+"   \sv     => vimrc > Source
+"
+"   \b      => Open Termianal in New Window
+"   \B      => Open Termianal in Current Window
+"   \g      => Open Termdebug/GDB with no file (:Termdebug)
+"
+"   <F2>    => Paste-Mode    > Toggle
+"----------------------
+" TABs: (For All Tabs)
+"----------------------
+"   \te     => Wndows Equals Size (Ctrl-W Ctrl-=)
+"   \tm     => Left-Column -> :mkview   
+"   \ts     => Left-Column -> :loadview
+"----------------------
+" GUI_Only:
+"----------------------
+"   Ctrl-Up     => Font-Size > Increase
+"   Ctrl-Down   => Font-Size > Decrease
+"   Ctrl-kPlus  => Font-Size > Increase
+"   Ctrl-kMinus => Font-Size > Decrease
+"   Ctrl-kEnter => Font-Size > Initial
+"----------------------
+"----------------------
+" Markers:
+"----------------------
+"
+"   ,/      => Search-Result   > Highlight > Toggle
+"   \s      => Spell-Check     > Highlight > Toggle
+"   \l      => Show-Invisibles             > Toggle
+"
+"----------------------
+" Plugins:
+"----------------------
+"
+"   Ctrl-p  => Ctrl-P_File-Search
+"
+"   \v      => Yank-Ring   > Toggle
+"   \p      => Nerd-Tree   > Toggle
+"   \d      => DelimitMate > Toggle
+"
+"   Ctrl-o  => TagList   > Toggle
+"----------------------
+"
+"--------------------------------------------------------------------------
+
+
+"-----------------------------------------------
+" General
+"-----------------------------------------------
+
+"----------------------------
+" Helpers
+"----------------------------
+
+" Vimrc Helpers
+    " (e)dit (v)imrc (\ev)
+    nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+    " (s)ource (v)imrc (\sv)
+    nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+
+":w/:W -> Fix mistake with :W for :w
+    command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+    "command! -bang Q quit<bang>
+
+" Paste-Mode > Toggle
+    set pastetoggle=<F2>
+
+"-----------------------------------------------
+" Navigation
+"-----------------------------------------------
+
+"----------------------------
+" Nav > Cursor
+"----------------------------
+
+" Cursor Stops on Visually Wrapped Lines
+    nnoremap j gj
+    nnoremap k gk
+
+"----------------------------
+" Nav > Window & Tab
+"----------------------------
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap ( gT
+noremap ) gt
+
+"----------------------------
+" Visual Markers
+"----------------------------
+
+" Search-Result > Highlighting > Toggle  => (,/)
+    nnoremap <silent> ,/ :set hlsearch!<CR>
+
+" Spell-Check > Highlighting > Toggle    => (\s)
+    nnoremap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
+
+"Show-Invisibles Toggle                  => (\l)
+    nnoremap <leader>l :set list!<CR>
+    "Invisibles-Characters
+    set listchars=tab:▸\ ,eol:¬
+
+"----------------------------
+"NERD Commenter
+"----------------------------
+let g:NERDCustomDelimiters = {
+    \ 'c': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+\ }
+  "-------------------------------------------------
+  "-------------------------------------------------
+    "\ 'c': { 'left': '// ', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'javascript': { 'left': '// ', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'lua': { 'left': '-- ', 'leftAlt': '--[[', 'rightAlt': ']]' },
+    "\ 'python': { 'left': '# ', 'leftAlt': '#' },
+    "\ 'sed': { 'left': '# ', 'leftAlt': '#' },
+  "-------------------------------------------------
+  "-------------------------------------------------
+    "\ 'awk': { 'left': '#' },
+    "\ 'calibre': { 'left': '//' },
+    "\ 'c': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'cpp': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'cmake': { 'left': '#' },
+    "\ 'crontab': { 'left': '#' },
+    "\ 'cs': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'java': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'javascript': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
+    "\ 'lua': { 'left': '--', 'leftAlt': '--[[', 'rightAlt': ']]' },
+    "\ 'python': { 'left': '# ', 'leftAlt': '#' },
+    "\ 'sed': { 'left': '#' },
+    "\ 'wget': { 'left': '#' },
+    "\ 'yaml': { 'left': '#' },
+
+"----------------------------
+" Yank Ring (Paste History)
+"----------------------------
+" TODO:
+"
+" TODO: The let statement causes problems in console invocation:
+"           - When a file is first opened:
+"               - Something may be pasted
+"               - The file opens in insert or replace mode.
+"
+"----------------------------
+"TODO: CHANGE Mapping or Remove
+nnoremap <silent> <leader>v :YRShow<CR>
+"let g:yankring_window_use_horiz = 0
+"let g:yankring_window_use_right = 0
+"let g:yankring_window_increment = 50
+"let g:yankring_window_width = 30
+"nnoremap <silent> <F11> :YRShow<CR>
+"let g:yankring_replace_n_pkey = '<C-[>'
+"let g:yankring_replace_n_nkey = '<C-]>'
+"let g:yankring_replace_n_pkey = '<C-[>'
+""let g:yankring_replace_n_pkey = '<c-[>'
+
+"-----------------------------------------------
+" Terminals
+"-----------------------------------------------
+
+" Open Bash Terminal in New Window (\b)
+    nnoremap <leader>b :ter<CR>
+
+" Open Bash Terminal Current Window (\B)
+    nnoremap <leader>B :ter ++curwin<CR>
+
+" Termdebug
+packadd termdebug
+
+    " Open GDB with no File (\g)
+        nnoremap <leader>g :Termdebug<CR>
+
+    " Open GDB with no File (\G)
+        "nnoremap <leader>G :Termdebug ++curwin<CR>
+
+"-----------------------------------------------
+" Tabdo
+"-----------------------------------------------
+
+" TabdoFunc()
+    "function TabdoFunc(func)
+        "tabdo call func()
+    "endfunction
+
+" Tabs-Vertical > Half/Even
+    " Function => Reset File Type Options
+    nnoremap <silent> <leader>te :tabdo wincmd =<CR>
+    "nnoremap <silent> <leader>te :tabdo :wincmd =<CR>
+
+" Tabs-Vertical > Left > mkview
+" TODO: This may not work as expected if there are 3 columns.
+    function MkviewLeft()
+        tabdo execute 'wincmd h' | mkview
+        "tabdo execute 'wincmd h' | mkview | echom 'Tab Call'
+        echom 'View Saved for the Left Window of all Tabs.'
+    endfunction
+    "nnoremap <silent> <leader>tm :call TabdoFunc(MkviewLeft)<CR>
+    nnoremap <silent> <leader>tm :call MkviewLeft()<CR>
+    "nnoremap <silent> <leader>tm :tabdo execute 'call MkviewLeft()' <bar> echom 'View Saved for the Left Window of all Tabs.'<CR>
+    "TODO: GOOD=> nnoremap <silent> <leader>tm :tabdo call MkviewLeft()<CR>
+    "nnoremap <silent> <leader>tm :tabdo execute ':wincmd h' <bar> :mkview'<CR>
+    "nnoremap <silent> <leader>tm :tabdo :wincmd h<CR>:mkview<CR>
+    "nnoremap <silent> <leader>hv :tabdo :wincmd h :mkview<CR>
+
+" Tabs-Vertical > Left > loadview (lo)
+" TODO: This may not work as expected if there are 3 columns.
+    function LoadviewLeft()
+        tabdo execute 'wincmd h' | loadview
+        echom 'View Loaded for the Left Window of all Tabs.'
+    endfunction
+    nnoremap <silent> <leader>tl :call LoadviewLeft()<CR>
+    "nnoremap <silent> <leader>tl :tabdo call LoadviewLeft()<CR>
+    "nnoremap <silent> <leader>tl :tabdo :wincmd h<CR>:loadview<CR>
+
+
+"-----------------------------------------------
+" File Exploring
+"-----------------------------------------------
+
+"----------------------------
+"NERDTree (\p)
+"----------------------------
+noremap <silent> <Leader>p :NERDTreeToggle<CR>
+
+"----------------------------
+"Ctrl-P
+"----------------------------
+"let g:ctrlp_map = '<c-[>'
+let g:ctrlp_arg_map = 1   "When this is set to 1, the <c-o> & <c-y> mappings will accept one extra key as an argument
+"set wildignore+=*/node_modules/*
+let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
+
+
+"-----------------------------------------------
+" Syntax, etc.
+"-----------------------------------------------
+
+"----------------------------
+" Taglist
+"----------------------------
+nnoremap <silent> <Leader>o :TlistToggle<CR>
+
+"----------------------------
 " Tagbar
-nnoremap <silent> <Leader>o :TagbarToggle<CR>
+"----------------------------
+"nnoremap <silent> <Leader>o :TagbarToggle<CR>
+"let g:tagbar_left = 1
 
-" DelimitMate
-map <silent> <Leader>d :DelimitMateSwitch<CR>
-"let delimitMate_offByDefault = 1   "Prevent delimitMate from loading until :DelimitMateSwitch is called
-let delimitMate_expand_cr = 1
-let delimitMate_jump_expansion = 1
-"let delimitMate_expand_space = 1
-"Fix mistake with :W for :w
-command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
-"command! -bang Q quit<bang>
-"SuperTab
-"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-""let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+"----------------------------
+" SuperTab
+"----------------------------
+"let g:SuperTabDefaultCompletionType = TODO:\"<c-x><c-o>"
+""let g:SuperTabContextDefaultCompletionType = TODO:\"<c-x><c-o>"
 
+"----------------------------
+" TODO: REMOVED
 " Syntastic
+"----------------------------
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -179,58 +466,83 @@ command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <ar
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-
-"Ctrl-P
-"let g:ctrlp_map = '<c-[>'
-let g:ctrlp_arg_map = 1   "When this is set to 1, the <c-o> & <c-y> mappings will accept one extra key as an argument
-"set wildignore+=*/node_modules/*
-let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
-
-"FROM vimrc_example
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+"----------------------------
+" DelimitMate => (\d)
+"----------------------------
+nnoremap <silent> <Leader>d :DelimitMateSwitch<CR>
+"let delimitMate_offByDefault = 1   "Prevent delimitMate from loading until :DelimitMateSwitch is called
+let delimitMate_expand_cr = 1
+let delimitMate_jump_expansion = 1
+"let delimitMate_expand_space = 1
 
 
-" Show syntax highlighting groups for word under cursor (From Vim
-" Casts)(Conisder Trying HiLinkTrace for this instead)
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
+"-----------------------------------------------
+" Font Size Adjust
+"-----------------------------------------------
+let s:pattern = '^\(.* \)\([1-9][0-9]*\)$'
+let s:minfontsize  = 6
+let s:initfontsize = 10
+let s:maxfontsize  = 16
+function! AdjustFontSize(amount)
+  if has("gui_running") && has("gui_gtk2") || has("gui_gtk3")
+    let fontname = substitute(&guifont, s:pattern, '\1', '')
+    let cursize = substitute(&guifont, s:pattern, '\2', '')
+    if (a:amount == 0)
+        let cursize = s:initfontsize
+    endif
+    let newsize = cursize + a:amount
+    "echom fontname
+    "echom cursize
+    "echom newsize
+    if (newsize >= s:minfontsize) && (newsize <= s:maxfontsize)
+      let newfont = fontname . newsize
+      "echom newfont
+      let &guifont = newfont
+    endif
+  else
+    echoerr "You need to run the GTK2 version of Vim to use this function."
   endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+endfunction
 
-"For EPUB Viewing
-au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
+function! LargerFont()
+  call AdjustFontSize(1)
+endfunction
+command! LargerFont call LargerFont()
 
-"FOR WINDOWS BOX
-    "source $VIMRUNTIME/vimrc_example.vim
-    "source $VIMRUNTIME/mswin.vim
-    "behave mswin
-    "set diffexpr=MyDiff()
+function! IniterFont()
+  call AdjustFontSize(0)
+endfunction
+command! IniterFont call IniterFont()
 
-    "function MyDiff()
-    "  let opt = '-a --binary '
-    "  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-    "  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-    "  let arg1 = v:fname_in
-    "  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-    "  let arg2 = v:fname_new
-    "  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-    "  let arg3 = v:fname_out
-    "  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-    "  let eq = ''
-    "  if $VIMRUNTIME =~ ' '
-    "    if &sh =~ '\<cmd'
-    "      let cmd = '""' . $VIMRUNTIME . '\diff"'
-    "      let eq = '"'
-    "    else
-    "      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    "    endif
-    "  else
-    "    let cmd = $VIMRUNTIME . '\diff'
-    "  endif
-    "  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-    "endfunction
+function! SmallerFont()
+  call AdjustFontSize(-1)
+endfunction
+command! SmallerFont call SmallerFont()
+
+nnoremap <silent> <C-Up> :LargerFont<CR>
+nnoremap <silent> <C-kPlus> :LargerFont<CR>
+"nnoremap <silent> <C-+> :LargerFont<CR>
+"nnoremap <silent> <C-Plus> :LargerFont<CR>
+nnoremap <silent> <C-Down> :SmallerFont<CR>
+nnoremap <silent> <C-kMinus> :SmallerFont<CR>
+"nnoremap <silent> <C-_> :SmallerFont<CR>
+"nnoremap <silent> <C-Minus> :SmallerFont<CR>
+nnoremap <silent> <C-kEnter> :IniterFont<CR>
+"nnoremap <silent> <C-Equal> :IniterFont<CR>
+"nnoremap <silent> <C-=> :IniterFont<CR>
+
+
+"-----------------------------------------------
+" TODO: REVIEW
+" FROM vimrc_example
+"-----------------------------------------------
+
+"" Show syntax highlighting groups for word under cursor (From Vim
+"" Casts)(Conisder Trying HiLinkTrace for this instead)
+"nnoremap <C-S-P> :call <SID>SynStack()<CR>
+"function! <SID>SynStack()
+  "if !exists("*synstack")
+    "return
+  "endif
+  "echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, \"name")')
+"endfunc

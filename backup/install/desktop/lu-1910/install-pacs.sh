@@ -27,13 +27,13 @@ cd packages
 ./install_mongodb.sh
 
 ./install_lua.sh
+./install_python.sh
 
 ./install_extra.sh
 
 
 # ~/.bashrc >> Custom
 cat <<'EOF' >> ${HOME}/.bashrc
-
 
 # Source Custom
 if [ -f "${HOME}"/.bashbas ]; then
@@ -48,14 +48,30 @@ sudo apt-get update -y
 
 cd ..
 
+# Clean Up
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoclean -y && sudo apt-get autoremove -y
 
 
 #-----------------------------------------
-# TODO:
+# TODO: Chrome
 #-----------------------------------------
 
+##Pacs="$Pacs google-chrome-stable"
 
-#./install_python.sh
-#./install_ruby.sh
+## Finish Setting Google Chrome as Default Browser
+#sudo update-alternatives --config x-www-browser
+    #- Select /usr/bin/google-chrome-stable  mode manual
 
-#Pacs="$Pacs google-chrome-stable"
+#sudo update-alternatives --config gnome-www-browser
+    #- Select /usr/bin/google-chrome-stable  mode manual
+
+
+## TEST by checking:
+##echo $BROWSER = /usr/bin/google-chrome-stable
+
+#-----------------------------------------
+# TODO: Pulse Audio (New Config Files)
+#-----------------------------------------
+
+# New Config Files etc.
+# Notes in $HOME/.config/pulse/README

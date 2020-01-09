@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dpkg --listfiles $1

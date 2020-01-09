@@ -32,18 +32,45 @@ function cdlink {
 
 
 #-----------------------------------------
-# Add custom scripts directory to path
+# Add PIP Scripts Directory to $Path
 #-----------------------------------------
 if [ -d "${HOME}"/.bin ]; then
 
-    PATH="$HOME/.bin:$PATH"
+    PATH="${HOME}/.local/bin:${PATH}"
 fi
+
+
+#-----------------------------------------
+# Add Custom Scripts Directory to $Path
+#-----------------------------------------
+if [ -d "${HOME}"/.bin ]; then
+
+    PATH="${HOME}/.bin:${PATH}"
+fi
+
+
+#-----------------------------------------
+# TODO:
+# Add Custom Libraries
+#-----------------------------------------
+#if [ -d "${HOME}"/src/packs ]; then
+
+    #PATH="${HOME}/.bin:${PATH}"
+#fi
 
 
 #-----------------------------------------
 # Aliases
 #-----------------------------------------
 alias cdl='cdlink'
+alias info='info --vi-keys'
+
+#-----------------------------------------
+# Lua Cli Config File Path
+#-----------------------------------------
+LUA_INIT="${HOME}/.luarc.lua"
+alias luas="lua -i ${LUA_INIT}"
+
 
 
 #-----------------------------------------

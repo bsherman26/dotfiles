@@ -1,0 +1,104 @@
+
+
+
+"Old Pathogen Setup   
+    " runtime bundle/vim-pathogen/autoload/pathogen.vim
+    " call pathogen#infect()
+    " call pathogen#helptags()
+
+
+" CTags File location
+"let Tlist_Ctags_Cmd='..\ctags58\ctags.exe'
+
+
+"--------------------------------------------------------------------------
+" Key Mappings
+"--------------------------------------------------------------------------
+
+
+"-----------------------------------------------
+" General
+"-----------------------------------------------
+
+"----------------------------
+" Helpers
+"----------------------------
+
+"nnoremap ; :
+
+"----------------------------
+" Navigation
+"----------------------------
+
+"----------------------------
+" Nav > Window & Tab
+"----------------------------
+" TODO:
+"
+" TODO: mapping (,) causes syntax highlighting errors, maybe more.
+"       I'm not sure if the lines below it are related to the problem,
+"       So, I left them in here.
+"
+"----------------------------
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map ( gT
+map ) gt
+"map <silent> <C-s> :w<CR>
+nmap <silent> ,/ :set hlsearch!<CR>
+
+
+
+"-----------------------------------------------
+" File Exploring
+"-----------------------------------------------
+
+"----------------------------
+" TODO: REMOVED -> Requires Ruby
+" Command-T (\p)
+"----------------------------
+"map <silent> <Leader>p :CommandT<CR>
+"map <silent> <Leader>t :CommandTTag<CR>
+"map <silent> <Leader>r :CommandTFlush<CR>
+""let g:CommandTMaxFiles=10000
+""let g:CommandTMaxDepth=10
+""This isn't working yet"
+"if !has('gui_running')
+    "let g:CommandTHighlightColor='Yellow'
+"endif
+"let g:CommandTMatchWindowReverse=1
+
+
+"--------------------------------------------------------------------------
+"FOR WINDOWS BOX
+"--------------------------------------------------------------------------
+    "source $VIMRUNTIME/vimrc_example.vim
+    "source $VIMRUNTIME/mswin.vim
+    "behave mswin
+    "set diffexpr=MyDiff()
+
+    "function MyDiff()
+    "  let opt = '-a --binary '
+    "  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+    "  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+    "  let arg1 = v:fname_in
+    "  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+    "  let arg2 = v:fname_new
+    "  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+    "  let arg3 = v:fname_out
+    "  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+    "  let eq = ''
+    "  if $VIMRUNTIME =~ ' '
+    "    if &sh =~ '\<cmd'
+    "      let cmd = '""' . $VIMRUNTIME . '\diff"'
+    "      let eq = '"'
+    "    else
+    "      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    "    endif
+    "  else
+    "    let cmd = $VIMRUNTIME . '\diff'
+    "  endif
+    "  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+    "endfunction

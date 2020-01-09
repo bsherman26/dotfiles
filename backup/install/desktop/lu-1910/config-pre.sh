@@ -54,7 +54,6 @@ homeMountPoints=(\
 
 homeDotfiles=(\
     .vimrc\
-    .bin\
     .bashbas\
     .cvsignore\
     .gitconfig\
@@ -68,18 +67,18 @@ homeDotfiles=(\
 # Root > Ephemeral-Mount-Points > Init
 #----------------------------------------
 
-sudo mkdir ${newRoot}/{\
-dev{,/pts},\
-media,\
-mnt,\
-proc,\
-run,\
-sys,\
-tmp\
-}
+#sudo mkdir ${newRoot}/{\
+#dev{,/pts},\
+#media,\
+#mnt,\
+#proc,\
+#run,\
+#sys,\
+#tmp\
+#}
 
-sudo chmod 555 ${newRoot}/{proc,sys}
-sudo chmod 1777 "${newRoot}/tmp"
+#sudo chmod 555 ${newRoot}/{proc,sys}
+#sudo chmod 1777 "${newRoot}/tmp"
 
 
 #----------------------------------------
@@ -119,8 +118,10 @@ done
 #----------------------------------------
 
 cp -r "${HOME}/.ssh"         "${newHome}"
+cp -r "${HOME}/.aws"         "${newHome}"
 ln -s "${projects}/current"  "${newHome}/current"
 ln -s "${dotfiles}"          "${newHome}/.dotfiles"
+ln -s "${dotfiles}/bin"      "${newHome}/.bin"
 ln -s "${dotfiles}/vim"      "${newHome}/.vim"
 ln -s "${dotfiles}/backup"   "${newHome}/.backup"
 
@@ -155,7 +156,7 @@ ln -s "${dotfiles}/.config/lxqt/panel.conf"              "${newHome}/.config/lxq
 ln -s "${dotfiles}/.config/lxqt/session.conf"            "${newHome}/.config/lxqt/session.conf"
 
 # ===>>> mimeapps.list <<<===
-ln -s "${dotfiles}/.config/gtk-3.0/settings.ini"         "${newHome}/.config/gtk-3.0/settings.ini"
+ln -s "${dotfiles}/.config/mimeapps.list"                "${newHome}/.config/mimeapps.list"
 
 # ===>>> OpenBox    <<<===
 mkdir "${newHome}/.config/openbox"
@@ -181,8 +182,8 @@ ln -s "${dotfiles}/.config/terminator/config"            "${newHome}/.config/ter
 #----------------------------------------
 
 # ===>>> Pulse-Audio <<<===
-mv "${newRoot}/etc/pulse/default.pa"                     "${newRoot}/etc/pulse/default.pa.dist"
-cp "${dotfiles}/etc/pulse/default.pa"                    "${newRoot}/etc/pulse/default.pa"
+sudo mv "${newRoot}/etc/pulse/default.pa"                "${newRoot}/etc/pulse/default.pa.dist"
+sudo cp "${dotfiles}/etc/pulse/default.pa"               "${newRoot}/etc/pulse/default.pa"
 
 
 
